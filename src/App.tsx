@@ -1,11 +1,14 @@
-import './App.css'
-import { MyRoutes } from './Router/MyRoutes'
+import React, { useEffect, useRef } from 'react';
+import './App.css';
+import { MyRoutes } from './Router/MyRoutes';
+
 
 function App() {
 
   return (
-     <div>
-      <MyRoutes></MyRoutes>
+     <div className='layout'>
+      <MyRoutes />
+   
      </div>
   )
 }

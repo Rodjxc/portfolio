@@ -1,0 +1,37 @@
+.home h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+.home strong {
+    color: #f44529;
+}
+
+.home h2, h3, h4, p {
+    font-weight: lighter;
+}
+
+.home a {
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f44529;
+    text-decoration: none;
+}
+
+.home a:hover {
+    background-color: rgb(24, 163, 24);
+    transition: all 300ms;
+}
+
+.home .heading,
+.page .heading {
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0px;
+}
+
