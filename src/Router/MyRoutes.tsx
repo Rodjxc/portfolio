@@ -22,6 +22,12 @@ export const MyRoutes = () => {
               <Route path='/servicios' element={<Servicios/>}></Route>
               <Route path='/CV' element={<CV/>}></Route>
               <Route path='/contact' element={<Contact/>}></Route>
+              <Route path='*' element={
+                <div className='page'>
+                  <h2 className='heading'>Error 404. The content doesn't exist or couldn't be displayed</h2>
+                </div>
+              }></Route>
+
            </Routes>
             </section>
   
