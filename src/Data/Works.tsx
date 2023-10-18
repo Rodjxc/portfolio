@@ -1,39 +1,31 @@
 export const Works = [
-    {
-        'id': 'Music Festival',
-        'name': 'Music Festival',
-        'url': 'https://victorroblesweb.es',
-        'tecnologies': 'HTML, Tailwind',
-        'categories': 'Web Design',
-        'description': 'A website for a ficticious music festival, built using Tailwind CSS'
-    },
-    {
-        'id': 'Facebook',
-        'name': 'Facebook',
-        'url': 'https://facebook.com',
-        'tecnologies': 'HTML, Tailwind',
-        'categories': 'Web Design',
-        'description': 'A social network'
-    },    
-    {
-        'id': 'MovieTrack',
-        'name': 'MovieTrack',
-        'url': 'movietrack.com',
-        'tecnologies': 'HTML, CSS, PHP, Laravel',
-        'categories': 'Web Design'
-    },    
-    {
-        'id': 'Linkedin',
-        'name': 'Linkedin',
-        'url': 'https://www.linkedin.com/in/rod-jimeno/',
-        'tecnologies': 'MERN stack',
-        'categories': 'Web Design'
-    },    
-    {
-        'id': 'X',
-        'name': 'X',
-        'url': 'https://twitter.com/Sendaplays',
-        'tecnologies': 'React, Node, Mongo',
-        'categories': 'Web Design'
-    }
+  {
+    id: "Music-Festival",
+    name: "Music Festival",
+    url: "https://victorroblesweb.es",
+    tecnologies: "HTML, Tailwind CSS",
+    categories: "Web Design",
+    description:
+      "A website for a fake music festival, built using Tailwind CSS.",
+    github: "https://github.com/Rodjxc/Music-Festival",
+  },
+  {
+    id: "movietrack",
+    name: "MovieTrack",
+    url: "movietrack.com",
+    tecnologies: "HTML, CSS, JS, React",
+    categories: "Web Design",
+    description:
+      "A website to write down, rate, and track movies you've watched or want to watch and add a description about them. Built using React.",
+    github: "https://github.com/Rodjxc/movies-site",
+  },
+  {
+    id: "lafogataderaid",
+    name: "La Fogata de Raid",
+    url: "https://lafogataderaid.com/",
+    tecnologies: "Wordpress, CSS",
+    categories: "Web Design",
+    description:
+      "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish of game guides of the videogame.",
+  },
 ];
