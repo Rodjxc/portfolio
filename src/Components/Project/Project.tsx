@@ -31,15 +31,21 @@ export const Project = () => {
 
   return (
     <div className="page-work">
-      <div className="mask">
-        <img src={"../../../public/img/" + proyecto.id + ".jpg"} alt="" />
-      </div>
-      <h1>{proyecto.name}</h1>
-      <p>{proyecto.tecnologies}</p>
-      <p>{proyecto.description}</p>
-      <a href={proyecto.url} target="blank">
-        Go to the Proyect
-      </a>
+      {proyecto && (
+        <div className="mask">
+          <img src={`../../../public/img/${proyecto.id}.jpg`} alt="" />
+        </div>
+      )}
+      {proyecto && (
+        <>
+          <h1>{proyecto.name}</h1>
+          <p>{proyecto.tecnologies}</p>
+          <p>{proyecto.description}</p>
+          <a href={proyecto.url} target="_blank">
+            Go to the Project
+          </a>
+        </>
+      )}
     </div>
   );
 };
