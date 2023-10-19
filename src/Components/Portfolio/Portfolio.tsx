@@ -24,7 +24,9 @@ export const Portfolio = () => {
                 <em>{Works.description}</em>
               </p>
               <span>
-                <Link to={Works.github}>Github repository</Link>
+                <Link to={Works.github || "/default-path-if-undefined"}>
+                  Github repository
+                </Link>
               </span>
             </article>
           );

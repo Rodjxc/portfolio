@@ -1,16 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import './App.css';
-import { MyRoutes } from './Router/MyRoutes';
-
+import "./App.css";
+import { MyRoutes } from "./Router/MyRoutes";
 
 function App() {
-
   return (
-     <div className='layout'>
+    <div className="layout">
       <MyRoutes />
-   
-     </div>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
