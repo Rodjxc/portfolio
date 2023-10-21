@@ -1,14 +1,20 @@
 h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-size: 50px;
-    margin-top: 80px;
-    }
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 80px;
+}
 
+li {
+  list-style: none;
+}
 li .link {
-text-decoration: none;
+  text-decoration: none;
 }
 
 li .link:hover {
-color: #f44529;;
+  color: #f44529;
+}
+
+.cv {
+  text-align: center;
 }

@@ -20,9 +20,9 @@ export const MyRoutes = () => {
             <Route path="/" element={<Navigate to="/inicio" />} />
             <Route path="/Inicio" element={<Inicio />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
-            <Route path="/servicios" element={<Servicios />}></Route>
+            {/* <Route path="/servicios" element={<Servicios />}></Route> */}
             <Route path="/CV" element={<CV />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            {/* <Route path="/contact" element={<Contact />}></Route> */}
             <Route path="/project/:id" element={<Project />}></Route>
 
             <Route

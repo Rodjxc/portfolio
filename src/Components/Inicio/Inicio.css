@@ -1,44 +1,223 @@
-.home h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-size: 40px;
-    margin-top: 80px;
+body {
+  color: #0f2c59;
 }
 
 .home strong {
-    color: #f44529;
+  color: #f3770d;
 }
 
-.home h2, h3, h4, p {
-    font-weight: lighter;
+.home h2,
+h3,
+h4,
+p {
+  font-weight: lighter;
 }
 
-.home a {
-    padding: 7px;
-    border-radius: 5px;
-    color: white;
-    background-color: #f44529;
-    text-decoration: none;
+#container-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8rem;
+  height: 50vh;
+  background-image: url("/public/img/fondo1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.home a:hover {
-    background-color: rgb(62, 62, 104);
-    transition: all 500ms;
-    background-position: -100% 0;
+#container-hero .hero-text {
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
 }
 
-.home a:not(:hover) {
-    background-color: #f44529; 
-    transition: all 500ms;
-    background-position: -100% 0;
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.link-small {
+  text-decoration: none;
+  color: #f3770d;
+}
+
+.link-small:hover {
+  text-decoration: none;
+  color: #772410;
+  font-weight: 800;
+  transition: all 400ms;
+}
+
+.hero-img-section .hero-img {
+  -webkit-animation: morph 8s ease-in-out infinite;
+  animation: morph 8s ease-in-out infinite;
+  background-image: url(/public/img/snd.jpg);
+  background-position: 50%;
+  border: 3px solid #0f2c59;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 25rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 25rem;
+}
+
+.icons a {
+  color: #0f2c59;
+  margin-right: 10px;
 }
 
 .home .heading,
 .page .heading {
-    font-style: italic;
-    font-size: 40px;
-    font-weight: 500;
-    color: black;
-    margin-bottom: 0px;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 500;
+  color: #0f2c59;
+  margin-bottom: 0px;
 }
 
+.home a {
+  padding: 7px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/*             SECOND SECTION            */
+
+.second-section {
+  background-image: url("/public/img/fondo2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills p {
+  padding-right: 2%; /* Add spacing between the text and images */
+  font-size: x-large;
+  border-right: 2px solid rgba(45, 46, 50, 0.5);
+}
+
+.skills ul {
+  list-style: none;
+  display: flex; /* Make the <ul> a flex container */
+}
+
+.skills li {
+  margin-right: 10px; /* Add spacing between images */
+}
+
+.skills ul li {
+  cursor: pointer;
+}
+
+.skills ul li img:hover {
+  transform: translateY(-1rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.second-section-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.second-section-text h2 {
+  text-align: center;
+}
+
+/*      THIRD SECTION  |   TEAM     */
+
+.team-heading {
+  background-color: #f8f0e5;
+  margin: 0;
+}
+
+.section-heading-wrapper {
+  margin-top: 5%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the letters vertically within each word */
+  margin: 0 5px; /* Adjust the spacing between words as needed */
+  animation: wave 0.5s ease infinite alternate;
+  position: relative;
+}
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the letters vertically within each word */
+  margin: 0 5px; /* Adjust the spacing between words as needed */
+}
+
+/*  KEYFRAMES ANIMATION */
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/*  MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  #container-hero {
+    text-align: center;
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 0px;
+  }
+
+  #container-hero .hero-img {
+    height: 20rem;
+    width: 20rem;
+    margin-top: 1.4rem;
+  }
+
+  #container-hero .hero-text {
+    height: auto;
+    text-align: center;
+  }
+
+  #container-hero .hero-text h1 {
+    height: auto;
+    text-align: center;
+  }
+
+  .skills {
+    flex-direction: column;
+    position: static;
+  }
+
+  .skills p {
+    border-bottom: 2px solid rgba(45, 46, 50, 0.5);
+    border-right: none;
+    margin-bottom: 3rem;
+    margin-right: 0;
+    padding-bottom: 1rem;
+    padding-right: 0;
+  }
+}
