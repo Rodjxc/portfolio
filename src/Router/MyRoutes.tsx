@@ -1,9 +1,9 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Inicio } from "../Components/Inicio/Inicio";
 import { Portfolio } from "../Components/Portfolio/Portfolio";
-import { Servicios } from "../Components/Servicios/Servicios";
+// import { Servicios } from "../Components/Servicios/Servicios";
 import { CV } from "../Components/CV/CV";
-import { Contact } from "../Components/Contact/Contact";
+// import { Contact } from "../Components/Contact/Contact";
 import { HeaderNav } from "../Components/layout/HeaderNav/HeaderNav";
 import { Footer } from "../Components/layout/Footer/Footer";
 import { Project } from "../Components/Project/Project";
