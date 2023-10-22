@@ -22,7 +22,7 @@ export const Home = () => {
     <div className="home">
       {/*   HERO SECTION - FIRST SECTION */}
 
-      <section id="container-hero" className="hidden">
+      <section id="container-hero">
         <div className="hero-text hidden">
           <h1>
             <a
@@ -43,7 +43,7 @@ export const Home = () => {
             </h4>
           </div>
           <div>
-            <span className="icons ">
+            <span className="icons">
               <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -65,10 +65,10 @@ export const Home = () => {
       {/*   ABOUT ME - SECOND SECTION */}
 
       <section id="second-section">
-        <div className="skills hidden">
+        <div className="skills ">
           <p>Tech Stack </p>
           <ul>
-            <li className="skill hidden">
+            <li className="skill">
               <img
                 src="https://skillicons.dev/icons?i=html,css"
                 alt="skill-icon"
