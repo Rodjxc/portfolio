@@ -18,11 +18,11 @@ p {
   align-items: center;
   justify-content: space-around;
   padding: 8rem;
-  height: 50vh;
   background-image: url("/img/fondo1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 80vh;
 }
 
 #container-hero .hero-text {

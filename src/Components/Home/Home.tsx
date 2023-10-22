@@ -1,22 +1,22 @@
 import "./Home.css";
-import { useEffect } from "react";
 import { Staff } from "./Staff/Staff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export const Home = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
     });
-  }, []);
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
 
   return (
     <div className="home">
@@ -128,14 +128,14 @@ export const Home = () => {
 
       {/*            THIRD SECTION   |   The Team     */}
 
-      <section id="team-heading hidden">
+      <section id="team-heading">
         <div className="section-heading-wrapper hidden">
           <div className="section-header-item">
             <h2 className="section-heading">The Oslo Team</h2>
             <p>I wear a lot of hats around here</p>
           </div>
         </div>
-        <div>
+        <div className="hidden">
           <Staff />
         </div>
       </section>
