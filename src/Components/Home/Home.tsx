@@ -1,22 +1,22 @@
 import "./Home.css";
+import { useEffect } from "react";
 import { Staff } from "./Staff/Staff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export const Home = () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
     });
-  });
-
-  const hiddenElements = document.querySelectorAll(".hidden");
-  hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
 
   return (
     <div className="home">
@@ -65,10 +65,10 @@ export const Home = () => {
       {/*   ABOUT ME - SECOND SECTION */}
 
       <section id="second-section">
-        <div className="skills ">
+        <div className="skills hidden">
           <p>Tech Stack </p>
           <ul>
-            <li className="skill">
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=html,css"
                 alt="skill-icon"
@@ -128,8 +128,8 @@ export const Home = () => {
 
       {/*            THIRD SECTION   |   The Team     */}
 
-      <section id="team-heading" className="hidden">
-        <div className="section-heading-wrapper">
+      <section id="team-heading hidden">
+        <div className="section-heading-wrapper hidden">
           <div className="section-header-item">
             <h2 className="section-heading">The Oslo Team</h2>
             <p>I wear a lot of hats around here</p>
