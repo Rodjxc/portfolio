@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { Inicio } from "../Components/Inicio/Inicio";
+import { Home } from "../Components/Home/Home";
 import { Portfolio } from "../Components/Portfolio/Portfolio";
 // import { Servicios } from "../Components/Servicios/Servicios";
 import { CV } from "../Components/CV/CV";
@@ -17,8 +17,8 @@ export const MyRoutes = () => {
         {/*   MAIN CONTENT */}
         <section className="content">
           <Routes>
-            <Route path="/" element={<Navigate to="/inicio" />} />
-            <Route path="/Inicio" element={<Inicio />}></Route>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/Home" element={<Home />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
             {/* <Route path="/servicios" element={<Servicios />}></Route> */}
             <Route path="/CV" element={<CV />}></Route>

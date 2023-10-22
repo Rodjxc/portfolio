@@ -1,9 +1,9 @@
-import "./Inicio.css";
+import "./Home.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
-export const Inicio = () => {
+export const Home = () => {
   return (
     <div className="home">
       {/*   HERO SECTION - FIRST SECTION */}
@@ -41,7 +41,7 @@ export const Inicio = () => {
         </div>
         <div className="hero-img-section">
           <img
-            src="../../../public/img/snd.jpg"
+            src="public.url/img/snd.jpg"
             alt="profile pic for Rod"
             className="hero-img"
           />
