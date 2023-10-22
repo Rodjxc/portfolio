@@ -1,15 +1,16 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   gap: 20px;
-  padding: 1rem;
+  padding: 100px;
 }
 
 .card {
   border: 2px solid #0f2c59;
   border-radius: 0 0 70px 70px;
-  margin-top: 3rem;
   text-align: center;
+  max-width: 360px;
 }
 
 .card-image {

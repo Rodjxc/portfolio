@@ -4,12 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export const Home = () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
+
   return (
     <div className="home">
       {/*   HERO SECTION - FIRST SECTION */}
 
-      <section id="container-hero">
-        <div className="hero-text">
+      <section id="container-hero" className="hidden">
+        <div className="hero-text hidden">
           <h1>
             <a
               className="link-small"
@@ -29,7 +43,7 @@ export const Home = () => {
             </h4>
           </div>
           <div>
-            <span className="icons">
+            <span className="icons ">
               <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -39,7 +53,7 @@ export const Home = () => {
             </span>
           </div>
         </div>
-        <div className="hero-img-section">
+        <div className="hero-img-section hidden">
           <img
             src="/img/snd.jpg"
             alt="profile pic for Rod"
@@ -48,35 +62,37 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="second-section">
-        <div className="skills">
+      {/*   ABOUT ME - SECOND SECTION */}
+
+      <section id="second-section">
+        <div className="skills hidden">
           <p>Tech Stack </p>
           <ul>
-            <li>
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=html,css"
                 alt="skill-icon"
               />
             </li>
-            <li>
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=js,ts"
                 alt="skill-icon"
               />
             </li>
-            <li>
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=figma,ps"
                 alt="skill-icon"
               />
             </li>
-            <li>
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=react,vite"
                 alt="skill-icon"
               />
             </li>
-            <li>
+            <li className="skill hidden">
               <img
                 src="https://skillicons.dev/icons?i=bootstrap,tailwind,scss"
                 alt="skill-icon"
@@ -85,8 +101,7 @@ export const Home = () => {
           </ul>
         </div>
 
-        {/*   ABOUT ME - SECOND SECTION */}
-        <div className="second-section-text">
+        <div className="second-section-text hidden">
           <h3>ABOUT ME</h3>
           <h4>
             I love building beautiful and functional web applications and
@@ -110,7 +125,10 @@ export const Home = () => {
           </h4>
         </div>
       </section>
-      <section className="team-heading">
+
+      {/*            THIRD SECTION   |   The Team     */}
+
+      <section id="team-heading" className="hidden">
         <div className="section-heading-wrapper">
           <div className="section-header-item">
             <h2 className="section-heading">The Oslo Team</h2>

@@ -83,7 +83,7 @@ p {
 
 /*             SECOND SECTION            */
 
-.second-section {
+#second-section {
   background-image: url("/img/fondo2.svg");
   background-size: cover;
   background-position: center;
@@ -156,6 +156,29 @@ p {
   justify-content: center;
   align-items: center; /* Center the letters vertically within each word */
   margin: 0 5px; /* Adjust the spacing between words as needed */
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.skill:nth-child(2) {
+  transition-delay: 200ms;
+}
+.skill:nth-child(2) {
+  transition-delay: 400ms;
+}
+.skill:nth-child(4) {
+  transition-delay: 600ms;
 }
 
 /*  KEYFRAMES ANIMATION */
@@ -233,5 +256,13 @@ p {
     margin-right: 0;
     padding-bottom: 1rem;
     padding-right: 0;
+  }
+}
+
+/* Media query for the scrolling, to make it slower and nicer*/
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }
