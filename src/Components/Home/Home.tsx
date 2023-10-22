@@ -41,7 +41,7 @@ export const Home = () => {
         </div>
         <div className="hero-img-section">
           <img
-            src="public.url/img/snd.jpg"
+            src="/img/snd.jpg"
             alt="profile pic for Rod"
             className="hero-img"
           />

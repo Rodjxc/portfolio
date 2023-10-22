@@ -1,12 +1,11 @@
 @font-face {
   font-family: "Kanit";
-  src: url("../../../public/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
+  src: url("/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../../../public/fonts/Quicksand/Quicksand-Regular.ttf")
-    format("truetype");
+  src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
 body {

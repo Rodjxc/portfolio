@@ -33,7 +33,7 @@ export const Project = () => {
     <div className="page-work">
       {proyecto && (
         <div className="mask">
-          <img src={`../../../public/img/${proyecto.id}.jpg`} alt="" />
+          <img src={`/img/${proyecto.id}.jpg`} alt="" />
         </div>
       )}
       {proyecto && (
