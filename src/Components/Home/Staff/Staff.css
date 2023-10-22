@@ -3,7 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   gap: 20px;
-  padding: 100px;
+  margin: 4rem 2rem 2rem 2rem;
 }
 
 .card {
@@ -20,7 +20,8 @@
 
 .card h1 {
   font-size: larger;
-  padding-bottom: 3%;
+  font-weight: 900;
+  padding-bottom: 8%;
   border-bottom: 1px solid #0f2c59;
 }
 

@@ -6,11 +6,16 @@ import { useEffect } from "react";
 
 export const Home = () => {
   useEffect(() => {
-    // Intersection Observer setup
+    // Intersection Observer setup. Runs the observer on load. It'll "observe" changes in the intersection of a target element
+    // with a parent element or the viewport
+
     const observer = new IntersectionObserver((entries) => {
+      // it goes over every "entry" in the entries array, Entries represent elements being observed. If the entry "intersects", it gives
+      // it the class of show (making them visible through CSS). Since I want them dissapearing again when not displayed, I make an else
+      // that will remove the class
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry);
           entry.target.classList.add("show");
         } else {
           entry.target.classList.remove("show");
@@ -133,6 +138,14 @@ export const Home = () => {
             <br />{" "}
           </h4>
         </div>
+        <div className="contact hidden">
+          <div className="contact-text">
+            <h2>Contact me! 👇</h2>
+            <a href="mailto:rodrysxc@gmail.com">
+              <h1>rodrysxc@gmail.com</h1>
+            </a>
+          </div>
+        </div>
       </section>
 
       {/*            THIRD SECTION   |   The Team     */}
@@ -141,10 +154,10 @@ export const Home = () => {
         <div className="section-heading-wrapper hidden">
           <div className="section-header-item">
             <h2 className="section-heading">The Oslo Team</h2>
-            <p>I wear a lot of hats around here</p>
+            <p>I wear a lot of hats around here.</p>
           </div>
         </div>
-        <div className="hidden">
+        <div className="staff-cards hidden">
           <Staff />
         </div>
       </section>

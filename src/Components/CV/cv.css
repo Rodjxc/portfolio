@@ -1,7 +1,6 @@
 h2 {
   font-weight: 400;
   font-size: 50px;
-  margin-top: 80px;
 }
 
 li {
@@ -17,4 +16,25 @@ li .link:hover {
 
 .cv {
   text-align: center;
+  background-image: url("/img/fondo3.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.education {
+  margin-top: 15%;
+}
+
+.working-tools {
+  transition-delay: 200ms;
+}
+
+.other-languages {
+  transition-delay: 400ms;
+  margin-bottom: 2rem;
+}
+
+.extra-bit {
+  background-color: #f44529;
 }
