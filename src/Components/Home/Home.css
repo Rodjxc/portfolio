@@ -124,8 +124,8 @@ p {
 .second-section-text {
   display: flex;
   flex-direction: column;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .second-section-text h2 {
@@ -183,7 +183,7 @@ p {
 
 /*  MEDIA QUERIES */
 
-@media (max-width: 900px) {
+@media (max-width: 884px) {
   #container-hero {
     text-align: center;
     flex-direction: column-reverse;
@@ -208,8 +208,22 @@ p {
   }
 
   .skills {
+    display: flex; /* Reset display to flex */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+  }
+
+  .skills ul {
+    justify-content: center; /* Center the list horizontally */
     flex-direction: column;
-    position: static;
+  }
+
+  .skills li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0; /* Remove spacing between images */
+    margin-bottom: 10px; /* Add spacing between images vertically */
   }
 
   .skills p {

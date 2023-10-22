@@ -14,7 +14,7 @@ export const HeaderNav = () => {
               to="/home"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Main
+              Home
             </NavLink>
           </li>
           <li>

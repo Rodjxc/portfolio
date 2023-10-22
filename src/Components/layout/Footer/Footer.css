@@ -1,11 +1,11 @@
 .footer {
-    min-height: 40px;
-    line-height: 7px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 80px;
-    padding-top: 40px;
-    color: #444;
-    background-color: #f5f5f5;
-    border-top: 3px solid black;
+  min-height: 40px;
+  line-height: 7px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 80px;
+  padding-top: 40px;
+  color: #0f2c59;
+  background-color: #f8f0e5;
+  border-top: 3px solid #0f2c59;
 }

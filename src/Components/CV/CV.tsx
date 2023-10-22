@@ -42,7 +42,7 @@ export const CV = () => {
               and Leisure Studies
             </li>
           </ul>
-          <h2>Work Experience</h2>
+          {/* <h2>Work Experience</h2>
           <ul>
             <li>Web Developer | Self employed (2022)</li>
             <li>Macondo AS | Key Account Manager (2022-2023) | Oslo </li>
@@ -51,17 +51,19 @@ export const CV = () => {
               Gipsy Hill Brewing Co. | Taproom Manager - Head of Beer
               (2018-2019) | London, UK{" "}
             </li>
-          </ul>
+          </ul> */}
         </article>
         <article>
-          <h2>Tech Stack</h2>
+          <h2>Working Tools</h2>
           <ul>
-            <li>HTML, CSS and Javascript</li>
-            <li>Typescript</li>
+            <li>HTML5, CSS3 </li>
+            <li>Javascript with Typescript</li>
             <li>Tailwind & Bootstrap</li>
-            <li>React</li>
+            <li>React JS with Vite</li>
             <li>Adobe Illustrator and Adobe Photoshop</li>
             <li>Figma & Webflow</li>
+            <li>Spotify</li>
+            <li>and Google :)</li>
           </ul>
         </article>
         <article>

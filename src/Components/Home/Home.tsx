@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { Staff } from "./Staff/Staff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
@@ -105,9 +105,8 @@ export const Home = () => {
             public speaking amongst other things. <br />
             <br />
             <br />
-            <Link to="/Contact">Contact me!</Link>
             <br />
-            <br />
+            <br />{" "}
           </h4>
         </div>
       </section>
@@ -118,8 +117,9 @@ export const Home = () => {
             <p>I wear a lot of hats around here</p>
           </div>
         </div>
-
-        <div className="works"></div>
+        <div>
+          <Staff />
+        </div>
       </section>
     </div>
   );

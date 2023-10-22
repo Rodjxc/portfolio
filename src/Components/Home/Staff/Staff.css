@@ -1,0 +1,32 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 1rem;
+}
+
+.card {
+  border: 2px solid #0f2c59;
+  border-radius: 0 0 70px 70px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h1 {
+  font-size: larger;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #0f2c59;
+}
+
+/* Media query for screens below 940px */
+@media (max-width: 940px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-auto-rows: auto; /* Automatically create new rows */
+  }
+}
