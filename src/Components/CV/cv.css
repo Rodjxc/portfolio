@@ -1,40 +1,63 @@
-h2 {
-  font-weight: 400;
-  font-size: 50px;
-}
-
-li {
-  list-style: none;
-}
-li .link {
-  text-decoration: none;
-}
-
-li .link:hover {
-  color: #f44529;
-}
-
 .cv {
-  text-align: center;
   background-image: url("/img/fondo3.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 8% 5%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Space items evenly in the row */
+  gap: 20px; /* Adjust the gap as needed */
+  min-height: 500px;
 }
 
-.education {
-  margin-top: 15%;
-}
-
-.working-tools {
-  transition-delay: 200ms;
-}
-
+.education,
+.working-tools,
 .other-languages {
-  transition-delay: 400ms;
-  margin-bottom: 2rem;
+  flex-basis: calc(33.33% - 50px); /* Set a flex basis for equal width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.extra-bit {
-  background-color: #f44529;
+.education h2,
+.working-tools h2,
+.other-languages h2 {
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid #0f2c59;
+}
+
+.education ul,
+.working-tools ul,
+.other-languages ul {
+  list-style: none;
+  padding: 20px;
+  text-align: left;
+}
+
+.education li .link,
+.working-tools li .link,
+.other-languages li .link {
+  text-decoration: none;
+}
+
+.education li .link:hover,
+.working-tools li .link:hover,
+.other-languages li .link:hover {
+  color: #f44529;
+}
+
+/* Media Query for stacking vertically on smaller screens */
+@media (max-width: 768px) {
+  .cv {
+    flex-direction: column;
+  }
+
+  .education,
+  .working-tools,
+  .other-languages {
+    flex-basis: 100%; /* Full width on smaller screens */
+  }
 }

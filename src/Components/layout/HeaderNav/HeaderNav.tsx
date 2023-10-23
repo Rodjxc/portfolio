@@ -1,7 +1,12 @@
 import { NavLink } from "react-router-dom";
+
 import "./HeaderNav.css";
 
 export const HeaderNav = () => {
+  // Small function that will take us to the top of the screen when we browse through different pages. We call with an onClick
+  const handleNavLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <header className="header">
       <nav>
@@ -13,6 +18,7 @@ export const HeaderNav = () => {
             <NavLink
               to="/home"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={handleNavLinkClick}
             >
               Home
             </NavLink>
@@ -21,6 +27,7 @@ export const HeaderNav = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={handleNavLinkClick}
             >
               Portfolio
             </NavLink>
@@ -32,6 +39,7 @@ export const HeaderNav = () => {
             <NavLink
               to="/cv"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={handleNavLinkClick}
             >
               CV
             </NavLink>

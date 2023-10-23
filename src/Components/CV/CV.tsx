@@ -24,7 +24,7 @@ export const CV = () => {
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
   return (
-    <div>
+    <div className="">
       <section className="cv">
         <article>
           <div className="education hidden">
@@ -80,7 +80,10 @@ export const CV = () => {
         </article>
         <article>
           <div className="working-tools hidden">
-            <h2>Working Tools</h2>
+            <h2>
+              Working <br />
+              Tools
+            </h2>
             <ul>
               <li>HTML5, CSS3 </li>
               <li>Javascript with Typescript</li>
@@ -95,7 +98,11 @@ export const CV = () => {
         </article>
         <article>
           <div className="other-languages hidden">
-            <h2>Other languages</h2>
+            <h2>
+              Other
+              <br />
+              Languages
+            </h2>
             <ul>
               <li>English | Proficient (Non-Native Speaker)</li>
               <li>Spanish | Native</li>

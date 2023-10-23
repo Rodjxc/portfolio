@@ -3,7 +3,7 @@ body {
 }
 
 .home strong {
-  color: #f3770d;
+  color: var(--orange);
 }
 
 .home h2,
@@ -38,7 +38,7 @@ p {
 
 .link-small {
   text-decoration: none;
-  color: #f3770d;
+  color: var(--orange);
 }
 
 .link-small:hover {
@@ -59,10 +59,11 @@ p {
   position: relative;
   transition: all 1s ease-in-out;
   width: 25rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .icons a {
-  color: #0f2c59;
+  color: var(--blue);
   margin-right: 10px;
 }
 
@@ -91,6 +92,11 @@ p {
   margin: 0;
 }
 
+.second-section-text h3 {
+  font-size: x-large;
+  font-weight: 800;
+}
+
 .skills {
   display: flex;
   align-items: center;
@@ -100,7 +106,7 @@ p {
 .skills p {
   padding-right: 2%; /* Add spacing between the text and images */
   font-size: x-large;
-  border-right: 2px solid rgba(45, 46, 50, 0.5);
+  border-right: 2px solid var(--blue);
 }
 
 .skills ul {
@@ -163,23 +169,17 @@ p {
 .contact-text h1 {
   display: inline-block;
   padding: 20px 50px;
-  border: 2px solid #0f2c59;
+  border: 2px solid var(--blue);
   border-radius: 50%;
   font-size: x-large;
   text-align: center;
   color: #0f2c59;
-  background: #fff; /* Background color */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 3);
-  animation: moveLeftRight 03s infinite alternate;
+  background: #ffe5d4; /* Background color */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: moveLeftRight 5s infinite alternate;
 }
 
 /*      THIRD SECTION  |   TEAM     */
-
-.team-heading {
-  background-color: #f8f0e5;
-  margin: 0;
-  padding: 2rem;
-}
 
 .section-heading-wrapper {
   margin-top: 5%;
@@ -188,10 +188,10 @@ p {
 .section-heading {
   display: flex;
   justify-content: center;
-  align-items: center; /* Center the letters vertically within each word */
-  margin: 0 5px; /* Adjust the spacing between words as needed */
   animation: wave 0.5s ease infinite alternate;
   position: relative;
+  font-size: x-large;
+  font-size: xx-large;
 }
 p {
   display: flex;
@@ -229,12 +229,10 @@ p {
 
 @keyframes moveLeftRight {
   0% {
-    transform: translateX(0); /* Start position */
+    transform: translateX(-45px); /* Start position */
   }
   100% {
-    transform: translateX(
-      100px
-    ); /* End position (adjust the value as needed) */
+    transform: translateX(25px); /* End position (adjust the value as needed) */
   }
 }
 
@@ -293,7 +291,7 @@ p {
   }
 
   .skills p {
-    border-bottom: 2px solid rgba(45, 46, 50, 0.5);
+    border-bottom: 2px solid #0f2c59;
     border-right: none;
     margin-bottom: 3rem;
     margin-right: 0;

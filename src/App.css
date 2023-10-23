@@ -19,3 +19,8 @@ body {
 .content {
   min-height: 300px;
 }
+
+:root {
+  --orange: #f3770d;
+  --blue: #0f2c59;
+}
