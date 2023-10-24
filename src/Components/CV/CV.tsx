@@ -107,7 +107,8 @@ export const CV = () => {
               <li>English | Proficient (Non-Native Speaker)</li>
               <li>Spanish | Native</li>
               <li>Catalan | Native</li>
-              <li>French | Conversational Proficiency</li>
+              <li>French | Limited Working Proficiency</li>
+              <li>Norwegian | Elementary Proficiency</li>
             </ul>
           </div>
         </article>

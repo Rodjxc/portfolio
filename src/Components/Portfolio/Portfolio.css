@@ -1,71 +1,91 @@
-@font-face {
-  font-family: "Kanit";
-  src: url("/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
-}
-
 body {
   font-family: "Kanit";
+  background-image: url("/img/fondoportfolio.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1 {
+  font-family: "Quicksand";
   text-align: center;
 }
 
 .works {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 6rem;
+  gap: 40px;
   align-items: center;
   justify-content: space-between;
   padding: 5%;
+  grid-auto-rows: 1fr; /* Make all rows have equal height */
+}
+
+.work-item {
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make sure work-items expand to fill the grid cell */
+}
+
+.work-item:hover {
+  transform: scale(1.05);
 }
 
 .work-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.work-item .mask {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  box-shadow: 0px 5px 25px grey;
-  border: 1px solid #ccc;
-}
-
-.work-item .mask:hover {
-  width: 105%;
-  border: 3px solid #fa4529;
-  transition: all 500ms;
+.work-item h1 {
+  color: var(--blue);
+  margin-top: 25px;
+  font-size: 29px;
+  text-align: center;
 }
 
 .work-item span {
   color: grey;
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
-.work-item h1 {
-  color: black;
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
+.work-item p {
+  margin: 20px 30px auto;
 }
 
 .work-item a {
-  color: black;
-  margin-top: 5px;
-  display: block;
+  color: var(--blue);
+  margin-top: 10px;
   text-decoration: none;
+  text-align: center;
+  height: 40px;
 }
 
 .work-item a:hover {
-  color: #fa4529;
+  color: var(--orange);
   transition: all 300ms;
 }
 
-@media (min-width: 820px) {
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 28px;
+  display: flex;
+  margin: 10px;
+}
+
+@media (min-width: 960px) {
   .works {
     grid-template-columns: repeat(2, 1fr);
   }

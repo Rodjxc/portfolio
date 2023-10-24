@@ -1,4 +1,7 @@
 import { Works } from "../../Data/Works";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
@@ -12,7 +15,7 @@ export const Portfolio = () => {
             <article key={Works.id} className="work-item">
               <div className="mask">
                 <img
-                  src={"../../../img/" + Works.id + ".jpg"}
+                  src={"/img/" + Works.id + ".jpg"}
                   alt="Image of the project"
                 />
               </div>
@@ -20,13 +23,28 @@ export const Portfolio = () => {
                 <Link to={"/project/" + Works.id}>{Works.name}</Link>
               </h1>
               <span>{Works.tecnologies}</span>
-              <p>
-                <em>{Works.description}</em>
-              </p>
+              <p>{Works.description}</p>
               <span>
-                <Link to={Works.github || "/default-path-if-undefined"}>
-                  Github repository
-                </Link>
+                <div className="icons">
+                  <span className="icon-wrapper">
+                    <Link
+                      to={Works.url || "/default-path-if-undefined"}
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowUpFromBracket}
+                        className="icon"
+                      />
+                    </Link>
+
+                    {/* Here I made it only render if there's something inside the github param. If it doesn't have, don't show */}
+                    {Works.github && (
+                      <Link to={Works.github} target="_blank">
+                        <FontAwesomeIcon icon={faGithub} className="icon" />
+                      </Link>
+                    )}
+                  </span>
+                </div>
               </span>
             </article>
           );
