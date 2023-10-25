@@ -14,14 +14,20 @@ export const Portfolio = () => {
           return (
             <article key={Works.id} className="work-item">
               <div className="mask">
-                <img
-                  src={"/img/" + Works.id + ".jpg"}
-                  alt="Image of the project"
-                />
+                {/*   If I want it to go to another page where I can display the project itself in detail, activate the
+                link below. In this case the projects are just ideas so there's not much to talk about */}
+                {/* <Link to={"/project/" + Works.id}> */}
+                <Link
+                  to={Works.url || "/default-path-if-undefined"}
+                  target="_blank"
+                >
+                  <img
+                    src={"/img/" + Works.id + ".jpg"}
+                    alt="Image of the project"
+                  />
+                </Link>
               </div>
-              <h1>
-                <Link to={"/project/" + Works.id}>{Works.name}</Link>
-              </h1>
+              <h1>{Works.name}</h1>
               <span>{Works.tecnologies}</span>
               <p>{Works.description}</p>
               <span>
