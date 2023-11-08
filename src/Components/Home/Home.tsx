@@ -118,15 +118,22 @@ export const Home = () => {
         <div className="second-section-text hidden">
           <h3>ABOUT ME</h3>
           <h4>
-            I love building beautiful and functional web applications and
-            letting my creativity shine through code. I'm a natural
-            problem-solver and self-learner.
+          A brewer who changed careers into front-end developer, that loves the webs with awesome user experiences!
+          I can sit for hours and code or research new frameworks, tools or learn new technologies. 
+          <br />
+
+          I have a Bachelor's Degree in Tourism and Leisure Studies, so I've always being passionate about learning languages.
+          <br />
+          <br />
+        Some of my favorite frameworks/tools: HTML, CSS3, Typescript, ReactJS, Vite, TailwindCSS, Bootstrap, Figma, Photoshop and of course Spotify, Google, Stackoverflow and Chat GPT like AIs. I'm a natural
+          problem-solver and self-learner.
             <br />
+            <br />
+
             I'm also a passionate and professional digital content creator with
             extensive experience in video creation, photo and video editing and
             live streaming.
-          </h4>
-          <h4>
+            <br />
             I've started my own YouTube (39k+) and Twitch channel (10k+) from 0
             and have built a solid follower base and engaged community and do
             live streams when the time allows it. This has allowed me to expand
@@ -134,8 +141,6 @@ export const Home = () => {
             public speaking amongst other things. <br />
             <br />
             <br />
-            <br />
-            <br />{" "}
           </h4>
         </div>
         <div className="contact hidden">
