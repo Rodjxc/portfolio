@@ -174,7 +174,7 @@ p {
   font-size: x-large;
   text-align: center;
   color: #0f2c59;
-  background: #ffe5d4; /* Background color */
+  background: whitesmoke; /* Background color */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   animation: moveLeftRight 5s infinite alternate;
 }
