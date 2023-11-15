@@ -32,7 +32,7 @@ export const Works = [
   {
     id: "gatsbyportf",
     name: "Gatsby Portfolio Template",
-    url: "https://gatsby-portf-template-j75r8mhel-rodjxc.vercel.app/",
+    url: "https://gatsby-portf-template-j75r8mhel-rodjxc.vercel.app",
     tecnologies: "GatsbyJS, ReactJS, GraphQL and CSS Modules",
     categories: "Web Design",
     description:
