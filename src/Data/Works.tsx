@@ -10,15 +10,6 @@ export const Works = [
     github: "https://github.com/Rodjxc/Music-Festival",
   },
   {
-    id: "movietrack",
-    name: "MovieTrack",
-    url: "https://movies-site-h4l5b12fe-rodjxc.vercel.app",
-    tecnologies: "HTML, CSS, React & JS",
-    categories: "Website functionality",
-    description:
-      "A website to write down, rate, and track movies you've watched or want to watch and add a description about them. Built using React and saving the items in the Local Storage",
-    github: "https://github.com/Rodjxc/movies-site",
-  },   {
     id: "portoflio",
     name: "Portfolio",
     url: "https://rodj.dev",
@@ -27,6 +18,27 @@ export const Works = [
     description:
       "This same website, where I got to play a bit more with React and other functionalities and, at the same time, building my own portfolio. Built with the React Routing library.",
     github: "https://github.com/Rodjxc/portfolio",
+  },
+  {
+    id: "movietrack",
+    name: "MovieTrack",
+    url: "https://movies-site-h4l5b12fe-rodjxc.vercel.app",
+    tecnologies: "HTML, CSS, React & JS",
+    categories: "Website functionality",
+    description:
+      "A website to write down, rate, and track movies you've watched or want to watch and add a description about them. Built using React and saving the items in the Local Storage",
+    github: "https://github.com/Rodjxc/movies-site",
+  },   
+  {
+    id: "gatsbyportf",
+    name: "Gatsby Portfolio Template",
+    url: "https://gatsby-portf-template-j75r8mhel-rodjxc.vercel.app/",
+    tecnologies: "GatsbyJS, ReactJS, GraphQL and CSS Modules",
+    categories: "Web Design",
+    description:
+      "A website template for a portfolio / blog, created from scratch using a blank Gatsby template. I used CSS modules for styling, and GraphQL for fetch information from Mardown files. It creates new pages dynamically everytime a new markdown file is created. Also thanks to GraphQL improves the performance of the site and size of rendered images",
+      github: "https://github.com/Rodjxc/gatsby-tuto",
+
   },
   {
     id: "lafogataderaid",
