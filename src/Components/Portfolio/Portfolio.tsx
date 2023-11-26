@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { faFigma } from "@fortawesome/free-brands-svg-icons";
+
 import "./Portfolio.css";
 
 export const Portfolio = () => {
@@ -17,7 +19,7 @@ export const Portfolio = () => {
                 {/*   If I want it to go to another page where I can display the project itself in detail, activate the
                 link below. In this case the projects are just ideas so there's not much to talk about */}
                 {/* <Link to={"/project/" + Works.id}> */}
-                <Link
+                <Link className="portfolio-img"
                   to={Works.url || "/default-path-if-undefined"}
                   target="_blank"
                 >
@@ -47,6 +49,11 @@ export const Portfolio = () => {
                     {Works.github && (
                       <Link to={Works.github} target="_blank">
                         <FontAwesomeIcon icon={faGithub} className="icon" />
+                      </Link>
+                    )}
+                    {Works.figma && (
+                      <Link to={Works.figma} target="_blank">
+                        <FontAwesomeIcon icon={faFigma} className="icon" />
                       </Link>
                     )}
                   </span>

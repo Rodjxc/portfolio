@@ -1,20 +1,30 @@
 export const Works = [
   {
     id: "Music-Festival",
-    name: "Music Festival",
+    name: "Oslo Music Festival",
     url: "https://music-festival-ten.vercel.app/",
     tecnologies: "HTML, React, Typescript & Tailwind CSS",
-    categories: "Website",
+    categories: "Web Design",
     description:
       "A website for a fake music festival, built using React and Tailwind CSS and implementing React libraries .",
     github: "https://github.com/Rodjxc/Music-Festival",
   },
   {
+    id: "CommuniLink",
+    name: "CommuniLink",
+    url: "https://rods-amazing-site-e407b1.webflow.io/",
+    tecnologies: "Webflog + Figma",
+    categories: "Web Design, built using Webflow",
+    description:
+      "A simple landing page for a website of a fake chat and video calls app, fully responsive. Designed in Figma and built using WebFlow",
+    figma: "https://www.figma.com/file/gpUYxGbCorvTaXlqGYHxmE/Practice%3A-Chat-App-Homepage-Design-(Copy)?type=design&node-id=107%3A17&mode=design&t=zf1RNJpPckd9Z4oB-1"
+  },
+  {
     id: "portoflio",
     name: "Portfolio",
     url: "https://rodj.dev",
-    tecnologies: "HTML, CSS, React & TS",
-    categories: "Website",
+    tecnologies: "HTML, CSS, React & TypeScript",
+    categories: "Website, Web Design",
     description:
       "This same website, where I got to play a bit more with React and other functionalities and, at the same time, building my own portfolio. Built with the React Routing library.",
     github: "https://github.com/Rodjxc/portfolio",
@@ -34,7 +44,7 @@ export const Works = [
     name: "Gatsby Portfolio Template",
     url: "https://gatsby-portf-template-j75r8mhel-rodjxc.vercel.app",
     tecnologies: "GatsbyJS, ReactJS, GraphQL and CSS Modules",
-    categories: "Web Design",
+    categories: "Web Development",
     description:
       "A website template for a portfolio / blog, created from scratch using a blank Gatsby template. I used CSS modules for styling, and GraphQL for fetch information from Mardown files. It creates new pages dynamically everytime a new markdown file is created. Also thanks to GraphQL improves the performance of the site and size of rendered images",
       github: "https://github.com/Rodjxc/gatsby-tuto",
@@ -45,8 +55,9 @@ export const Works = [
     name: "La Fogata de Raid",
     url: "https://lafogataderaid.com/",
     tecnologies: "Wordpress, CSS",
-    categories: "Web Design",
+    categories: "Website with Wordpress CMS",
     description:
       "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame.",
   },
+  
 ];
