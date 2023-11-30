@@ -10,10 +10,21 @@ export const Works = [
     github: "https://github.com/Rodjxc/Music-Festival",
   },
   {
+    id: "hystar",
+    name: "Hystar",
+    url: "https://hystar.webflow.io/",
+    tecnologies: "Webflow + Figma",
+    categories: "Web Design, built using Webflow",
+    description:
+      "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements",
+    figma: "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1"
+  },
+
+  {
     id: "CommuniLink",
     name: "CommuniLink",
     url: "https://communilinkrodjdev.webflow.io/",
-    tecnologies: "Webflog + Figma",
+    tecnologies: "Webflow + Figma",
     categories: "Web Design, built using Webflow",
     description:
       "A simple landing page for a website of a fake chat and video calls app, fully responsive. Designed in Figma and built using WebFlow",
