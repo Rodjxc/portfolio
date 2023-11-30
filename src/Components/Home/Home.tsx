@@ -52,7 +52,7 @@ export const Home = () => {
           <div>
             <h4>Hi👋!</h4>
             <h4>
-              I'm <strong>Rod</strong>, a <strong>Web Developer</strong> based
+              I'm <strong>Rod</strong>, a <strong>Web Developer</strong> and <strong>Web Designer</strong> based
               in Oslo, Norway 📍.
             </h4>
           </div>
@@ -119,13 +119,14 @@ export const Home = () => {
           <h3>ABOUT ME</h3>
           <h4>
           A brewer who changed careers into front-end developer, that loves the webs with awesome user experiences!
-          I can sit for hours and code or research new frameworks, tools or learn new technologies. 
+          I can sit for hours and code or research new frameworks, tools or learn new technologies. I like starting new projects starting 
+          with simple designs in Figma, to fully functional websites.
           <br />
 
           I have a Bachelor's Degree in Tourism and Leisure Studies, so I've always being passionate about learning languages.
           <br />
           <br />
-        Some of my favorite frameworks/tools: HTML, CSS3, Typescript, ReactJS, Vite, TailwindCSS, Bootstrap, Figma, Photoshop and of course Spotify, Google, Stackoverflow and Chat GPT like AIs. I'm a natural
+        Some of my favorite frameworks/tools: HTML, CSS3, Typescript, ReactJS, Vite, Webflow, TailwindCSS, Bootstrap, Figma, Photoshop and of course Spotify, Google, Stackoverflow and Chat GPT like AIs. I'm a natural
           problem-solver and self-learner.
             <br />
             <br />

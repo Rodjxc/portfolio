@@ -60,6 +60,8 @@ export const CV = () => {
                   Udemy | Tailwind CSS - Zero to hero v3 2023
                 </a>
               </li>
+              <li>Udemy | Complete Web Design: From Figma to Webflow to Freelancing</li>
+              <li>IBD Certified Beer Sommelier (yes, for real)</li>
               <li>
                 UIB - University of Balearic Island (Spain) - Degree in Tourism
                 and Leisure Studies
