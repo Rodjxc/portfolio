@@ -92,7 +92,8 @@ export const CV = () => {
               <li>Tailwind & Bootstrap</li>
               <li>React JS with Vite</li>
               <li>Adobe Illustrator and Adobe Photoshop</li>
-              <li>Figma & Webflow</li>
+              <li>Figma</li>
+              <li>Building websites with Webflow</li>
               <li>Spotify</li>
               <li>and Google :)</li>
             </ul>

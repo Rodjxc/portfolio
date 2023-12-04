@@ -1,4 +1,15 @@
 export const Works = [
+ 
+  {
+    id: "hystar",
+    name: "Hystar",
+    url: "https://hystar.webflow.io/",
+    tecnologies: "Webflow + Figma",
+    categories: "Web Design, built using Webflow",
+    description:
+      "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements. It includes a blog application (news) with different posts that map the data from a database",
+    figma: "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1"
+  },
   {
     id: "Music-Festival",
     name: "Oslo Music Festival",
@@ -8,16 +19,6 @@ export const Works = [
     description:
       "A website for a fake music festival, built using React and Tailwind CSS and implementing React libraries .",
     github: "https://github.com/Rodjxc/Music-Festival",
-  },
-  {
-    id: "hystar",
-    name: "Hystar",
-    url: "https://hystar.webflow.io/",
-    tecnologies: "Webflow + Figma",
-    categories: "Web Design, built using Webflow",
-    description:
-      "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements",
-    figma: "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1"
   },
 
   {
