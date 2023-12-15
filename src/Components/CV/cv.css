@@ -71,8 +71,13 @@
 
   .education,
   .working-tools,
+  .work-experience,
   .other-languages {
     flex-basis: 100%;
     /* Full width on smaller screens */
+  }
+
+  .work-experience div {
+    max-width: 85%;
   }
 }
