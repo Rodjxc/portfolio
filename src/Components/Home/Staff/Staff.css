@@ -20,9 +20,16 @@
   border-bottom: 2px solid #0f2c59;
 }
 
+.card .card-position {
+  background-color: rgb(248, 237, 222);
+}
+
 .card h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
   font-weight: 900;
+  margin-top: -10px;
+  padding-top: 8%;
   padding-bottom: 8%;
   border-bottom: 1px solid #0f2c59;
 }
@@ -30,7 +37,9 @@
 /* Media query for screens below 940px */
 @media (max-width: 940px) {
   .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-auto-rows: auto; /* Automatically create new rows */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-auto-rows: auto;
+    /* Automatically create new rows */
   }
 }

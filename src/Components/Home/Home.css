@@ -104,18 +104,21 @@ p {
 }
 
 .skills p {
-  padding-right: 2%; /* Add spacing between the text and images */
+  padding-right: 2%;
+  /* Add spacing between the text and images */
   font-size: x-large;
   border-right: 2px solid var(--blue);
 }
 
 .skills ul {
   list-style: none;
-  display: flex; /* Make the <ul> a flex container */
+  display: flex;
+  /* Make the <ul> a flex container */
 }
 
 .skills li {
-  margin-right: 10px; /* Add spacing between images */
+  margin-right: 10px;
+  /* Add spacing between images */
 }
 
 .skills ul li {
@@ -138,6 +141,7 @@ p {
 .skill:nth-child(4) {
   transition-delay: 600ms;
 }
+
 .skill:nth-child(5) {
   transition-delay: 800ms;
 }
@@ -174,7 +178,8 @@ p {
   font-size: x-large;
   text-align: center;
   color: #0f2c59;
-  background: whitesmoke; /* Background color */
+  background: whitesmoke;
+  /* Background color */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   animation: moveLeftRight 5s infinite alternate;
 }
@@ -190,14 +195,17 @@ p {
   justify-content: center;
   animation: wave 0.5s ease infinite alternate;
   position: relative;
-  font-size: x-large;
   font-size: xx-large;
+
 }
+
 p {
   display: flex;
   justify-content: center;
-  align-items: center; /* Center the letters vertically within each word */
-  margin: 0 5px; /* Adjust the spacing between words as needed */
+  align-items: center;
+  /* Center the letters vertically within each word */
+  margin: 0 5px;
+  /* Adjust the spacing between words as needed */
 }
 
 .hidden {
@@ -219,9 +227,11 @@ p {
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
+
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
+
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
@@ -229,10 +239,13 @@ p {
 
 @keyframes moveLeftRight {
   0% {
-    transform: translateX(-45px); /* Start position */
+    transform: translateX(-45px);
+    /* Start position */
   }
+
   100% {
-    transform: translateX(25px); /* End position (adjust the value as needed) */
+    transform: translateX(25px);
+    /* End position (adjust the value as needed) */
   }
 }
 
@@ -240,6 +253,7 @@ p {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-5px);
   }
@@ -272,22 +286,28 @@ p {
   }
 
   .skills {
-    display: flex; /* Reset display to flex */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    /* Reset display to flex */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
     text-align: center;
   }
 
   .skills ul {
-    justify-content: center; /* Center the list horizontally */
+    justify-content: center;
+    /* Center the list horizontally */
     flex-direction: column;
   }
 
   .skills li {
     display: flex;
     flex-direction: column;
-    margin-right: 0; /* Remove spacing between images */
-    margin-bottom: 10px; /* Add spacing between images vertically */
+    margin-right: 0;
+    /* Remove spacing between images */
+    margin-bottom: 10px;
+    /* Add spacing between images vertically */
   }
 
   .skills p {

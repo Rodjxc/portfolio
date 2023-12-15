@@ -13,7 +13,8 @@ export const Staff = () => (
               className="card-image"
             />
           </div>
-          <h1>{StaffData.position}</h1>
+          <div className="card-position"><h1>{StaffData.position}</h1>
+</div>
           <h4>{StaffData.name}</h4>
         </article>
       </div>

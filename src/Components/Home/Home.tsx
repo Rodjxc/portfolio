@@ -118,28 +118,22 @@ export const Home = () => {
         <div className="second-section-text hidden">
           <h3>ABOUT ME</h3>
           <h4>
-          A brewer who changed careers into front-end developer, that loves the webs with awesome user experiences!
-          I can sit for hours and code or research new frameworks, tools or learn new technologies. I like starting new projects starting 
-          with simple designs in Figma, to fully functional websites.
-          <br />
-
-          I have a Bachelor's Degree in Tourism and Leisure Studies, so I've always being passionate about learning languages.
+          Since I was 5 I’ve been surrounded by computers and videogames which probably laid the foundations of an interest for technology. This interest took me to a pivotal decision, shifting from a 10+ years working in the craft beer industry and being a beer sommelier, to changing my career to become a developer. Fueled by this determination, I've completed all courses and education I could find over the last year to strengthen my skills, ensuring a transition into a developer role.
           <br />
           <br />
-        Some of my favorite frameworks/tools: HTML, CSS3, Typescript, ReactJS, Vite, Webflow, TailwindCSS, Bootstrap, Figma, Photoshop and of course Spotify, Google, Stackoverflow and Chat GPT like AIs. I'm a natural
-          problem-solver and self-learner.
+          I believe that my brain naturally works exactly the way a developer thinks, with the logic and
+          synchronous (or asyc.) side of programming as well as being fullfilled by the creative side of 
+          building a website. I really enjoy minimalist designs, inspired by the likes of Next JS and Vercel.
+           When I see a project built with frameworks I'm not familiar with, I instantly get an “I want to 
+           learn this” feeling, and I already have on sight learning Remix, ThreeJS and Python. Now I’m looking to
+            be part of a bigger team and contribute to wider projects with my skills and personality.
+          <br />
+          <br />
+        Some of my favorite frameworks/tools: HTML, CSS3, Typescript, ReactJS, Vite, Webflow, TailwindCSS, Bootstrap, Figma, Photoshop and of course Spotify, Google, Stackoverflow and Chat GPT like AIs. 
             <br />
             <br />
 
-            I'm also a passionate and professional digital content creator with
-            extensive experience in video creation, photo and video editing and
-            live streaming.
             <br />
-            I've started my own YouTube (39k+) and Twitch channel (10k+) from 0
-            and have built a solid follower base and engaged community and do
-            live streams when the time allows it. This has allowed me to expand
-            my skills in other fields like SEO copywriting, picture editing and
-            public speaking amongst other things. <br />
             <br />
             <br />
           </h4>
