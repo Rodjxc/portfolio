@@ -5,22 +5,24 @@
   background-repeat: no-repeat;
   padding: 8% 5%;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
-  justify-content: space-between; /* Space items evenly in the row */
-  gap: 20px; /* Adjust the gap as needed */
+  flex-direction: column;
+  gap: 20px;
   min-height: 500px;
 }
 
 .education,
 .working-tools,
+.work-experience,
 .other-languages {
-  flex-basis: calc(33.33% - 50px); /* Set a flex basis for equal width */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+
+
 .education h2,
+.work-experience h2,
 .working-tools h2,
 .other-languages h2 {
   font-weight: 400;
@@ -32,7 +34,6 @@
 .education ul,
 .working-tools ul,
 .other-languages ul {
-  list-style: none;
   padding: 20px;
   text-align: left;
 }
@@ -43,11 +44,23 @@
   text-decoration: none;
 }
 
-.education li .link:hover,
-.working-tools li .link:hover,
-.other-languages li .link:hover {
+.education li .link:hover {
   color: #f44529;
 }
+
+
+.work-experience div {
+  max-width: 60%;
+}
+
+.work-experience h4 {
+  font-weight: bold;
+}
+
+.work-experience div p {
+  display: inline-block;
+}
+
 
 /* Media Query for stacking vertically on smaller screens */
 @media (max-width: 768px) {
@@ -59,6 +72,7 @@
   .education,
   .working-tools,
   .other-languages {
-    flex-basis: 100%; /* Full width on smaller screens */
+    flex-basis: 100%;
+    /* Full width on smaller screens */
   }
 }
