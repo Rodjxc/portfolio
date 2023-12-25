@@ -1,9 +1,10 @@
 body {
-  color: #0f2c59;
+  color: #ffffff;
+  margin: 0;
 }
 
 .home strong {
-  color: var(--orange);
+  font-weight: bold;
 }
 
 .home h2,
@@ -16,34 +17,31 @@ p {
 #container-hero {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 8rem;
-  background-image: url("/img/fondo1.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 80vh;
+  justify-content: center;
+  padding: 8rem 8rem 5rem 5rem;
+  background-color: #2b2b2b;
 }
 
 #container-hero .hero-text {
-  font-family: "Quicksand";
+  font-family: "Work Sans";
   display: flex;
   flex-direction: column;
-  font-size: 25px;
+  font-size: 21px;
+  padding-right: 140px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 60px;
 }
 
 .link-small {
   text-decoration: none;
-  color: var(--orange);
+  color: var(--olivia);
 }
 
 .link-small:hover {
   text-decoration: none;
-  color: #772410;
+  color: #f5d6ce;
   font-weight: 800;
   transition: all 400ms;
 }
@@ -53,18 +51,13 @@ p {
   animation: morph 8s ease-in-out infinite;
   background-image: url(/img/snd.jpg);
   background-position: 50%;
-  border: 3px solid #0f2c59;
+  border: 3px solid #f6c5b7;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   height: 25rem;
   position: relative;
   transition: all 1s ease-in-out;
   width: 25rem;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-.icons a {
-  color: var(--blue);
-  margin-right: 10px;
+  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.5);
 }
 
 .home .heading,
@@ -80,6 +73,10 @@ p {
   padding: 7px;
   border-radius: 5px;
   text-decoration: none;
+}
+
+.show-image {
+  display: inline-block;
 }
 
 /*             SECOND SECTION            */
@@ -196,7 +193,6 @@ p {
   animation: wave 0.5s ease infinite alternate;
   position: relative;
   font-size: xx-large;
-
 }
 
 p {

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+
+
 @font-face {
   font-family: "Kanit";
   src: url("/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
@@ -8,10 +11,11 @@
   src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
+
+
 body {
-  font-family: "Kanit";
-  background-color: #f8f0e5;
-  color: #0f2c59;
+  font-family: "Work Sans";
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
@@ -23,4 +27,5 @@ body {
 :root {
   --orange: #f3770d;
   --blue: #0f2c59;
+  --olivia: #F6C5B7;
 }

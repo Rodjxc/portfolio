@@ -1,7 +1,6 @@
 import "./Home.css";
 import { Staff } from "./Staff/Staff";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
 import { useEffect } from "react";
 
 export const Home = () => {
@@ -39,15 +38,16 @@ export const Home = () => {
       <section id="container-hero">
         <div className="hero-text hidden">
           <h1>
+            Front End Developer < br/>
+            and
             <a
-              className="link-small"
+              className="link-small show-image"
               href="https://www.beerandcideracademy.org/meet-the-sommeliers/2018/10/10/rodrigo-jimeno"
               target="blank"
             >
               Beer expert🍺
-            </a>
-            turned <br />
-            Front End Developer
+            </a> < br/>
+            &lt; /&gt;
           </h1>
           <div>
             <h4>Hi👋!</h4>
@@ -56,16 +56,7 @@ export const Home = () => {
               in Oslo, Norway 📍.
             </h4>
           </div>
-          <div>
-            <span className="icons">
-              <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="https://github.com/Rodjxc" target="blank">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
-            </span>
-          </div>
+         
         </div>
         <div className="hero-img-section hidden">
           <img
