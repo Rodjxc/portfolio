@@ -1,6 +1,5 @@
 import "./Home.css";
 import { Staff } from "./Staff/Staff";
-
 import { useEffect } from "react";
 
 export const Home = () => {
@@ -34,9 +33,18 @@ export const Home = () => {
   return (
     <div className="home">
       {/*   HERO SECTION - FIRST SECTION */}
-
+<div className="hero-title">
+        <h1>
+          ROD JIMENO
+        </h1>
+        </div> 
       <section id="container-hero">
-        <div className="hero-text hidden">
+
+       
+        <div className="hero-text">
+          <h2>Hey!</h2>
+        </div>
+        {/* <div className="hero-title hidden">
           <h1>
             Front End Developer < br/>
             and
@@ -46,18 +54,19 @@ export const Home = () => {
               target="blank"
             >
               Beer expert🍺
-            </a> < br/>
-            &lt; /&gt;
+            </a>            
           </h1>
-          <div>
+            
+        </div>
+        <div className="hero-text ">
             <h4>Hi👋!</h4>
             <h4>
               I'm <strong>Rod</strong>, a <strong>Web Developer</strong> and <strong>Web Designer</strong> based
               in Oslo, Norway 📍.
             </h4>
-          </div>
-         
-        </div>
+          </div> */}
+
+
         <div className="hero-img-section hidden">
           <img
             src="/img/snd.jpg"

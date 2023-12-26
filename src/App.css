@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
 
 @font-face {
   font-family: "Kanit";
@@ -11,11 +10,13 @@
   src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
-
+* {
+  background-color: black;
+}
 
 body {
-  font-family: "Work Sans";
-  font-weight: 600;
+  /* font-family: "Quicksand"; */
+  /* font-weight: 600; */
   margin: 0;
   padding: 0;
 }
@@ -27,5 +28,5 @@ body {
 :root {
   --orange: #f3770d;
   --blue: #0f2c59;
-  --olivia: #F6C5B7;
+  --olivia: #f6c5b7;
 }

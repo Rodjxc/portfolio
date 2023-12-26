@@ -2,9 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2b2b2b;
-  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
-  height: 70px;
+  /* box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2); */
   position: fixed;
   top: 0;
   width: 100%;
@@ -12,10 +10,14 @@ nav {
   font-size: large;
 }
 
-.header .logo h3 {
-  font-family: "Work Sans";
+.header .logo a {
+  font-family: "Quicksand";
+  font-weight: bolder;
+  font-size: 30px;
   color: white;
-  margin-left: 60px;
+  margin-left: 90px;
+  text-decoration: none;
+  border-bottom: 0;
 }
 
 .header nav ul {
@@ -103,9 +105,10 @@ a:nth-child(2) {
   width: 100%;
   min-height: 70%;
   z-index: 98;
-  background-color: rgb(42, 42, 44);
+  background-color: black;
+  box-shadow: 5px 15px 10px rgba(255, 255, 255, 0.2);
   padding-top: 120px;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .mobile-nav.is-active {
@@ -139,7 +142,7 @@ a:nth-child(2) {
 .container-mobile {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 60px;
 }
 
 @media (max-width: 768px) {

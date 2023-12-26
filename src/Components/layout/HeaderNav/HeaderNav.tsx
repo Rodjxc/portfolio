@@ -47,25 +47,23 @@ export const HeaderNav = () => {
     <header className="header">
       <nav>
         <div className="logo">
-          <h3>Rod Jimeno | Frontend Dev</h3>
+              <NavLink
+                to="/home"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                onClick={handleNavLinkClick}
+              >
+                &lt; RJ /&gt;
+              </NavLink>
+          
         </div>
 
         <button className="hamburger-menu">
           <div className="bar"></div>
         </button>
 
-        <div className={`links-navbar ${windowWidth <= 768 ? 'hidden' : ''}`}>
+        <div className="links-navbar">
           <ul>
-            <li>
-              <NavLink
-                to="/home"
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                onClick={handleNavLinkClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
+             <li>
               <NavLink
                 to="/portfolio"
                 className={({ isActive }) => (isActive ? 'active' : '')}
@@ -85,7 +83,7 @@ export const HeaderNav = () => {
             </li>
           </ul>
         </div>
-        <div className={`icons icons-navbar ${windowWidth <= 768 ? 'hidden' : ''}`}>
+        <div className="icons icons-navbar">
           <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank">
             <FontAwesomeIcon icon={faGithub} />
           </a>
@@ -98,15 +96,7 @@ export const HeaderNav = () => {
       <nav className="mobile-nav">
         <div className="container-mobile">
           <ul>
-            <li>
-              <NavLink
-                to="/home"
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                onClick={handleNavLinkClick}
-              >
-                Home
-              </NavLink>
-            </li>
+           
             <li>
               <NavLink
                 to="/portfolio"
