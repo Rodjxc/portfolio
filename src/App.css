@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
 
 @font-face {
   font-family: "Kanit";
@@ -10,9 +11,9 @@
   src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
-* {
+/* * {
   background-color: black;
-}
+} */
 
 body {
   /* font-family: "Quicksand"; */
@@ -21,9 +22,9 @@ body {
   padding: 0;
 }
 
-.content {
+/* .content {
   min-height: 300px;
-}
+} */
 
 :root {
   --orange: #f3770d;

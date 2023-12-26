@@ -81,7 +81,7 @@ export const CV = () => {
           <article>
           <div className="work-experience hidden">
             <h2>Work Experience</h2>
-            <div>
+            <div className="web-dev">
               <h4>Web Developer | Freelance (Nov. 2022 - Present) | 📍 Oslo</h4>
              <p>During the time of my studies I've been able to partake in all the projects and 
               works shown in my portfolio and it's been an assurance that development has been the 
@@ -91,28 +91,28 @@ export const CV = () => {
                and a user experience. And not only is it a fulfilling job but also I have fun alongside 
                it. </p>
                </div>
-             <div> 
-              <h4>Macondo AS | Key <u>Account Manager</u> (Jan. 2022 - March 2023) | 📍 Oslo </h4>
+             <div className="macondo"> 
+              <h4>Macondo AS | Key Account Manager (Jan. 2022 - March 2023) | 📍 Oslo </h4>
              <p>My role here was quite varied - not just helping with beer production of Schouskjelleren 
               Bryggeri but also connecting with some of the managers of the best bars in Oslo. I listened to 
               what they craved and sourced unique beers from around the globe. Some of those selections even
-              made their way to Vinmonopolet! This role <u>wasn't just about beer, but also selling and negotiating 
+              made their way to Vinmonopolet! This role wasn't just about beer, but also selling and negotiating 
               prices with managers, curating customer relationships and keeping up and understanding the trends
                and needs of the market. This relations led me to close and friendly relationships with bar owners
-               leading to an increase in sales for the company and good reputation as a supplier</u>. I also designed
+               leading to an increase in sales for the company and good reputation as a supplier. I also designed
                 the logo and website of the company.</p>
              </div>
-            <div>
+            <div className="content-creator">
               <h4> Content Creator for Youtube & Twitch (July 2019 - Present)</h4>
               <p>I started my Content Creation journey in 2019 by starting a YouTube channel where I made game 
                 guides for various video games, which laid part of the groundwork for my transition into the 
-                development world. Beyond technical skills, <u>this experience taught me valuable skills like discipline, 
+                development world. Beyond technical skills, this experience taught me valuable skills like discipline, 
                 commitment, keeping up to date with technology. Also other valuable skills like web SEO and 
-                picture/video editing </u>to enhance the channel's quality, with allowed me to have a good eye for 
+                picture/video editing to enhance the channel's quality, with allowed me to have a good eye for 
                 good UX / UI design and accessibility which have proven of great use in my developer career. All 
                 of this have resulted in a growing channel that recently passed the 40k mark.</p>
             </div>
-            <div>
+            <div className="various">
              <h4>Various roles within brewing and hospitality (July 2012 - 2019) | 📍 Oslo - London (UK)</h4>
              <p>A year after I finished my university I decided to move out of my comfort zone and I moved to London,
                UK, where I worked for several years. I worked in hospitality both as a bartender and as a manager 

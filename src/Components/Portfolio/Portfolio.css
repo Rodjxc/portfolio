@@ -1,13 +1,4 @@
-body {
-  font-family: "Kanit";
-  background-image: url("/img/fondoportfolio.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 h1 {
-  font-family: "Quicksand";
   text-align: center;
 }
 

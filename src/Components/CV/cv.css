@@ -1,8 +1,9 @@
+h2 {
+  font-family: "Gruppo";
+  text-decoration: none;
+}
+
 .cv {
-  background-image: url("/img/fondo3.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 8% 5%;
   display: flex;
   flex-direction: column;
@@ -19,16 +20,14 @@
   align-items: center;
 }
 
-
-
 .education h2,
 .work-experience h2,
 .working-tools h2,
 .other-languages h2 {
   font-weight: 400;
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
-  border-bottom: 2px solid #0f2c59;
+  text-transform: uppercase;
 }
 
 .education ul,
@@ -45,9 +44,8 @@
 }
 
 .education li .link:hover {
-  color: #f44529;
+  color: var(--olivia);
 }
-
 
 .work-experience div {
   max-width: 60%;
@@ -61,6 +59,24 @@
   display: inline-block;
 }
 
+.web-dev p,
+.macondo p,
+.content-creator p,
+.various p {
+  border-left: 1px solid var(--olivia);
+  padding-left: 3%;
+  font-family: "quicksand";
+  line-height: 2rem;
+}
+
+.web-dev h4,
+.macondo h4,
+.content-creator h4,
+.various h4 {
+  font-family: "Gruppo";
+  font-size: larger;
+  text-transform: uppercase;
+}
 
 /* Media Query for stacking vertically on smaller screens */
 @media (max-width: 768px) {
