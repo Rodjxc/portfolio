@@ -1,25 +1,11 @@
-import "./App.css";
-import { MyRoutes } from "./Router/MyRoutes";
-import MouseFollower from "mouse-follower";
-import gsap from "gsap";
-import { useEffect } from "react";
+import { MyRoutes } from './Router/MyRoutes';
+import { Cursor } from './Components/Cursor/Cursor';
 
-MouseFollower.registerGSAP(gsap);
-
-
-
-function App() {
-
-  useEffect(() => {
-    const cursor = new MouseFollower();
-  }, []);
+export const App = () => {
   return (
-
     <div className="layout">
-    <MyRoutes />
-    <div className="cursor"></div>
+      <MyRoutes />
+      <Cursor />
     </div>
   );
-}
-
-export default App;
+};

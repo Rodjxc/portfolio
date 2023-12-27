@@ -46,7 +46,8 @@ export const HeaderNav = () => {
   return (
     <header className="header">
       <nav>
-        <div className="logo">
+        <div className="logo"  data-cursor-text ="Take me back" 
+>
               <NavLink
                 to="/home"
                 className={({ isActive }) => (isActive ? 'active' : '')}

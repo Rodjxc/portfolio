@@ -1,0 +1,7 @@
+.mf-cursor {
+  color: #f6c5b7;
+}
+
+.mf-cursor .mf-cursor-text {
+  color: black; /* Change the color of the text inside the cursor */
+}

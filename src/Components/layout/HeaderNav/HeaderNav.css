@@ -1,5 +1,4 @@
 nav {
-  font-family: "Kanit";
   background-color: black;
   display: flex;
   align-items: center;
@@ -13,9 +12,8 @@ nav {
 }
 
 .header .logo a {
-  font-family: "quicksand";
-  font-weight: bolder;
-  font-size: 30px;
+  font-family: "Jura", sans-serif; /* font-weight: bolder; */
+  font-size: 40px;
   color: white;
   margin-left: 90px;
   text-decoration: none;
@@ -30,6 +28,7 @@ nav {
 }
 
 .header li {
+  font-family: "Jura", sans-serif;
   font-weight: bold;
   font-size: 18px;
   margin-left: 15px;
@@ -70,9 +69,11 @@ a:nth-child(2) {
 .hamburger-menu {
   display: none;
   width: 40px;
+  margin-top: 4%;
   margin-right: 5%;
+  border: none;
   cursor: pointer;
-  background: none;
+  background-color: black;
 }
 
 .hamburger-menu .bar,
@@ -128,8 +129,9 @@ a:nth-child(2) {
 }
 
 .mobile-nav a {
-  display: block;
-  color: white;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 200px;
   margin-bottom: 1rem;
@@ -152,7 +154,6 @@ a:nth-child(2) {
   .mobile-nav {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
   }
 
   .hamburger-menu {
@@ -162,5 +163,9 @@ a:nth-child(2) {
   .links-navbar,
   .icons-navbar {
     display: none;
+  }
+
+  .header .logo {
+    margin-top: 5%;
   }
 }

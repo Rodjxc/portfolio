@@ -14,7 +14,7 @@ export const Portfolio = () => {
       <section className="works">
         {Works.map((Works) => {
           return (
-            <article key={Works.id} className="work-item">
+            <article key={Works.id} className="work-item" data-cursor-text ="See project live">
               <div className="mask">
                 {/*   If I want it to go to another page where I can display the project itself in detail, activate the
                 link below. In this case the projects are just ideas so there's not much to talk about */}
@@ -29,6 +29,7 @@ export const Portfolio = () => {
                   />
                 </Link>
               </div>
+              <div className="card-text">
               <h1>{Works.name}</h1>
               <span>{Works.tecnologies}</span>
               <p>{Works.description}</p>
@@ -59,6 +60,8 @@ export const Portfolio = () => {
                   </span>
                 </div>
               </span>
+              </div>
+             
             </article>
           );
         })}

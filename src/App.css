@@ -1,23 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
-
-@font-face {
-  font-family: "Kanit";
-  src: url("/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Quicksand";
-  src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Jura:wght@300;400;500;600;700&display=swap");
 
 /* * {
   background-color: black;
 } */
 
 body {
-  /* font-family: "Quicksand"; */
-  /* font-weight: 600; */
   margin: 0;
   padding: 0;
 }
