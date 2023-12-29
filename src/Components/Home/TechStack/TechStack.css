@@ -1,0 +1,84 @@
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills p {
+  padding-right: 2%;
+  /* Add spacing between the text and images */
+  font-size: x-large;
+  border-right: 2px solid var(--blue);
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  /* Make the <ul> a flex container */
+}
+
+.skills li {
+  margin-right: 10px;
+  /* Add spacing between images */
+}
+
+.skills ul li {
+  cursor: pointer;
+}
+
+.skills ul li img:hover {
+  transform: translateY(-1rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.skill:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.skill:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.skill:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.skill:nth-child(5) {
+  transition-delay: 800ms;
+}
+
+@media (max-width: 884px) {
+  .skills {
+    display: flex;
+    /* Reset display to flex */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+  }
+
+  .skills ul {
+    justify-content: center;
+    /* Center the list horizontally */
+    flex-direction: column;
+  }
+
+  .skills li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    /* Remove spacing between images */
+    margin-bottom: 10px;
+    /* Add spacing between images vertically */
+  }
+
+  .skills p {
+    border-bottom: 2px solid #0f2c59;
+    border-right: none;
+    margin-bottom: 3rem;
+    margin-right: 0;
+    padding-bottom: 1rem;
+    padding-right: 0;
+  }
+}

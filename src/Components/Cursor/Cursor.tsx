@@ -7,7 +7,7 @@ MouseFollower.registerGSAP(gsap);
 export const Cursor = () => {
      new MouseFollower({
       container: document.body,
-      speed: 1.6,
+      speed: 0.6,
       skewingText: 0.1,
     });
 

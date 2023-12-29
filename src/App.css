@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Jura:wght@300;400;500;600;700&display=swap");
 
-/* * {
-  background-color: black;
-} */
+@font-face {
+  font-family: "Uncut-Sans";
+  src: url("/fonts/UncutSans/Uncut-Sans-VF.ttf") format('truetype');
+}
+
 
 body {
   margin: 0;
