@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <div>
       <section id="container-hero">
-        <div className="text">
+        <div className="text hidden">
           <div className="hero-text">
             <h2>Hey!</h2>
             <p>
@@ -15,7 +15,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="hero-title">
+          <div className="rod-name">
             <h1>Rod Jimeno</h1>
           </div>
         </div>

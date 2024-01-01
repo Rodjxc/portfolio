@@ -34,7 +34,7 @@ export const Home = () => {
   }, []); // The empty dependency array ensures this effect runs only on mount
 
   return (
-    <div className="home">
+    <div className="hero-section">
       {/*   HERO SECTION - FIRST SECTION */}
      
     <Hero />

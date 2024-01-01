@@ -6,21 +6,7 @@ body {
   margin: 0;
 }
 
-
-
-
-
-
-/*              SECOND SECTION         */
-
-
-
 /*      THIRD SECTION  |   TEAM     */
-
-.section-heading-wrapper {
-  padding: 1px;
-  margin-top: 5%;
-}
 
 .section-heading {
   font-family: "Uncut-Sans", sans-serif;
@@ -68,7 +54,6 @@ p {
   }
 }
 
-
 @keyframes wave {
   0% {
     transform: translateY(0);
@@ -78,8 +63,6 @@ p {
     transform: translateY(-5px);
   }
 }
-
-
 
 /* Media query for the scrolling, to make it slower and nicer*/
 
