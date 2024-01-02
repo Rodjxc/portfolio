@@ -35,7 +35,7 @@ export const Portfolio = () => {
                   <span>{Works.tecnologies}</span>
                   <p>{Works.description}</p>
                   <span>
-                    <div className="icons-card">
+                  <div className="icons-card">
                        <Link
                           to={Works.url || "/default-path-if-undefined"}
                           target="_blank"
@@ -57,11 +57,11 @@ export const Portfolio = () => {
                             <FontAwesomeIcon icon={faFigma} className="icon" />
                         </Link>
                       )}
-                    </div>
-              </span>
-              </div>
-             
-            </article>
+                  </div>
+                  </span>
+                  
+                </div>
+             </article>
           );
         })}
       </section>

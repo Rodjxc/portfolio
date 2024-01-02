@@ -7,13 +7,13 @@ margin-bottom: 5%;
 margin-left: 8%;
 }
 
-a {
+.footer a {
     text-decoration: none;
     color: #5c5c5c; /* Set your default text color */
     position: relative;
   }
   
-  a::before {
+ .footer a::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -24,11 +24,11 @@ a {
     transition: width 0.5s ease; /* Transition the width property */
   }
   
-  a:hover {
+  .footer a:hover {
     color: #f6c5b7; /* Change text color on hover */
   }
   
-  a:hover::before {
+  .footer a:hover::before {
     width: 100%; /* Make the loading bar appear fully on hover */
   }
   
