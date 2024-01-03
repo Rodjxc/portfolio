@@ -35,11 +35,9 @@ export const Home = () => {
 
   return (
     <div className="hero-section">
-      {/*   HERO SECTION - FIRST SECTION */}
      
     <Hero />
         
-      {/*   ABOUT ME - SECOND SECTION */}
       <section id="second-section">
         <TechStack />
 
@@ -47,12 +45,7 @@ export const Home = () => {
       </section>
       {/*            THIRD SECTION   |   The Team     */}
       <section id="team-heading">
-        <div className="section-heading-wrapper hidden">
-          <div className="section-header-item">
-            <h2 className="section-heading">The Oslo Team</h2>
-            <p>I wear a lot of hats around here.</p>
-          </div>
-        </div>
+        
         <div className="staff-cards hidden">
           <Staff />
         </div>

@@ -1,9 +1,36 @@
+.staff-section {
+  background-color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.section-heading {
+  font-family: "Uncut-Sans", sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  animation: wave 0.5s ease infinite alternate;
+  position: relative;
+  font-size: xx-large;
+}
+
+.section-p {
+  font-family: "Uncut-Sans", sans-serif;
+  color: black;
+  font-size: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
 .card-grid {
+  background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  gap: 30px;
-  margin: 4rem 2rem 2rem 2rem;
+  gap: 10px;
+  width: 100%;
 }
 
 .card {
@@ -12,7 +39,7 @@
   border-radius: 70px 70px 70px 70px;
   text-align: center;
   max-width: 360px;
-  box-shadow: 5px 5px 10px rgba(230, 228, 228, 0.5);
+  box-shadow: 5px 5px 10px rgba(32, 32, 32, 0.5);
 }
 
 .card-image {

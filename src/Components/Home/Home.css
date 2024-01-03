@@ -8,22 +8,7 @@ body {
 
 /*      THIRD SECTION  |   TEAM     */
 
-.section-heading {
-  font-family: "Uncut-Sans", sans-serif;
-  display: flex;
-  justify-content: center;
-  animation: wave 0.5s ease infinite alternate;
-  position: relative;
-  font-size: xx-large;
-}
 
-p {
-  font-family: "Uncut-Sans", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-}
 
 .hidden {
   opacity: 0;

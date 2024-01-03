@@ -20,11 +20,12 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-img-section hidden">
+        <div className="hero-img-section hidden" >
           <img
-            src="/img/snd.jpg"
+            src="/img/snd-back2.png"
             alt="profile pic for Rod"
             className="hero-img"
+            data-cursor-text ="Yep, that's me!"
           />
         </div>
       </section>

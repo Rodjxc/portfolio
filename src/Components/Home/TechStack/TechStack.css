@@ -1,14 +1,18 @@
 .skills {
+  background-color: rgb(255, 255, 255);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+ padding-top: 20vh;
+ padding-bottom: 15vh;
 }
 
-.skills p {
+.skills h1 {
+  font-family: "Work Sans", sans-serif;
   padding-right: 2%;
-  /* Add spacing between the text and images */
-  font-size: x-large;
-  border-right: 2px solid var(--blue);
+  font-size: 4vh;
+  border-right: 2px solid black;
 }
 
 .skills ul {
@@ -47,14 +51,12 @@
   transition-delay: 800ms;
 }
 
-@media (max-width: 884px) {
+@media (max-width: 890px) {
   .skills {
+    margin-top: 10%;
     display: flex;
-    /* Reset display to flex */
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center items horizontally */
     text-align: center;
   }
 

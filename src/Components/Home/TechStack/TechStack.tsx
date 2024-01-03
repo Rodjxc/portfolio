@@ -4,8 +4,8 @@ export const TechStack = () => {
   return (
     <div>
 
-<div className="skills hidden">
-          <p>Tech Stack </p>
+<section className="skills hidden">
+          <h1>Tech Stack </h1>
           <ul>
             <li className="skill hidden">
               <img
@@ -38,7 +38,7 @@ export const TechStack = () => {
               />
             </li>
           </ul>
-        </div>
+        </section>
 
     </div>
   )
