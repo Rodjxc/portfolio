@@ -1,12 +1,11 @@
-import "./App.css";
-import { MyRoutes } from "./Router/MyRoutes";
+import { MyRoutes } from './Router/MyRoutes';
+import { Cursor } from './Components/Cursor/Cursor';
 
-function App() {
+export const App = () => {
   return (
     <div className="layout">
       <MyRoutes />
+      <Cursor />
     </div>
   );
-}
-
-export default App;
+};

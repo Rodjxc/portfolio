@@ -1,0 +1,81 @@
+#container-hero {
+  display: flex;
+  margin-top: 100px;
+  height: 89vh;
+  width: 100%;
+}
+
+.rod-name {
+  height: 100%;
+  font-family: "Uncut-Sans", sans-serif;
+  letter-spacing: -1px;
+  font-size: 20vh;
+  margin-left: -13px;
+  margin-top: 10%;
+}
+
+.hero-text h2 {
+  font-family: "Uncut-Sans", sans-serif;
+}
+
+.hero-text {
+  font-family: "Uncut-Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 4.1vh;
+  padding-right: 5%;
+  padding-left: 20%;
+  line-height: 20px;
+}
+
+.hero-img-section .hero-img {
+  float: right;
+  height: 100%;
+}
+
+/*  MEDIA QUERIES */
+
+@media (max-width: 890px) {
+  #container-hero {
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .hero-img {
+    max-height: 80%;
+    max-width: 80%;
+  }
+
+  #container-hero .hero-text {
+    height: auto;
+    display: flex;
+    font-size: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto 2% auto 2%;
+  }
+
+  #container-hero .hero-text h1 {
+    height: auto;
+    text-align: center;
+  }
+
+  .rod-name {
+    display: none;
+  }
+}
+
+@media (max-width: 650px){
+#container-hero {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.hero-text {
+  margin: auto 2% auto 2%;
+
+}
+}

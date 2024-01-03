@@ -1,8 +1,9 @@
+h2 {
+  font-family: "Gruppo";
+  text-decoration: none;
+}
+
 .cv {
-  background-image: url("/img/fondo3.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 8% 5%;
   display: flex;
   flex-direction: column;
@@ -14,21 +15,20 @@
 .working-tools,
 .work-experience,
 .other-languages {
+  font-family: "Jura", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .education h2,
 .work-experience h2,
 .working-tools h2,
 .other-languages h2 {
   font-weight: 400;
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
-  border-bottom: 2px solid #0f2c59;
+  text-transform: uppercase;
 }
 
 .education ul,
@@ -36,18 +36,23 @@
 .other-languages ul {
   padding: 20px;
   text-align: left;
+  list-style: none;
+}
+
+.education li {
+  margin-bottom: 15px;
 }
 
 .education li .link,
 .working-tools li .link,
 .other-languages li .link {
+  color: white;
   text-decoration: none;
 }
 
 .education li .link:hover {
-  color: #f44529;
+  color: #f6c5b7;
 }
-
 
 .work-experience div {
   max-width: 60%;
@@ -61,6 +66,29 @@
   display: inline-block;
 }
 
+.web-dev p,
+.macondo p,
+.content-creator p,
+.various p {
+  font-family: "Jura", sans-serif;
+  border-left: 1px solid #f6c5b7;
+  padding-left: 5%;
+  line-height: 2rem;
+}
+
+.web-dev h4,
+.macondo h4,
+.content-creator h4,
+.various h4 {
+  font-family: "Gruppo";
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.working-tools li {
+  font-family: "Jura", sans-serif;
+  margin-bottom: 5px;
+}
 
 /* Media Query for stacking vertically on smaller screens */
 @media (max-width: 768px) {

@@ -22,44 +22,46 @@ export const Portfolio = () => {
                 <Link className="portfolio-img"
                   to={Works.url || "/default-path-if-undefined"}
                   target="_blank"
+                  data-cursor-text ="See project live"
                 >
                   <img
-                    src={"/img/" + Works.id + ".jpg"}
+                    src={"/img/" + Works.id + ".png"}
                     alt="Image of the project"
                   />
                 </Link>
               </div>
-              <h1>{Works.name}</h1>
-              <span>{Works.tecnologies}</span>
-              <p>{Works.description}</p>
-              <span>
-                <div className="icons">
-                  <span className="icon-wrapper">
-                    <Link
-                      to={Works.url || "/default-path-if-undefined"}
-                      target="_blank"
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowUpFromBracket}
-                        className="icon"
-                      />
-                    </Link>
+               <div className="card-text">
+                  <h1>{Works.name}</h1>
+                  <span>{Works.tecnologies}</span>
+                  <p>{Works.description}</p>
+                  <span>
+                  <div className="icons-card">
+                       <Link
+                          to={Works.url || "/default-path-if-undefined"}
+                          target="_blank"
+                        >
+                          <FontAwesomeIcon
+                          icon={faArrowUpFromBracket}
+                          className="icon"
+                        />
+                        </Link>
 
-                    {/* Here I made it only render if there's something inside the github param. If it doesn't have, don't show */}
-                    {Works.github && (
-                      <Link to={Works.github} target="_blank">
-                        <FontAwesomeIcon icon={faGithub} className="icon" />
-                      </Link>
-                    )}
-                    {Works.figma && (
-                      <Link to={Works.figma} target="_blank">
-                        <FontAwesomeIcon icon={faFigma} className="icon" />
-                      </Link>
-                    )}
+                        {/* Here I made it only render if there's something inside the github param. If it doesn't have, don't show */}
+                        {Works.github && (
+                          <Link to={Works.github} target="_blank">
+                            <FontAwesomeIcon icon={faGithub} className="icon" />
+                        </Link>
+                      )}
+                        {Works.figma && (
+                        <Link to={Works.figma} target="_blank">
+                            <FontAwesomeIcon icon={faFigma} className="icon" />
+                        </Link>
+                      )}
+                  </div>
                   </span>
+                  
                 </div>
-              </span>
-            </article>
+             </article>
           );
         })}
       </section>

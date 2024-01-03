@@ -1,0 +1,22 @@
+.about-me {
+  font-family: "Uncut-Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5vh;
+  padding: 4% 15% 5% 15%;
+  line-height: 20px;
+}
+
+.sommelier {
+    color: #f6c5b7;
+    text-decoration: none;
+}
+
+@media (max-width: 890px) {
+.about-me {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+}
+  

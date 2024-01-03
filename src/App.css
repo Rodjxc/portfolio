@@ -1,26 +1,22 @@
-@font-face {
-  font-family: "Kanit";
-  src: url("/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Jura:wght@300;400;500;600;700&display=swap");
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+  font-family: "Uncut-Sans";
+  src: url("/fonts/UncutSans/Uncut-Sans-VF.ttf") format('truetype');
 }
+
 
 body {
-  font-family: "Kanit";
-  background-color: #f8f0e5;
-  color: #0f2c59;
   margin: 0;
   padding: 0;
 }
 
-.content {
+/* .content {
   min-height: 300px;
-}
+} */
 
 :root {
   --orange: #f3770d;
   --blue: #0f2c59;
+  --olivia: #f6c5b7;
 }
