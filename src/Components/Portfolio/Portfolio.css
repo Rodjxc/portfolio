@@ -28,26 +28,31 @@
 .card-text h1 {
   color: #f6c5b7;
   font-size: 2.3rem;
+  margin-top: 10px;
 }
 
-.card-text p{
+.card-text p {
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .icons-card {
-  display: flex !important;
-  justify-content: center;
-  align-items: center; /* Vertically center the child elements */
-  margin-top: 25px;
-  /* margin-left: 6rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 20px;
+  margin-left: 33%;
+  margin-bottom: 20px;
 }
 
 .icons-card a {
   display: flex;
+  text-align: center;
   color: white;
   font-size: 25px;
-  /* margin-left: 15%; */
+  margin: 0 10px;
+  /* margin-left: 30%; */
+
 }
 
 .icons-card a:hover {
@@ -55,10 +60,18 @@
 }
 
 
+@media (max-width: 890px) {
+  .work-item {
+    flex-direction: column;
+  }
 
+  .work-item img {
+    width: 100%;
+    height: auto;
+  }
 
-*/ @media (min-width: 960px) {
-  .works {
-    grid-template-columns: repeat(2, 1fr);
+  .card-text {
+    text-align: center;
+    margin: 20px 0;
   }
 }

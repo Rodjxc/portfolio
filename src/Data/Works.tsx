@@ -1,7 +1,7 @@
 export const Works = [
  
   {
-    id: "hystarfull",
+    id: "HystarF",
     name: "Hystar",
     url: "https://hystar.webflow.io/",
     tecnologies: "Webflow + Figma",
@@ -11,7 +11,7 @@ export const Works = [
     figma: "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1"
   },
   {
-    id: "musicfestivalfull",
+    id: "MusicF",
     name: "Oslo Music Festival",
     url: "https://music-festival-ten.vercel.app/",
     tecnologies: "HTML, React, Typescript & Tailwind CSS",
@@ -22,7 +22,7 @@ export const Works = [
   },
 
   {
-    id: "communilinkfull",
+    id: "CommuF",
     name: "CommuniLink",
     url: "https://communilinkrodjdev.webflow.io/",
     tecnologies: "Webflow + Figma",
@@ -32,7 +32,7 @@ export const Works = [
     figma: "https://www.figma.com/file/gpUYxGbCorvTaXlqGYHxmE/Practice%3A-Chat-App-Homepage-Design-(Copy)?type=design&node-id=107%3A17&mode=design&t=zf1RNJpPckd9Z4oB-1"
   },
   {
-    id: "portfoliofull",
+    id: "PortF",
     name: "Portfolio",
     url: "https://rodj.dev",
     tecnologies: "HTML, CSS, React & TypeScript",
@@ -42,7 +42,7 @@ export const Works = [
     github: "https://github.com/Rodjxc/portfolio",
   },
   {
-    id: "moviesfull",
+    id: "MovieF",
     name: "MovieTrack",
     url: "https://movies-site-h4l5b12fe-rodjxc.vercel.app",
     tecnologies: "HTML, CSS, React & JS",
@@ -52,18 +52,7 @@ export const Works = [
     github: "https://github.com/Rodjxc/movies-site",
   },   
   {
-    id: "gatsbyfull",
-    name: "Gatsby Portfolio Template",
-    url: "https://gatsby-portf-template-j75r8mhel-rodjxc.vercel.app",
-    tecnologies: "GatsbyJS, ReactJS, GraphQL and CSS Modules",
-    categories: "Web Development",
-    description:
-      "A website template for a portfolio / blog, created from scratch using a blank Gatsby template. I used CSS modules for styling, and GraphQL for fetch information from Mardown files. It creates new pages dynamically everytime a new markdown file is created. Also thanks to GraphQL improves the performance of the site and size of rendered images",
-      github: "https://github.com/Rodjxc/gatsby-tuto",
-
-  },
-  {
-    id: "fogatafull",
+    id: "RaidF",
     name: "La Fogata de Raid",
     url: "https://lafogataderaid.com/",
     tecnologies: "Wordpress, CSS",

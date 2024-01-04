@@ -22,7 +22,7 @@
   font-family: "Uncut-Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  font-size: 3.5vh;
+  font-size: 20px;
   padding-right: 5%;
   padding-left: 20%;
   line-height: 30px;
@@ -37,6 +37,7 @@
 
 @media (max-width: 890px) {
   #container-hero {
+    display: flex;
     text-align: center;
     justify-content: center;
     height: 100%;
@@ -50,11 +51,13 @@
   #container-hero .hero-text {
     height: auto;
     display: flex;
-    font-size: 3vh;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: auto 2% auto 2%;
+    margin: auto 8% auto 8%;
+    padding-left: 0;
+    line-height: 30px;
+
   }
 
   #container-hero .hero-text h1 {
@@ -76,6 +79,8 @@
 
 .hero-text {
   margin: auto 2% auto 2%;
+  line-height: 30px;
+
 
 }
 }

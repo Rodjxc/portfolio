@@ -25,7 +25,7 @@ export const Portfolio = () => {
                   data-cursor-text ="See project live"
                 >
                   <img
-                    src={"/img/" + Works.id + ".png"}
+                    src={"/img/" + Works.id + ".jpg"}
                     alt="Image of the project"
                   />
                 </Link>
@@ -34,7 +34,6 @@ export const Portfolio = () => {
                   <h1>{Works.name}</h1>
                   <span>{Works.tecnologies}</span>
                   <p>{Works.description}</p>
-                  <span>
                   <div className="icons-card">
                        <Link
                           to={Works.url || "/default-path-if-undefined"}
@@ -58,7 +57,6 @@ export const Portfolio = () => {
                         </Link>
                       )}
                   </div>
-                  </span>
                   
                 </div>
              </article>

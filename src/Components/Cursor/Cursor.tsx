@@ -4,6 +4,8 @@ import "./cursor.css"
 
 MouseFollower.registerGSAP(gsap);
 
+
+
 export const Cursor = () => {
      new MouseFollower({
       container: document.body,

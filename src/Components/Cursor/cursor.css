@@ -5,3 +5,9 @@
 .mf-cursor .mf-cursor-text {
   color: black; /* Change the color of the text inside the cursor */
 }
+
+@media (max-width: 890px) {
+  .mf-cursor {
+    display: none;
+  }
+}
