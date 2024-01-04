@@ -17,46 +17,68 @@
 .section-p {
   font-family: "Uncut-Sans", sans-serif;
   color: black;
-  font-size: 3vh;
+  font-size: 20px;
+}
+
+.staff-section {
+  padding: 4%;
+}
+
+.section-heading-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+}
+
+.section-header-item {
+  text-align: center;
 }
 
 .card-grid {
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-items: center;
-  gap: 10px;
-  width: 100%;
+  gap: 20px;
 }
 
 .card {
-  font-family: "Uncut-Sans", sans-serif;
-  background-color: #1b1b1b;
-  border-radius: 70px 70px 70px 70px;
-  text-align: center;
-  max-width: 360px;
-  box-shadow: 5px 5px 10px rgba(32, 32, 32, 0.5);
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  border-bottom: 1px solid black;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image {
-  border-radius: 70px 70px 0px 0px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-bottom: 2px solid var(--olivia);
 }
 
-.card h1 {
-  font-size: larger;
-  font-weight: 900;
-  margin-top: -10px;
-  padding-top: 8%;
-  padding-bottom: 8%;
-  border-radius: 0px 0px 70px 70px;
+.card-text {
+  padding-top: 10px;
+  margin-bottom: 25px;
 }
+
+.position-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.card-text h3,
+.card-text h4 {
+  color: black;
+  margin: 0;
+}
+
+.card-text h3 {
+  font-size: 25px;
+}
+
 
 /* Media query for screens below 940px */
 @media (max-width: 940px) {

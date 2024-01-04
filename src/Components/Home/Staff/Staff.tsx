@@ -21,12 +21,12 @@ export const Staff = () => (
               className="card-image"
             />
           </div>
-          <div className="card-position">
-            <h1>{StaffData.position}</h1>
-        </div>
-        <div> 
-           <h4>{StaffData.name}</h4>
-        </div>
+          <div className="card-text">
+            <div className="position-name">
+            <h3>{StaffData.position}</h3>
+            <h4>{StaffData.name}</h4>
+            </div>
+          </div>
         </article>
       </div>
     ))}
