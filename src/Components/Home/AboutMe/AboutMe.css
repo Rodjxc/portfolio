@@ -1,11 +1,10 @@
 .about-me {
   font-family: "Uncut-Sans", sans-serif;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 2.5vh;
+  text-align: center;
   padding: 4% 15% 5% 15%;
-  line-height: 20px;
+  line-height: 25px;
+  font-size: 15px;
 }
 
 .sommelier {
@@ -15,6 +14,9 @@
 
 @media (max-width: 890px) {
 .about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-right: 10%;
   padding-left: 10%;
 }
