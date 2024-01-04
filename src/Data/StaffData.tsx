@@ -1,22 +1,22 @@
 export const StaffData = [
   {
     id: "staff5",
-    position: "President",
+    position: "CEO & Founder",
     name: "Rod Jimeno",
   },
   {
     id: "staff4",
-    position: "Sales",
+    position: "Sales & Marketing",
     name: "Rod Jimeno",
   },
   {
     id: "staff1",
-    position: "Creative Director",
+    position: "Finance Director",
     name: "Rod Jimeno",
   },
   {
     id: "staff2",
-    position: "Lead Web Developer",
+    position: "Lead Developer",
     name: "Rod Jimeno",
   },
   {

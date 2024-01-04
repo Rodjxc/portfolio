@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   animation: wave 0.5s ease infinite alternate;
-  position: relative;
   font-size: xx-large;
 }
 
@@ -76,7 +75,7 @@ article {
 }
 
 .card-text h3 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
