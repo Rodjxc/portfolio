@@ -83,10 +83,10 @@ export const HeaderNav = () => {
           </ul>
         </div>
         <div className="icons icons-navbar">
-          <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank" data-cursor-text ="My Github repos">
+          <a href="https://github.com/Rodjxc" target="blank" data-cursor-text ="My Github repos">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://github.com/Rodjxc" target="blank" data-cursor-text ="LinkedIn">
+          <a href="https://www.linkedin.com/in/rod-jimeno/" target="blank" data-cursor-text ="LinkedIn">
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </div>
