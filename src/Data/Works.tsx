@@ -11,6 +11,17 @@ export const Works = [
     figma: "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1"
   },
   {
+    id: "Jokeapp",
+    name: "Joke App",
+    url: "https://joke-app-indol.vercel.app/",
+    tecnologies: "Vite, React, Typescript",
+    categories: "Web App",
+    description:
+      "An app I developed for a technical case, where the app fetches a list of jokes from an API and allows you to edit them. Built using AntDesign components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle"
+      ,
+      github: "https://github.com/Rodjxc/joke-app"
+  },
+  {
     id: "MusicF",
     name: "Oslo Music Festival",
     url: "https://music-festival-ten.vercel.app/",
@@ -60,5 +71,6 @@ export const Works = [
     description:
       "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame.",
   },
+
   
 ];
