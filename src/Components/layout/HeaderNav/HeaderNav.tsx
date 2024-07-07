@@ -11,6 +11,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
+import { COLORS } from "../../../common/colors";
 
 export const HeaderNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,7 +46,7 @@ export const HeaderNav = () => {
     <Box
       as="header"
       bg="black"
-      color="white"
+      color={COLORS.WHITE}
       position="fixed"
       top="0"
       width="100%"
@@ -67,20 +68,22 @@ export const HeaderNav = () => {
           onClick={handleMobileNavToggle}
           icon={<FontAwesomeIcon icon={isOpen ? faTimes : faBars} />}
           variant="ghost"
-          color="white"
+          color={COLORS.WHITE}
           aria-label="Toggle Navigation"
         />
         <Flex
           className="links-navbar"
           display={{ base: "none", md: "flex" }}
           alignItems="center"
+          justifyContent="center"
+          flex="1"
         >
           <NavLink
             to="/portfolio"
             onClick={handleNavLinkClick}
             style={({ isActive }) => ({
-              color: isActive ? "#f6c5b7" : "white",
-              borderBottom: isActive ? "3px solid #f6c5b7" : "none",
+              color: isActive ? COLORS.PINK : COLORS.WHITE,
+              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
               paddingBottom: isActive ? "9px" : "none",
               marginLeft: "15px",
               marginRight: "15px",
@@ -91,6 +94,23 @@ export const HeaderNav = () => {
             })}
           >
             Portfolio
+          </NavLink>
+          <NavLink
+            to="/cv"
+            onClick={handleNavLinkClick}
+            style={({ isActive }) => ({
+              color: isActive ? COLORS.PINK : COLORS.WHITE,
+              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
+              paddingBottom: isActive ? "9px" : "none",
+              marginLeft: "15px",
+              marginRight: "15px",
+              fontFamily: "'Jura', sans-serif",
+              fontWeight: "bold",
+              fontSize: "18px",
+              textDecoration: "none",
+            })}
+          >
+            CV
           </NavLink>
         </Flex>
         <Flex
@@ -103,7 +123,7 @@ export const HeaderNav = () => {
             target="blank"
             data-cursor-text="My Github repos"
             marginRight="3rem"
-            color="white"
+            color={COLORS.WHITE}
           >
             <FontAwesomeIcon icon={faGithub} />
           </Link>
@@ -112,7 +132,7 @@ export const HeaderNav = () => {
             target="blank"
             data-cursor-text="LinkedIn"
             marginRight="3rem"
-            color="white"
+            color={COLORS.WHITE}
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </Link>
@@ -135,8 +155,8 @@ export const HeaderNav = () => {
             to="/portfolio"
             onClick={handleNavLinkClick}
             style={({ isActive }) => ({
-              color: isActive ? "#f6c5b7" : "white",
-              borderBottom: isActive ? "3px solid #f6c5b7" : "none",
+              color: isActive ? COLORS.PINK : COLORS.WHITE,
+              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
               paddingBottom: isActive ? "9px" : "none",
               marginLeft: "15px",
               marginRight: "15px",
@@ -152,8 +172,8 @@ export const HeaderNav = () => {
             to="/cv"
             onClick={handleNavLinkClick}
             style={({ isActive }) => ({
-              color: isActive ? "#f6c5b7" : "white",
-              borderBottom: isActive ? "3px solid #f6c5b7" : "none",
+              color: isActive ? COLORS.PINK : COLORS.WHITE,
+              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
               paddingBottom: isActive ? "9px" : "none",
               marginLeft: "15px",
               marginRight: "15px",
@@ -169,7 +189,7 @@ export const HeaderNav = () => {
             href="https://github.com/Rodjxc"
             target="blank"
             data-cursor-text="My Github repos"
-            color="white"
+            color={COLORS.WHITE}
           >
             <FontAwesomeIcon icon={faGithub} />
           </Link>
@@ -177,7 +197,7 @@ export const HeaderNav = () => {
             href="https://www.linkedin.com/in/rod-jimeno/"
             target="blank"
             data-cursor-text="LinkedIn"
-            color="white"
+            color={COLORS.WHITE}
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </Link>

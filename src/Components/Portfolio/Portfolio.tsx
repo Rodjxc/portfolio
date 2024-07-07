@@ -12,11 +12,18 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { COLORS } from "../../common/colors";
 
 export const Portfolio = () => {
   return (
     <Box className="page" padding="4%" bg="black" color="white">
-      <Heading as="h1" textAlign="center" fontSize="4xl" mb="8" color="#f6c5b7">
+      <Heading
+        as="h1"
+        textAlign="center"
+        fontSize="4xl"
+        mb="8"
+        color={COLORS.PINK}
+      >
         Portfolio
       </Heading>
       <VStack spacing="40px" align="stretch">
@@ -58,10 +65,10 @@ export const Portfolio = () => {
                 p="4"
                 width={{ base: "100%", md: "50%" }}
               >
-                <Heading as="h1" color="#f6c5b7" fontSize="2xl" mt="2">
+                <Heading as="h1" color={COLORS.PINK} fontSize="2xl" mt="2">
                   {work.name}
                 </Heading>
-                <Text color="#fdd2c6" fontSize="lg" mt="2">
+                <Text color={COLORS.PINK} fontSize="lg" mt="2">
                   {work.tecnologies}
                 </Text>
                 <Text my="4" mx="auto" width="80%">
@@ -72,10 +79,10 @@ export const Portfolio = () => {
                     as={RouterLink}
                     to={work.url || "/default-path-if-undefined"}
                     target="_blank"
-                    color="white"
+                    color={COLORS.WHITE}
                     fontSize="25px"
                     mx="2"
-                    _hover={{ color: "#f6c5b7" }}
+                    _hover={COLORS.PINK}
                   >
                     <FontAwesomeIcon icon={faArrowUpFromBracket} />
                   </Link>
@@ -84,10 +91,10 @@ export const Portfolio = () => {
                       as={RouterLink}
                       to={work.github}
                       target="_blank"
-                      color="white"
+                      color={COLORS.WHITE}
                       fontSize="25px"
                       mx="2"
-                      _hover={{ color: "#f6c5b7" }}
+                      _hover={COLORS.PINK}
                     >
                       <FontAwesomeIcon icon={faGithub} />
                     </Link>
@@ -97,10 +104,10 @@ export const Portfolio = () => {
                       as={RouterLink}
                       to={work.figma}
                       target="_blank"
-                      color="white"
+                      color={COLORS.WHITE}
                       fontSize="25px"
                       mx="2"
-                      _hover={{ color: "#f6c5b7" }}
+                      _hover={COLORS.PINK}
                     >
                       <FontAwesomeIcon icon={faFigma} />
                     </Link>

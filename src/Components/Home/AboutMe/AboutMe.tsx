@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Link, Flex } from "@chakra-ui/react";
+import { COLORS } from "../../../common/colors";
 
 export const AboutMe = () => {
   return (
@@ -19,7 +20,7 @@ export const AboutMe = () => {
             href="https://www.beerandcideracademy.org/meet-the-sommeliers/2018/10/10/rodrigo-jimeno"
             data-cursor-text="Wanna know more?"
             target="_blank"
-            color="#f6c5b7"
+            color={COLORS.PINK}
             _hover={{ textDecoration: "none" }}
           >
             beer sommelier
@@ -47,7 +48,7 @@ export const AboutMe = () => {
             href="https://www.youtube.com/sendaplays"
             data-cursor-text="A weird hobby"
             target="_blank"
-            color="#f6c5b7"
+            color={COLORS.PINK}
             _hover={{ textDecoration: "none" }}
           >
             a YouTube channel

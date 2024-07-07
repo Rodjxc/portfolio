@@ -1,4 +1,4 @@
-// import './Contact.css'
+import "./Contact.css";
 import { Box } from "@chakra-ui/react";
 
 export const Contact = () => {

@@ -8,6 +8,7 @@ import {
   ListItem,
   Text,
 } from "@chakra-ui/react";
+import { COLORS } from "../../common/colors";
 
 export const CV = () => {
   useEffect(() => {
@@ -46,8 +47,8 @@ export const CV = () => {
             <ListItem mb="15px">
               <Link
                 href=""
-                color="white"
-                _hover={{ color: "#f6c5b7" }}
+                color={COLORS.WHITE}
+                _hover={COLORS.PINK}
                 textDecoration="none"
               >
                 Udemy | Master in React: React JS, Hooks, MERN, NodeJS, JWT
@@ -56,8 +57,8 @@ export const CV = () => {
             <ListItem mb="15px">
               <Link
                 href="https://www.udemy.com/certificate/UC-a51f7d6a-becd-4034-abd3-18b7a31a0a69/"
-                color="white"
-                _hover={{ color: "#f6c5b7" }}
+                color={COLORS.WHITE}
+                _hover={COLORS.PINK}
                 textDecoration="none"
               >
                 Udemy | The Complete 2023 Web Development Bootcamp
@@ -66,8 +67,8 @@ export const CV = () => {
             <ListItem mb="15px">
               <Link
                 href="https://www.udemy.com/certificate/UC-f7fceaa7-e4fc-4062-8b6c-d18583280e75/"
-                color="white"
-                _hover={{ color: "#f6c5b7" }}
+                color={COLORS.WHITE}
+                _hover={COLORS.PINK}
                 textDecoration="none"
               >
                 Udemy | Master in CSS: Responsive design, SASS, LESS, Flexbox,
@@ -77,8 +78,8 @@ export const CV = () => {
             <ListItem mb="15px">
               <Link
                 href="https://www.udemy.com/certificate/UC-f053ab6b-d229-4899-ac50-0b0e42756b66/"
-                color="white"
-                _hover={{ color: "#f6c5b7" }}
+                color={COLORS.WHITE}
+                _hover={COLORS.PINK}
                 textDecoration="none"
               >
                 Udemy | Tailwind CSS - Zero to hero v3 2023
@@ -87,8 +88,8 @@ export const CV = () => {
             <ListItem mb="15px">
               <Link
                 href="https://www.udemy.com/certificate/UC-bd7b711f-a31c-4886-82a3-a9ee376804e2/"
-                color="white"
-                _hover={{ color: "#f6c5b7" }}
+                color={COLORS.WHITE}
+                _hover={COLORS.PINK}
                 textDecoration="none"
               >
                 Udemy | Complete Web Design: From Figma to Webflow to
@@ -129,7 +130,11 @@ export const CV = () => {
             >
               Web Developer | Freelance (Nov. 2022 - Present) | 📍 Oslo
             </Text>
-            <Text borderLeft="1px solid #f6c5b7" pl="5%" lineHeight="2rem">
+            <Text
+              borderLeft={`1px solid ${COLORS.PINK}`}
+              pl="5%"
+              lineHeight="2rem"
+            >
               During the time of my studies I've been able to partake in all the
               projects and works shown in my portfolio and it's been an
               assurance that development has been the right career path for me.
@@ -154,7 +159,11 @@ export const CV = () => {
               Macondo AS | Key Account Manager (Jan. 2022 - March 2023) | 📍
               Oslo
             </Text>
-            <Text borderLeft="1px solid #f6c5b7" pl="5%" lineHeight="2rem">
+            <Text
+              borderLeft={`1px solid ${COLORS.PINK}`}
+              pl="5%"
+              lineHeight="2rem"
+            >
               My role here was quite varied - not just helping with beer
               production of Schouskjelleren Bryggeri but also connecting with
               some of the managers of the best bars in Oslo. I listened to what
@@ -185,7 +194,11 @@ export const CV = () => {
             >
               Content Creator for Youtube & Twitch (July 2019 - Present)
             </Text>
-            <Text borderLeft="1px solid #f6c5b7" pl="5%" lineHeight="2rem">
+            <Text
+              borderLeft={`1px solid ${COLORS.PINK}`}
+              pl="5%"
+              lineHeight="2rem"
+            >
               I started my Content Creation journey in 2019 by starting a
               YouTube channel where I made game guides for various video games,
               which laid part of the groundwork for my transition into the
@@ -212,7 +225,11 @@ export const CV = () => {
               Various roles within brewing and hospitality (July 2012 - 2019) |
               📍 Oslo - London (UK)
             </Text>
-            <Text borderLeft="1px solid #f6c5b7" pl="5%" lineHeight="2rem">
+            <Text
+              borderLeft={`1px solid ${COLORS.PINK}`}
+              pl="5%"
+              lineHeight="2rem"
+            >
               A year after I finished my university I decided to move out of my
               comfort zone and I moved to London, UK, where I worked for several
               years. I worked in hospitality both as a bartender and as a
