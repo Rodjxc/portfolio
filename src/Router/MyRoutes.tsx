@@ -1,7 +1,6 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "../Components/Home/Home";
 import { Portfolio } from "../Components/Portfolio/Portfolio";
-// import { Servicios } from "../Components/Servicios/Servicios";
 import { CV } from "../Components/CV/CV";
 // import { Contact } from "../Components/Contact/Contact";
 import { HeaderNav } from "../Components/layout/HeaderNav/HeaderNav";
@@ -20,7 +19,6 @@ export const MyRoutes = () => {
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
-            {/* <Route path="/servicios" element={<Servicios />}></Route> */}
             <Route path="/CV" element={<CV />}></Route>
             {/* <Route path="/contact" element={<Contact />}></Route> */}
             <Route path="/project/:id" element={<Project />}></Route>

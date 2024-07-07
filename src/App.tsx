@@ -1,11 +1,14 @@
-import { MyRoutes } from './Router/MyRoutes';
-import { Cursor } from './Components/Cursor/Cursor';
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { MyRoutes } from "./Router/MyRoutes";
+import { Cursor } from "./Components/Cursor/Cursor";
 
 export const App = () => {
   return (
-    <div className="layout">
-      <MyRoutes />
-      <Cursor />
-    </div>
+    <ChakraProvider>
+      <Box>
+        <MyRoutes />
+        <Cursor />
+      </Box>
+    </ChakraProvider>
   );
 };

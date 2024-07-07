@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Works } from "../../Data/Works";
-import "./Project.css";
+import { Box, Heading, Image, Text, Link, VStack } from "@chakra-ui/react";
 
-// Here we create an interface to let the useState know that the params we'll be receiving, will of be those types
+// Here we create an interface to let the useState know that the params we'll be receiving, will be of those types
 interface ProjectType {
   id: string;
   name: string;
@@ -25,27 +24,40 @@ export const Project = () => {
   const [proyecto, setProyecto] = useState<ProjectType | null>(null);
 
   useEffect(() => {
-    let proyecto = Works.filter((trabajo) => trabajo.id === params.id);
+    const proyecto = Works.filter((trabajo) => trabajo.id === params.id);
     setProyecto(proyecto[0]);
-  }, []);
+  }, [params.id]);
 
   return (
-    <div className="page-work">
+    <Box className="page-work" padding="4" maxW="xl" margin="auto">
       {proyecto && (
-        <div className="mask">
-          <img src={`/img/${proyecto.id}.jpg`} alt="" />
-        </div>
+        <Box
+          className="mask"
+          height="300px"
+          overflow="hidden"
+          boxShadow="0px 0px 20px #ddd"
+        >
+          <Image
+            src={`/img/${proyecto.id}.jpg`}
+            alt={proyecto.name}
+            width="100%"
+            height="100%"
+            objectFit="cover"
+          />
+        </Box>
       )}
       {proyecto && (
-        <>
-          <h1>{proyecto.name}</h1>
-          <p>{proyecto.tecnologies}</p>
-          <p>{proyecto.description}</p>
-          <a href={proyecto.url} target="_blank">
+        <VStack spacing={4} align="start" mt={4}>
+          <Heading as="h1" size="xl">
+            {proyecto.name}
+          </Heading>
+          <Text fontSize="lg">{proyecto.tecnologies}</Text>
+          <Text>{proyecto.description}</Text>
+          <Link href={proyecto.url} isExternal color="teal.500">
             Go to the Project
-          </a>
-        </>
+          </Link>
+        </VStack>
       )}
-    </div>
+    </Box>
   );
 };

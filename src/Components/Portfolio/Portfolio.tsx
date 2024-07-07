@@ -1,68 +1,116 @@
 import { Works } from "../../Data/Works";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
-import { faFigma } from "@fortawesome/free-brands-svg-icons";
-
-import "./Portfolio.css";
+import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
+import { Link as RouterLink } from "react-router-dom";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 export const Portfolio = () => {
   return (
-    <div className="page">
-      <h1 className="heading">Portfolio</h1>
-      <section className="works">
-        {Works.map((Works) => {
+    <Box className="page" padding="4%" bg="black" color="white">
+      <Heading as="h1" textAlign="center" fontSize="4xl" mb="8" color="#f6c5b7">
+        Portfolio
+      </Heading>
+      <VStack spacing="40px" align="stretch">
+        {Works.map((work) => {
           return (
-            <article key={Works.id} className="work-item">
-              <div className="mask">
-                {/*   If I want it to go to another page where I can display the project itself in detail, activate the
-                link below. In this case the projects are just ideas so there's not much to talk about */}
-                {/* <Link to={"/project/" + Works.id}> */}
-                <Link className="portfolio-img"
-                  to={Works.url || "/default-path-if-undefined"}
+            <Flex
+              key={work.id}
+              direction={{ base: "column", md: "row" }}
+              borderTop="1px solid white"
+              borderRight="1px solid white"
+              align="stretch"
+            >
+              <Box
+                overflow="hidden"
+                maxHeight="450px"
+                width={{ base: "100%", md: "50%" }}
+              >
+                <Link
+                  as={RouterLink}
+                  to={work.url || "/default-path-if-undefined"}
                   target="_blank"
-                  data-cursor-text ="See project live"
+                  display="block"
+                  data-cursor-text="See project live"
                 >
-                  <img
-                    src={"/img/" + Works.id + ".jpg"}
+                  <Image
+                    src={"/img/" + work.id + ".jpg"}
                     alt="Image of the project"
+                    objectFit="cover"
+                    width="100%"
+                    height="100%"
                   />
                 </Link>
-              </div>
-               <div className="card-text">
-                  <h1>{Works.name}</h1>
-                  <span>{Works.tecnologies}</span>
-                  <p>{Works.description}</p>
-                  <div className="icons-card">
-                       <Link
-                          to={Works.url || "/default-path-if-undefined"}
-                          target="_blank"
-                        >
-                          <FontAwesomeIcon
-                          icon={faArrowUpFromBracket}
-                          className="icon"
-                        />
-                        </Link>
-
-                        {/* Here I made it only render if there's something inside the github param. If it doesn't have, don't show */}
-                        {Works.github && (
-                          <Link to={Works.github} target="_blank">
-                            <FontAwesomeIcon icon={faGithub} className="icon" />
-                        </Link>
-                      )}
-                        {Works.figma && (
-                        <Link to={Works.figma} target="_blank">
-                            <FontAwesomeIcon icon={faFigma} className="icon" />
-                        </Link>
-                      )}
-                  </div>
-                  
-                </div>
-             </article>
+              </Box>
+              <Flex
+                direction="column"
+                textAlign="center"
+                justifyContent="center"
+                fontFamily="'Uncut-Sans', sans-serif"
+                p="4"
+                width={{ base: "100%", md: "50%" }}
+              >
+                <Heading as="h1" color="#f6c5b7" fontSize="2xl" mt="2">
+                  {work.name}
+                </Heading>
+                <Text color="#fdd2c6" fontSize="lg" mt="2">
+                  {work.tecnologies}
+                </Text>
+                <Text my="4" mx="auto" width="80%">
+                  {work.description}
+                </Text>
+                <Flex justifyContent="center" mt="4" mb="4">
+                  <Link
+                    as={RouterLink}
+                    to={work.url || "/default-path-if-undefined"}
+                    target="_blank"
+                    color="white"
+                    fontSize="25px"
+                    mx="2"
+                    _hover={{ color: "#f6c5b7" }}
+                  >
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                  </Link>
+                  {work.github && (
+                    <Link
+                      as={RouterLink}
+                      to={work.github}
+                      target="_blank"
+                      color="white"
+                      fontSize="25px"
+                      mx="2"
+                      _hover={{ color: "#f6c5b7" }}
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                    </Link>
+                  )}
+                  {work.figma && (
+                    <Link
+                      as={RouterLink}
+                      to={work.figma}
+                      target="_blank"
+                      color="white"
+                      fontSize="25px"
+                      mx="2"
+                      _hover={{ color: "#f6c5b7" }}
+                    >
+                      <FontAwesomeIcon icon={faFigma} />
+                    </Link>
+                  )}
+                </Flex>
+              </Flex>
+            </Flex>
           );
         })}
-      </section>
-    </div>
+      </VStack>
+    </Box>
   );
 };
