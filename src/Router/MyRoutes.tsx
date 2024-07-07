@@ -2,7 +2,6 @@ import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "../Components/Home/Home";
 import { Portfolio } from "../Components/Portfolio/Portfolio";
 import { CV } from "../Components/CV/CV";
-// import { Contact } from "../Components/Contact/Contact";
 import { HeaderNav } from "../Components/layout/HeaderNav/HeaderNav";
 import { Footer } from "../Components/layout/Footer/Footer";
 import { Project } from "../Components/Project/Project";
@@ -17,11 +16,10 @@ export const MyRoutes = () => {
         <section className="content">
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />}></Route>
-            <Route path="/portfolio" element={<Portfolio />}></Route>
-            <Route path="/CV" element={<CV />}></Route>
-            {/* <Route path="/contact" element={<Contact />}></Route> */}
-            <Route path="/project/:id" element={<Project />}></Route>
+            <Route path="/home" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/CV" element={<CV />} />
+            <Route path="/project/:id" element={<Project />} />
 
             <Route
               path="*"

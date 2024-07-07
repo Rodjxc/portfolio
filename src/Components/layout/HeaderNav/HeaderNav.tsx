@@ -1,7 +1,3 @@
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
 import {
   Box,
@@ -11,15 +7,23 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { Logo } from "./Logo";
+import { CenterLinks } from "./CenterLinks";
+import { IconLinks } from "./IconLinks";
 import { COLORS } from "../../../common/colors";
+import { NavLink } from "react-router-dom";
+import { useCallback } from "react";
 
-export const HeaderNav = () => {
+export const HeaderNav: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleNavLinkClick = () => {
+  const handleNavLinkClick = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     onClose();
-  };
+  }, [onClose]);
 
   const handleMobileNavToggle = () => {
     if (isOpen) {
@@ -29,18 +33,18 @@ export const HeaderNav = () => {
     }
   };
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (window.innerWidth > 768 && isOpen) {
       onClose();
     }
-  };
+  }, [isOpen, onClose]);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isOpen]);
+  }, [handleResize]);
 
   return (
     <Box
@@ -51,18 +55,15 @@ export const HeaderNav = () => {
       top="0"
       width="100%"
       zIndex="200"
-      paddingY="4"
+      py="4"
     >
-      <Flex alignItems="center" justifyContent="space-between" paddingX="8">
-        <Box className="logo" data-cursor-text="Take me back">
-          <NavLink
-            to="/home"
-            onClick={handleNavLinkClick}
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            &lt; RJ /&gt;
-          </NavLink>
-        </Box>
+      <Flex alignItems="center" justifyContent="space-between" px="8">
+        <Logo handleNavLinkClick={handleNavLinkClick} />
+
+        <CenterLinks handleNavLinkClick={handleNavLinkClick} />
+
+        <IconLinks />
+
         <IconButton
           display={{ base: "block", md: "none" }}
           onClick={handleMobileNavToggle}
@@ -71,76 +72,10 @@ export const HeaderNav = () => {
           color={COLORS.WHITE}
           aria-label="Toggle Navigation"
         />
-        <Flex
-          className="links-navbar"
-          display={{ base: "none", md: "flex" }}
-          alignItems="center"
-          justifyContent="center"
-          flex="1"
-        >
-          <NavLink
-            to="/portfolio"
-            onClick={handleNavLinkClick}
-            style={({ isActive }) => ({
-              color: isActive ? COLORS.PINK : COLORS.WHITE,
-              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
-              paddingBottom: isActive ? "9px" : "none",
-              marginLeft: "15px",
-              marginRight: "15px",
-              fontFamily: "'Jura', sans-serif",
-              fontWeight: "bold",
-              fontSize: "18px",
-              textDecoration: "none",
-            })}
-          >
-            Portfolio
-          </NavLink>
-          <NavLink
-            to="/cv"
-            onClick={handleNavLinkClick}
-            style={({ isActive }) => ({
-              color: isActive ? COLORS.PINK : COLORS.WHITE,
-              borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
-              paddingBottom: isActive ? "9px" : "none",
-              marginLeft: "15px",
-              marginRight: "15px",
-              fontFamily: "'Jura', sans-serif",
-              fontWeight: "bold",
-              fontSize: "18px",
-              textDecoration: "none",
-            })}
-          >
-            CV
-          </NavLink>
-        </Flex>
-        <Flex
-          className="icons-navbar"
-          display={{ base: "none", md: "flex" }}
-          alignItems="center"
-        >
-          <Link
-            href="https://github.com/Rodjxc"
-            target="blank"
-            data-cursor-text="My Github repos"
-            marginRight="3rem"
-            color={COLORS.WHITE}
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/rod-jimeno/"
-            target="blank"
-            data-cursor-text="LinkedIn"
-            marginRight="3rem"
-            color={COLORS.WHITE}
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </Link>
-        </Flex>
       </Flex>
+
       <Flex
         as="nav"
-        className="mobile-nav"
         display={{ base: isOpen ? "flex" : "none", md: "none" }}
         flexDirection="column"
         position="fixed"
@@ -148,7 +83,7 @@ export const HeaderNav = () => {
         width="100%"
         bg="black"
         zIndex="199"
-        paddingTop="90px"
+        pt="90px"
       >
         <VStack spacing="4">
           <NavLink
@@ -158,8 +93,6 @@ export const HeaderNav = () => {
               color: isActive ? COLORS.PINK : COLORS.WHITE,
               borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
               paddingBottom: isActive ? "9px" : "none",
-              marginLeft: "15px",
-              marginRight: "15px",
               fontFamily: "'Jura', sans-serif",
               fontWeight: "bold",
               fontSize: "18px",
@@ -175,8 +108,6 @@ export const HeaderNav = () => {
               color: isActive ? COLORS.PINK : COLORS.WHITE,
               borderBottom: isActive ? `3px solid ${COLORS.PINK}` : "none",
               paddingBottom: isActive ? "9px" : "none",
-              marginLeft: "15px",
-              marginRight: "15px",
               fontFamily: "'Jura', sans-serif",
               fontWeight: "bold",
               fontSize: "18px",
@@ -190,6 +121,7 @@ export const HeaderNav = () => {
             target="blank"
             data-cursor-text="My Github repos"
             color={COLORS.WHITE}
+            fontSize="20px"
           >
             <FontAwesomeIcon icon={faGithub} />
           </Link>
@@ -198,6 +130,7 @@ export const HeaderNav = () => {
             target="blank"
             data-cursor-text="LinkedIn"
             color={COLORS.WHITE}
+            fontSize="20px"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </Link>

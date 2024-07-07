@@ -8,7 +8,7 @@ export const AboutMe = () => {
       padding={{ base: "4% 10% 5% 10%", md: "4% 15% 5% 15%" }}
     >
       <Flex direction="column" textAlign="center" className="about-me hidden">
-        <Heading as="h3" fontSize="3xl" mb="4">
+        <Heading fontSize="3xl" mb="12">
           ABOUT ME
         </Heading>
         <Text as="h4" fontSize="15px" lineHeight="25px">
