@@ -3,7 +3,7 @@ export const Works = [
     id: "HystarF",
     name: "Hystar",
     url: "https://hystar.webflow.io/",
-    tecnologies: "Webflow + Figma",
+    technologies: "Webflow + Figma",
     categories: "Web Design, built using Webflow",
     description:
       "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements. It includes a blog application (news) with different posts that map the data from a database",
@@ -14,7 +14,7 @@ export const Works = [
     id: "Jokeapp",
     name: "Joke App",
     url: "https://joke-app-indol.vercel.app/",
-    tecnologies: "Vite, React, Typescript",
+    technologies: "Vite, React, Typescript",
     categories: "Web App",
     description:
       "An app I developed for a technical case, where the app fetches a list of jokes from an API and allows you to edit them. Built using AntDesign components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
@@ -24,7 +24,7 @@ export const Works = [
     id: "MusicF",
     name: "Oslo Music Festival",
     url: "https://music-festival-ten.vercel.app/",
-    tecnologies: "HTML, React, Typescript & Tailwind CSS",
+    technologies: "HTML, React, Typescript & Tailwind CSS",
     categories: "Web Design",
     description:
       "A website for a fake music festival, built using React and Tailwind CSS and implementing React libraries .",
@@ -35,7 +35,7 @@ export const Works = [
     id: "CommuF",
     name: "CommuniLink",
     url: "https://communilinkrodjdev.webflow.io/",
-    tecnologies: "Webflow + Figma",
+    technologies: "Webflow + Figma",
     categories: "Web Design, built using Webflow",
     description:
       "A simple landing page for a website of a fake chat and video calls app, fully responsive. Designed in Figma and built using WebFlow",
@@ -46,17 +46,17 @@ export const Works = [
     id: "PortF",
     name: "Portfolio",
     url: "https://rodj.dev",
-    tecnologies: "HTML, CSS, React & TypeScript",
+    technologies: "HTML, CSS, React & TypeScript",
     categories: "Website, Web Design",
     description:
-      "This same website, where I got to play a bit more with React and other functionalities and, at the same time, building my own portfolio. Built using React Router and Chakra UI as a component library.",
+      "This same website, where I got to play a bit more with React and other functionalities and, at the same time, building my own portfolio. Built using React Router, Framer-Motion and Chakra UI components",
     github: "https://github.com/Rodjxc/portfolio",
   },
   {
     id: "MovieF",
     name: "MovieTrack",
     url: "https://movies-site-h4l5b12fe-rodjxc.vercel.app",
-    tecnologies: "HTML, CSS, React & JS",
+    technologies: "HTML, CSS, React & JS",
     categories: "Website functionality",
     description:
       "A website to write down, rate, and track movies you've watched or want to watch and add a description about them. Built using React and saving the items in the Local Storage",
@@ -66,7 +66,7 @@ export const Works = [
     id: "RaidF",
     name: "La Fogata de Raid",
     url: "https://lafogataderaid.com/",
-    tecnologies: "Wordpress, CSS",
+    technologies: "Wordpress, CSS",
     categories: "Website with Wordpress CMS",
     description:
       "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame.",

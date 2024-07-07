@@ -1,14 +1,15 @@
 import { useEffect } from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-  List,
-  ListItem,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, List, ListItem, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { COLORS } from "../../common/colors";
+import { Education } from "./Education";
+
+const MotionBox = motion(Box);
+
+const sectionVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+};
 
 export const CV = () => {
   useEffect(() => {
@@ -24,90 +25,33 @@ export const CV = () => {
 
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
   return (
-    <Box padding="8% 5%" minH="500px">
+    <Box padding="8% 5%" minH="500px" bg={COLORS.BLACK} color={COLORS.WHITE}>
       <Flex direction="column" gap="20px">
-        <Box
+        <MotionBox
           className="hidden education"
           fontFamily="Jura, sans-serif"
           textAlign="center"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
         >
-          <Heading
-            as="h2"
-            fontWeight="400"
-            fontSize="70px"
-            textTransform="uppercase"
-            mb="4"
-          >
-            Education
-          </Heading>
-          <List>
-            <ListItem mb="15px">
-              <Link
-                href=""
-                color={COLORS.WHITE}
-                _hover={COLORS.PINK}
-                textDecoration="none"
-              >
-                Udemy | Master in React: React JS, Hooks, MERN, NodeJS, JWT
-              </Link>
-            </ListItem>
-            <ListItem mb="15px">
-              <Link
-                href="https://www.udemy.com/certificate/UC-a51f7d6a-becd-4034-abd3-18b7a31a0a69/"
-                color={COLORS.WHITE}
-                _hover={COLORS.PINK}
-                textDecoration="none"
-              >
-                Udemy | The Complete 2023 Web Development Bootcamp
-              </Link>
-            </ListItem>
-            <ListItem mb="15px">
-              <Link
-                href="https://www.udemy.com/certificate/UC-f7fceaa7-e4fc-4062-8b6c-d18583280e75/"
-                color={COLORS.WHITE}
-                _hover={COLORS.PINK}
-                textDecoration="none"
-              >
-                Udemy | Master in CSS: Responsive design, SASS, LESS, Flexbox,
-                Grid & Bootstrap
-              </Link>
-            </ListItem>
-            <ListItem mb="15px">
-              <Link
-                href="https://www.udemy.com/certificate/UC-f053ab6b-d229-4899-ac50-0b0e42756b66/"
-                color={COLORS.WHITE}
-                _hover={COLORS.PINK}
-                textDecoration="none"
-              >
-                Udemy | Tailwind CSS - Zero to hero v3 2023
-              </Link>
-            </ListItem>
-            <ListItem mb="15px">
-              <Link
-                href="https://www.udemy.com/certificate/UC-bd7b711f-a31c-4886-82a3-a9ee376804e2/"
-                color={COLORS.WHITE}
-                _hover={COLORS.PINK}
-                textDecoration="none"
-              >
-                Udemy | Complete Web Design: From Figma to Webflow to
-                Freelancing
-              </Link>
-            </ListItem>
-            <ListItem>IBD Certified Beer Sommelier</ListItem>
-            <ListItem>
-              UIB - University of Balearic Island (Spain) - Degree in Tourism
-              and Leisure Studies
-            </ListItem>
-          </List>
-        </Box>
+          <Education />
+        </MotionBox>
 
-        <Box
+        <MotionBox
           className="hidden work-experience"
           fontFamily="Jura, sans-serif"
           textAlign="center"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
         >
           <Heading
             as="h2"
@@ -243,12 +187,15 @@ export const CV = () => {
               opportunities to grow.
             </Text>
           </Box>
-        </Box>
+        </MotionBox>
 
-        <Box
+        <MotionBox
           className="hidden working-tools"
           fontFamily="Jura, sans-serif"
           textAlign="center"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
         >
           <Heading
             as="h2"
@@ -270,12 +217,15 @@ export const CV = () => {
             <ListItem mb="5px">Spotify</ListItem>
             <ListItem mb="5px">and Google :)</ListItem>
           </List>
-        </Box>
+        </MotionBox>
 
-        <Box
+        <MotionBox
           className="hidden other-languages"
           fontFamily="Jura, sans-serif"
           textAlign="center"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
         >
           <Heading
             as="h2"
@@ -295,7 +245,7 @@ export const CV = () => {
             <ListItem mb="5px">French | Limited Working Proficiency</ListItem>
             <ListItem mb="5px">Norwegian | Elementary Proficiency</ListItem>
           </List>
-        </Box>
+        </MotionBox>
       </Flex>
     </Box>
   );

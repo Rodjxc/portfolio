@@ -21,7 +21,7 @@ export const Portfolio = () => {
         as="h1"
         textAlign="center"
         fontSize="4xl"
-        mb="8"
+        my="8"
         color={COLORS.PINK}
       >
         Portfolio
@@ -69,7 +69,7 @@ export const Portfolio = () => {
                   {work.name}
                 </Heading>
                 <Text color={COLORS.PINK} fontSize="lg" mt="2">
-                  {work.tecnologies}
+                  {work.technologies}
                 </Text>
                 <Text my="4" mx="auto" width="80%">
                   {work.description}
