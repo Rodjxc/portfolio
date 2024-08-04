@@ -14,10 +14,10 @@ export const Works = [
     id: "Jokeapp",
     name: "Joke App",
     url: "https://joke-app-indol.vercel.app/",
-    technologies: "Vite, React, Typescript",
+    technologies: "React, Typescript",
     categories: "Web App",
     description:
-      "An app I developed for a technical case, where the app fetches a list of jokes from an API and allows you to edit them. Built using AntDesign components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
+      "A small app able to fetch a list of jokes from an API and allows you to edit them. Built using AntD components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
     github: "https://github.com/Rodjxc/joke-app",
   },
   {
