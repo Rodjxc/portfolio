@@ -1,13 +1,10 @@
 import { Box, Flex, Heading, Text, Image, Link } from "@chakra-ui/react";
-import { COLORS } from "../../../common/colors";
+import { COLORS } from "../../common/colors";
 
 export const Hero = () => {
 	return (
 		<Box
 			display="flex"
-			marginTop="55px"
-			height="90vh"
-			width="100%"
 			flexDirection={{ base: "column-reverse", md: "row" }}
 			textAlign={{ base: "center", md: "left" }}
 			justifyContent={{ base: "center", md: "flex-start" }}

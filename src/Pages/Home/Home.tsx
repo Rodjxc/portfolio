@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import { Hero } from "./Hero/Hero";
-import { Staff } from "./Staff/Staff";
-import { TechStack } from "./TechStack/TechStack";
+import { Staff } from "../Staff/Staff";
+import { TechStack } from "../TechStack/TechStack";
+import { Hero } from "../Hero/Hero";
 
 export const Home = () => {
 	return (
@@ -11,9 +11,8 @@ export const Home = () => {
 			<div>
 				<TechStack />
 			</div>
-
 			<div>
-				<Box className="staff-cards">
+				<Box>
 					<Staff />
 				</Box>
 			</div>

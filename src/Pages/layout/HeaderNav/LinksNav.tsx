@@ -46,7 +46,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				>
 					CV
 				</NavLink>
-				<NavLink
+				{/* <NavLink
 					to="/about-me"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -58,7 +58,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 					onClick={onClose}
 				>
 					About Me
-				</NavLink>
+				</NavLink> */}
 				<Link
 					href="https://github.com/Rodjxc"
 					target="_blank"
@@ -112,7 +112,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				>
 					Projects
 				</NavLink>
-				<NavLink
+				{/* <NavLink
 					to="/about-me"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -123,7 +123,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 					}
 				>
 					About Me
-				</NavLink>
+				</NavLink> */}
 				<Link
 					href="https://github.com/Rodjxc"
 					target="_blank"
