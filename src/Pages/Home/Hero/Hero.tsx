@@ -22,7 +22,7 @@ export const Hero = () => {
 					fontFamily="'Uncut-Sans', sans-serif"
 					fontSize="20px"
 					lineHeight="30px"
-					// paddingX={{ base: "0", md: "20%" }}
+					paddingX={{ base: "0", md: "20%" }}
 				>
 					<Heading mb="6">Hey, I'm Rod!</Heading>
 					<Text>

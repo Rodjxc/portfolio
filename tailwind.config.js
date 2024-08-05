@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        lightBlack: {custom: '#181818'},
         pink: {
           custom: '#f6c5b7',
         },
