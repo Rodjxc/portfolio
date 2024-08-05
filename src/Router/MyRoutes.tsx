@@ -2,16 +2,16 @@ import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "../Pages/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
 import { CV } from "../Pages/CV/CV";
-import { HeaderNav } from "../Pages/layout/HeaderNav/HeaderNav";
 import { Footer } from "../Pages/layout/Footer/Footer";
 import { Project } from "../Pages/Project/Project";
+import { Header } from "../Pages/layout/HeaderNav/Header";
 
 export const MyRoutes = () => {
 	return (
 		<div>
 			<BrowserRouter>
 				{/*   HEADER AND NAVIGATION */}
-				<HeaderNav />
+				<Header />
 				{/*   MAIN CONTENT */}
 				<section className="content">
 					<Routes>
