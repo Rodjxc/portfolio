@@ -1,19 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { Box, Text } from "@chakra-ui/react";
-import { COLORS } from "../../../common/colors";
+import { Text } from "@chakra-ui/react";
 
-interface LogoProps {
-  handleNavLinkClick: () => void;
-}
-
-export const Logo: React.FC<LogoProps> = ({ handleNavLinkClick }) => (
-  <Box className="logo" data-cursor-text="Take me back">
-    <NavLink
-      to="/home"
-      onClick={handleNavLinkClick}
-      style={{ textDecoration: "none", color: COLORS.WHITE }}
-    >
-      <Text fontSize="2xl">&lt; RJ /&gt;</Text>
-    </NavLink>
-  </Box>
-);
+export const Logo = () => {
+	return (
+		<NavLink to="/home" className="text-white no-underline">
+			<Text className="text-2xl">&lt; Rod Jimeno /&gt;</Text>
+		</NavLink>
+	);
+};
