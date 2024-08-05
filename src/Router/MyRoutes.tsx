@@ -5,6 +5,7 @@ import { CV } from "../Pages/CV/CV";
 import { Footer } from "../Pages/layout/Footer/Footer";
 import { Project } from "../Pages/Project/Project";
 import { Header } from "../Pages/layout/HeaderNav/Header";
+import { AboutMe } from "../Pages/AboutMe/AboutMe";
 
 export const MyRoutes = () => {
 	return (
@@ -20,6 +21,7 @@ export const MyRoutes = () => {
 						<Route path="/portfolio" element={<Portfolio />} />
 						<Route path="/CV" element={<CV />} />
 						<Route path="/project/:id" element={<Project />} />
+						<Route path="/about-me" element={<AboutMe />} />
 
 						<Route
 							path="*"

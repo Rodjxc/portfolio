@@ -46,6 +46,19 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				>
 					CV
 				</NavLink>
+				<NavLink
+					to="/about-me"
+					className={({ isActive }) =>
+						`no-underline font-bold text-lg pb-2 border-b-2 ${
+							isActive
+								? "text-pink-custom border-pink-custom"
+								: "text-white border-transparent hover:border-pink-custom"
+						}`
+					}
+					onClick={onClose}
+				>
+					About Me
+				</NavLink>
 				<Link
 					href="https://github.com/Rodjxc"
 					target="_blank"
@@ -76,18 +89,6 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				display={{ base: "none", md: "flex" }}
 			>
 				<NavLink
-					to="/portfolio"
-					className={({ isActive }) =>
-						`no-underline font-bold text-lg pb-2 border-b-2 ${
-							isActive
-								? "text-pink-custom border-pink-custom"
-								: "text-white border-transparent hover:border-pink-custom"
-						}`
-					}
-				>
-					Portfolio
-				</NavLink>
-				<NavLink
 					to="/cv"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -97,7 +98,31 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 						}`
 					}
 				>
-					CV
+					Experience
+				</NavLink>
+				<NavLink
+					to="/portfolio"
+					className={({ isActive }) =>
+						`no-underline font-bold text-lg pb-2 border-b-2 ${
+							isActive
+								? "text-pink-custom border-pink-custom"
+								: "text-white border-transparent hover:border-pink-custom"
+						}`
+					}
+				>
+					Projects
+				</NavLink>
+				<NavLink
+					to="/about-me"
+					className={({ isActive }) =>
+						`no-underline font-bold text-lg pb-2 border-b-2 ${
+							isActive
+								? "text-pink-custom border-pink-custom"
+								: "text-white border-transparent hover:border-pink-custom"
+						}`
+					}
+				>
+					About Me
 				</NavLink>
 				<Link
 					href="https://github.com/Rodjxc"
