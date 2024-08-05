@@ -12,9 +12,11 @@ export const MyRoutes = () => {
 		<div>
 			<BrowserRouter>
 				{/*   HEADER AND NAVIGATION */}
+
 				<Header />
+
 				{/*   MAIN CONTENT */}
-				<section className="content">
+				<section className="pt-16">
 					<Routes>
 						<Route path="/" element={<Navigate to="/home" />} />
 						<Route path="/home" element={<Home />} />

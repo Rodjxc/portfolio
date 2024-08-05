@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
-import { StaffData } from "../../../Data/StaffData";
-import { COLORS } from "../../../common/colors";
+import { COLORS } from "../../common/colors";
+import { StaffData } from "./StaffData";
 
 export const Staff = () => (
 	<Box bg={COLORS.WHITE} py="3%">

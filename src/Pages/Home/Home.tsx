@@ -7,7 +7,6 @@ export const Home = () => {
 	return (
 		<Box className="bg-lightBlack-custom text-white">
 			<Hero />
-
 			<div>
 				<TechStack />
 			</div>

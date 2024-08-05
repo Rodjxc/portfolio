@@ -4,6 +4,7 @@ import { COLORS } from "../../common/colors";
 export const Hero = () => {
 	return (
 		<Box
+			className="pt-16"
 			display="flex"
 			flexDirection={{ base: "column-reverse", md: "row" }}
 			textAlign={{ base: "center", md: "left" }}
