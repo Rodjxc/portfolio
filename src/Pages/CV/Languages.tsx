@@ -1,38 +1,37 @@
-import { Heading, List, ListItem, Flex } from "@chakra-ui/react";
+import { Heading, List, ListItem } from "@chakra-ui/react";
 
 const languages = [
-  { name: "English", proficiency: "Proficient (Non-Native Speaker)" },
-  { name: "Spanish", proficiency: "Native" },
-  { name: "Catalan", proficiency: "Native" },
-  { name: "French", proficiency: "Limited Working Proficiency" },
-  { name: "Norwegian", proficiency: "Elementary Proficiency" },
+	{
+		id: "English",
+		name: "English",
+		proficiency: "(Daily use)",
+	},
+	{ id: "Spanish", name: "Spanish", proficiency: "(Mother tongue)" },
+	{ id: "Catalan", name: "Catalan", proficiency: "(Mother tongue)" },
+	{ id: "French", name: "French", proficiency: "(Je parle un peu)" },
+	{ id: "Norwegian", name: "Norwegian", proficiency: "(Survivable)" },
 ];
 
 export const Languages = () => {
-  return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      textAlign="center"
-      padding="20px"
-    >
-      <Heading
-        as="h2"
-        fontWeight="400"
-        fontSize="70px"
-        textTransform="uppercase"
-        mb="4"
-      >
-        Other Languages
-      </Heading>
-      <List>
-        {languages.map((language, index) => (
-          <ListItem key={index} mb="5px">
-            {language.name} | {language.proficiency}
-          </ListItem>
-        ))}
-      </List>
-    </Flex>
-  );
+	return (
+		<div className="flex flex-col  items-center py-6">
+			<Heading
+				className="text-pink-custom"
+				fontWeight="400"
+				fontSize="40px"
+				textTransform="uppercase"
+				mb="20"
+				textAlign="center" // Aligns heading to the left
+			>
+				Languages
+			</Heading>
+			<List>
+				{languages.map((language) => (
+					<ListItem key={language.name} mb="5px">
+						{language.name} - {language.proficiency}
+					</ListItem>
+				))}
+			</List>
+		</div>
+	);
 };

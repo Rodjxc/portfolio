@@ -12,13 +12,14 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 	return (
 		<Box
 			display={{ base: isOpen ? "block" : "none", md: "flex" }}
-			mt={{ base: 4, md: 8 }}
-			px={8}
+			mt={{ base: 4, md: 0 }}
+			className="bg-lightBlack-custom px-8 py-8 w-full"
 		>
 			<VStack
 				spacing={4}
 				display={{ base: "block", md: "none" }}
 				divider={<StackDivider borderColor="gray.700" />}
+				width="100%"
 			>
 				<NavLink
 					to="/portfolio"
@@ -46,7 +47,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				>
 					CV
 				</NavLink>
-				{/* <NavLink
+				<NavLink
 					to="/about-me"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -58,7 +59,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 					onClick={onClose}
 				>
 					About Me
-				</NavLink> */}
+				</NavLink>
 				<Link
 					href="https://github.com/Rodjxc"
 					target="_blank"
@@ -85,7 +86,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 			</VStack>
 
 			<Box
-				className="flex items-center space-x-20"
+				className="flex items-center space-x-20 bg-lightBlack-custom w-full"
 				display={{ base: "none", md: "flex" }}
 			>
 				<NavLink
@@ -112,7 +113,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				>
 					Projects
 				</NavLink>
-				{/* <NavLink
+				<NavLink
 					to="/about-me"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -123,7 +124,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 					}
 				>
 					About Me
-				</NavLink> */}
+				</NavLink>
 				<Link
 					href="https://github.com/Rodjxc"
 					target="_blank"
