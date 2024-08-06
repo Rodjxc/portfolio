@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
-		<Box className="bg-lightBlack-custom text-white fixed top-0 w-full p-8 h-36">
+		<Box className="bg-lightBlack-custom text-white fixed top-0 w-full p-8 h-auto">
 			{" "}
 			<Flex justify="space-between" align="center">
 				<Logo />
