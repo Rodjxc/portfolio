@@ -17,7 +17,6 @@ export const TechStack = () => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 2 }}
 			width="100%"
-			height="100vh"
 			p="0"
 		>
 			<Heading

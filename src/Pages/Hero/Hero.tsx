@@ -11,8 +11,9 @@ export const Hero = () => {
 			justifyContent={{ base: "center", md: "flex-start" }}
 			color="white"
 			width="100%"
-			height="100vh"
-			p="0"
+			height="87vh"
+			mb="12"
+			p="4"
 		>
 			<Flex
 				direction="column"

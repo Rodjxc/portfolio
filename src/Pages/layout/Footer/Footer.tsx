@@ -18,7 +18,6 @@ export const Footer = () => {
 				<span>say hi — &nbsp;</span>
 				<Link
 					href="mailto:rodrysxc@gmail.com"
-					color={COLORS.GRAY}
 					position="relative"
 					textDecoration="none"
 					_before={{
