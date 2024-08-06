@@ -8,10 +8,10 @@ export const WorkExperience = () => {
 			<Heading
 				className="text-pink-custom"
 				fontWeight="400"
-				fontSize="60px"
+				fontSize="40px"
 				textTransform="uppercase"
 				mb="20"
-				textAlign="center"
+				textAlign="left"
 			>
 				Work Experience
 			</Heading>
