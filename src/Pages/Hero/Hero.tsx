@@ -25,8 +25,7 @@ export const Hero = () => {
 				>
 					<Heading mb="6">Hey, I'm Rod!</Heading>
 					<Text>
-						Hey! I'm Rod. I've been a front-end developer since 2021 (previously
-						I worked as a{" "}
+						I've been a front-end developer since 2021 (previously I worked as a{" "}
 						<Link
 							color={COLORS.PINK}
 							href="https://www.beerandcideracademy.org/meet-the-sommeliers/2018/10/10/rodrigo-jimeno"
@@ -37,6 +36,7 @@ export const Hero = () => {
 							beer sommelier
 						</Link>{" "}
 						for breweries in UK and Norway). <br />
+						<br />
 						Back in 2021, one of the tasks for my job back then was building a
 						simple website and tumbled head first into the rabbit hole of coding
 						and web development. Fast-forward to today, and I've had the

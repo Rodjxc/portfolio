@@ -1,28 +1,28 @@
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { COLORS } from "../../common/colors";
-import { workExperiences } from "./workExperience";
+import { workExperienceData } from "./workExperienceData";
 
 export const WorkExperience = () => {
 	return (
-		<Flex
-			direction="column"
-			alignItems="center"
-			justifyContent="center"
-			minH="100vh"
-			padding="20px"
-		>
+		<div className="flex flex-col items-center py-6">
 			<Heading
-				as="h2"
+				className="text-pink-custom"
 				fontWeight="400"
-				fontSize="70px"
+				fontSize="60px"
 				textTransform="uppercase"
-				mb="4"
+				mb="20"
 				textAlign="center"
 			>
 				Work Experience
 			</Heading>
-			{workExperiences.map((experience) => (
-				<Box key={experience.id} maxW="60%" mx="auto" textAlign="left" mb="8">
+			{workExperienceData.map((experience) => (
+				<Box
+					key={experience.title}
+					maxW="80%"
+					mx="auto"
+					textAlign="left"
+					mb="12"
+				>
 					<Text fontWeight="bold" fontFamily="Gruppo" fontSize="xl" mb="4">
 						{experience.title}
 					</Text>
@@ -33,8 +33,24 @@ export const WorkExperience = () => {
 					>
 						{experience.description}
 					</Text>
+					{experience.stack && (
+						<Wrap justify="center" mt="6" spacing="2">
+							{experience.stack.map((tech) => (
+								<WrapItem key={experience.id}>
+									<Button
+										variant="outline"
+										borderColor={COLORS.PINK}
+										color="white"
+										_hover={{ borderColor: COLORS.PINK, color: COLORS.PINK }}
+									>
+										{tech}
+									</Button>
+								</WrapItem>
+							))}
+						</Wrap>
+					)}
 				</Box>
 			))}
-		</Flex>
+		</div>
 	);
 };
