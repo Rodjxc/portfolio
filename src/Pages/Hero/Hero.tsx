@@ -4,27 +4,24 @@ import { COLORS } from "../../common/colors";
 export const Hero = () => {
 	return (
 		<Box
-			className="bg-lightBlack-custom"
+			className="pt-16"
 			display="flex"
 			flexDirection={{ base: "column-reverse", md: "row" }}
 			textAlign={{ base: "center", md: "left" }}
 			justifyContent={{ base: "center", md: "flex-start" }}
-			color="white"
-			width="100%"
-			height="87vh"
-			mb="12"
-			p="4"
 		>
 			<Flex
 				direction="column"
 				alignItems={{ base: "center", md: "flex-start" }}
 				justifyContent="center"
 				paddingX={{ base: "2%", md: "5%" }}
+				paddingY={{ base: "4%", md: "0" }}
 			>
 				<Box
 					fontFamily="'Uncut-Sans', sans-serif"
 					fontSize="20px"
 					lineHeight="30px"
+					paddingX={{ base: "0", md: "20%" }}
 				>
 					<Heading mb="6">Hey, I'm Rod!</Heading>
 					<Text>
