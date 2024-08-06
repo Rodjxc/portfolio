@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { Home } from "../Pages/Home/Home";
+import { Home } from "../Pages/layout/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
 import { CV } from "../Pages/CV/CV";
 import { Footer } from "../Pages/layout/Footer/Footer";
@@ -16,7 +16,7 @@ export const MyRoutes = () => {
 				<Header />
 
 				{/*   MAIN CONTENT */}
-				<section className="pt-16">
+				<section className="pt-20">
 					<Routes>
 						<Route path="/" element={<Navigate to="/home" />} />
 						<Route path="/home" element={<Home />} />

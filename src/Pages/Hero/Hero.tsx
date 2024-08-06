@@ -81,12 +81,7 @@ export const Hero = () => {
 				</Box>
 			</Flex>
 
-			<Box
-				className="hero-img-section hidden"
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-			>
+			<Box display="flex" justifyContent="center" alignItems="center">
 				<Image
 					src="/img/snd-back2.png"
 					alt="profile pic for Rod"

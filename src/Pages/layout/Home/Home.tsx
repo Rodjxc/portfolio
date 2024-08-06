@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import { Staff } from "../Staff/Staff";
-import { TechStack } from "../TechStack/TechStack";
-import { Hero } from "../Hero/Hero";
+import { Staff } from "../../Staff/Staff";
+import { TechStack } from "../../TechStack/TechStack";
+import { Hero } from "../../Hero/Hero";
 
 export const Home = () => {
 	return (

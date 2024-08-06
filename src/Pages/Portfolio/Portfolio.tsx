@@ -18,8 +18,8 @@ type Project = {
 
 export const Portfolio = () => {
 	return (
-		<div className="bg-lightBlack-custom text-white p-28 mt-4">
-			<Heading className="text-center my-8 text-pink-custom">Portfolio</Heading>
+		<div className="bg-lightBlack-custom text-white px-8">
+			<Heading className="text-center my-6 text-pink-custom">Portfolio</Heading>
 			<VStack spacing="40px" align="stretch">
 				{Works.map((work: Project) => {
 					return (
