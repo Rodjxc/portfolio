@@ -22,6 +22,19 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				width="100%"
 			>
 				<NavLink
+					to="/home"
+					className={({ isActive }) =>
+						`no-underline font-bold text-lg pb-2 border-b-2 ${
+							isActive
+								? "text-pink-custom border-pink-custom"
+								: "text-white border-transparent hover:border-pink-custom"
+						}`
+					}
+					onClick={onClose}
+				>
+					Main
+				</NavLink>
+				<NavLink
 					to="/portfolio"
 					className={({ isActive }) =>
 						`no-underline font-bold text-lg pb-2 border-b-2 ${
@@ -89,6 +102,19 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				className="flex items-center space-x-20 bg-lightBlack-custom w-full"
 				display={{ base: "none", md: "flex" }}
 			>
+				<NavLink
+					to="/home"
+					className={({ isActive }) =>
+						`no-underline font-bold text-lg pb-2 border-b-2 ${
+							isActive
+								? "text-pink-custom border-pink-custom"
+								: "text-white border-transparent hover:border-pink-custom"
+						}`
+					}
+					onClick={onClose}
+				>
+					Hey!
+				</NavLink>
 				<NavLink
 					to="/cv"
 					className={({ isActive }) =>
