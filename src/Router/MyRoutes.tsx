@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "../Pages/layout/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
-import { CV } from "../Pages/CV/CV";
+import { Experience } from "../Pages/CV/Experience";
 import { Footer } from "../Pages/layout/Footer/Footer";
 import { Project } from "../Pages/Project/Project";
 import { Header } from "../Pages/layout/HeaderNav/Header";
@@ -21,7 +21,7 @@ export const MyRoutes = () => {
 						<Route path="/" element={<Navigate to="/home" />} />
 						<Route path="/home" element={<Home />} />
 						<Route path="/portfolio" element={<Portfolio />} />
-						<Route path="/CV" element={<CV />} />
+						<Route path="/CV" element={<Experience />} />
 						<Route path="/project/:id" element={<Project />} />
 						<Route path="/about-me" element={<AboutMe />} />
 

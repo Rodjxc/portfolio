@@ -1,14 +1,15 @@
-import { Heading, List, ListItem } from "@chakra-ui/react";
+import { Heading, List, ListItem, Box } from "@chakra-ui/react";
 
 const codingLanguages = [
 	{ name: "HTML/5" },
 	{ name: "CSS/3" },
 	{ name: "Tailwind CSS" },
-	{ name: "React " },
+	{ name: "React" },
 	{ name: "JavaScript" },
 	{ name: "Typescript" },
 	{ name: "JSON / XML" },
 	{ name: "Git" },
+	{ name: "i18n Internationalization library" },
 	{ name: "Component Libraries" },
 	{ name: "Bootstrap" },
 	{ name: "React Query" },
@@ -17,26 +18,30 @@ const codingLanguages = [
 	{ name: "Wordpress" },
 ];
 
-export const Languages = () => {
+export const Coding = () => {
 	return (
-		<div className="flex flex-col py-6">
+		<Box
+			bg="white"
+			borderRadius="md"
+			p="6"
+			boxShadow="md"
+			border="1px solid #dcdcdc"
+		>
 			<Heading
-				className="text-pink-custom"
 				fontWeight="400"
-				fontSize="40px"
+				fontSize="30px"
 				textTransform="uppercase"
-				mb="10"
+				mb="4"
+				color="black"
 				textAlign="left"
 			>
 				Coding
 			</Heading>
-			<List>
+			<List spacing={2} color="black">
 				{codingLanguages.map((language) => (
-					<ListItem key={language.name} mb="5px">
-						{language.name}
-					</ListItem>
+					<ListItem key={language.name}>{language.name}</ListItem>
 				))}
 			</List>
-		</div>
+		</Box>
 	);
 };

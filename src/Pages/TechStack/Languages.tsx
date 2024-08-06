@@ -1,4 +1,4 @@
-import { Heading, List, ListItem } from "@chakra-ui/react";
+import { Heading, List, ListItem, Box } from "@chakra-ui/react";
 
 const languages = [
 	{
@@ -14,24 +14,31 @@ const languages = [
 
 export const Languages = () => {
 	return (
-		<div className="flex flex-col  items-center py-6">
+		<Box
+			bg="white"
+			borderRadius="md"
+			p="6"
+			boxShadow="md"
+			border="1px solid #dcdcdc"
+			mb="6"
+		>
 			<Heading
-				className="text-pink-custom"
 				fontWeight="400"
-				fontSize="40px"
+				fontSize="30px"
 				textTransform="uppercase"
-				mb="20"
-				textAlign="center" // Aligns heading to the left
+				mb="4"
+				color="black"
+				textAlign="center"
 			>
 				Languages
 			</Heading>
-			<List>
+			<List spacing={2} color="black">
 				{languages.map((language) => (
-					<ListItem key={language.name} mb="5px">
+					<ListItem key={language.id}>
 						{language.name} - {language.proficiency}
 					</ListItem>
 				))}
 			</List>
-		</div>
+		</Box>
 	);
 };

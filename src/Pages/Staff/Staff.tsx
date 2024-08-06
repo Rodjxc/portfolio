@@ -1,25 +1,13 @@
 import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
-import { COLORS } from "../../common/colors";
 import { StaffData } from "./StaffData";
 
 export const Staff = () => (
-	<Box bg={COLORS.WHITE} py="3%">
+	<div className="bg-lightBlack-custom text-white py-8">
 		<Flex direction="column" alignItems="center" mb="20px">
-			<Heading
-				as="h2"
-				fontFamily="Uncut-Sans, sans-serif"
-				color="black"
-				fontSize="xx-large"
-				my="8"
-			>
+			<Heading fontFamily="Uncut-Sans, sans-serif" fontSize="xx-large" my="8">
 				The Oslo Team
 			</Heading>
-			<Text
-				fontFamily="Uncut-Sans, sans-serif"
-				color="black"
-				fontSize="20"
-				mb="6"
-			>
+			<Text fontFamily="Uncut-Sans, sans-serif" fontSize="20" mb="6">
 				I wear a lot of hats and raincoats around here.
 			</Text>
 		</Flex>
@@ -37,7 +25,7 @@ export const Staff = () => (
 				<Box
 					key={staff.id}
 					maxW="320px"
-					borderBottom="1px solid black"
+					borderBottom="1px solid white"
 					className="card"
 				>
 					<Flex direction="column" as="article">
@@ -54,10 +42,10 @@ export const Staff = () => (
 								alignItems="flex-end"
 								className="position-name"
 							>
-								<Heading as="h3" fontSize="20px" color="black" m="0">
+								<Heading as="h3" fontSize="20px" m="0">
 									{staff.position}
 								</Heading>
-								<Heading as="h4" fontSize="16px" color="black" m="0">
+								<Heading as="h4" fontSize="16px" m="0">
 									{staff.name}
 								</Heading>
 							</Flex>
@@ -66,5 +54,5 @@ export const Staff = () => (
 				</Box>
 			))}
 		</Grid>
-	</Box>
+	</div>
 );
