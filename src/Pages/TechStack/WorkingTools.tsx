@@ -1,4 +1,5 @@
 import { Heading, List, ListItem, Box } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const workingTools = [
 	"Github",
@@ -10,6 +11,8 @@ const workingTools = [
 	"and Google :)",
 ];
 
+const MotionListItem = motion(ListItem);
+
 export const WorkingTools = () => {
 	return (
 		<Box
@@ -17,7 +20,8 @@ export const WorkingTools = () => {
 			borderRadius="md"
 			p="6"
 			boxShadow="md"
-			border="1px solid #dcdcdc"
+			_hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
+			transition="all 0.3s ease"
 		>
 			<Heading
 				fontWeight="400"
@@ -31,7 +35,14 @@ export const WorkingTools = () => {
 			</Heading>
 			<List spacing={2} color="black">
 				{workingTools.map((tool, index) => (
-					<ListItem key={index}>{tool}</ListItem>
+					<MotionListItem
+						key={index}
+						initial={{ opacity: 0, x: -20 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ delay: index * 0.1 }}
+					>
+						{tool}
+					</MotionListItem>
 				))}
 			</List>
 		</Box>

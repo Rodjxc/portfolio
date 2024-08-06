@@ -32,7 +32,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 					}
 					onClick={onClose}
 				>
-					Main
+					Hey!
 				</NavLink>
 				<NavLink
 					to="/portfolio"

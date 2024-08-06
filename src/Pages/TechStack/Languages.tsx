@@ -1,4 +1,5 @@
 import { Heading, List, ListItem, Box } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const languages = [
 	{
@@ -12,6 +13,8 @@ const languages = [
 	{ id: "Norwegian", name: "Norwegian", proficiency: "(Survivable)" },
 ];
 
+const MotionListItem = motion(ListItem);
+
 export const Languages = () => {
 	return (
 		<Box
@@ -19,8 +22,9 @@ export const Languages = () => {
 			borderRadius="md"
 			p="6"
 			boxShadow="md"
-			border="1px solid #dcdcdc"
 			mb="6"
+			_hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
+			transition="all 0.3s ease"
 		>
 			<Heading
 				fontWeight="400"
@@ -33,10 +37,15 @@ export const Languages = () => {
 				Languages
 			</Heading>
 			<List spacing={2} color="black">
-				{languages.map((language) => (
-					<ListItem key={language.id}>
+				{languages.map((language, index) => (
+					<MotionListItem
+						key={language.id}
+						initial={{ opacity: 0, x: -20 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ delay: index * 0.1 }}
+					>
 						{language.name} - {language.proficiency}
-					</ListItem>
+					</MotionListItem>
 				))}
 			</List>
 		</Box>

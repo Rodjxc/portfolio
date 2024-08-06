@@ -1,4 +1,5 @@
 import { Heading, List, ListItem, Box } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const codingLanguages = [
 	{ name: "HTML/5" },
@@ -7,9 +8,9 @@ const codingLanguages = [
 	{ name: "React" },
 	{ name: "JavaScript" },
 	{ name: "Typescript" },
+	{ name: "i18n Internationalization library" },
 	{ name: "JSON / XML" },
 	{ name: "Git" },
-	{ name: "i18n Internationalization library" },
 	{ name: "Component Libraries" },
 	{ name: "Bootstrap" },
 	{ name: "React Query" },
@@ -18,6 +19,8 @@ const codingLanguages = [
 	{ name: "Wordpress" },
 ];
 
+const MotionListItem = motion(ListItem);
+
 export const Coding = () => {
 	return (
 		<Box
@@ -25,7 +28,8 @@ export const Coding = () => {
 			borderRadius="md"
 			p="6"
 			boxShadow="md"
-			border="1px solid #dcdcdc"
+			_hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
+			transition="all 0.3s ease"
 		>
 			<Heading
 				fontWeight="400"
@@ -38,8 +42,15 @@ export const Coding = () => {
 				Coding
 			</Heading>
 			<List spacing={2} color="black">
-				{codingLanguages.map((language) => (
-					<ListItem key={language.name}>{language.name}</ListItem>
+				{codingLanguages.map((language, index) => (
+					<MotionListItem
+						key={language.name}
+						initial={{ opacity: 0, x: -20 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ delay: index * 0.1 }}
+					>
+						{language.name}
+					</MotionListItem>
 				))}
 			</List>
 		</Box>

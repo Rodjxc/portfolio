@@ -2,7 +2,10 @@ import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import { StaffData } from "./StaffData";
 
 export const Staff = () => (
-	<div className="bg-lightBlack-custom text-white py-8">
+	<Box
+		className="bg-lightBlack-custom text-white py-8"
+		style={{ width: "100%", height: "100vh", padding: "4rem" }}
+	>
 		<Flex direction="column" alignItems="center" mb="20px">
 			<Heading fontFamily="Uncut-Sans, sans-serif" fontSize="xx-large" my="8">
 				The Oslo Team
@@ -54,5 +57,5 @@ export const Staff = () => (
 				</Box>
 			))}
 		</Grid>
-	</div>
+	</Box>
 );

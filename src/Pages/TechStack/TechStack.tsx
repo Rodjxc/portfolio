@@ -1,15 +1,24 @@
 import { Box, Grid, GridItem, Heading, Text, Divider } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { Coding } from "./Coding";
 import { Languages } from "./Languages";
 import { WorkingTools } from "./WorkingTools";
 
+const MotionBox = motion(Box);
+
 export const TechStack = () => {
 	return (
-		<Box
+		<MotionBox
 			bg="white"
 			color="black"
 			py={{ base: "6", md: "20" }}
 			px={{ base: "4", md: "10" }}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 2 }}
+			width="100%"
+			height="100vh"
+			p="0"
 		>
 			<Heading
 				fontWeight="400"
@@ -44,6 +53,6 @@ export const TechStack = () => {
 					<WorkingTools />
 				</GridItem>
 			</Grid>
-		</Box>
+		</MotionBox>
 	);
 };
