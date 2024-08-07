@@ -12,7 +12,6 @@ export const TechStack = () => {
 				fontWeight="400"
 				fontSize={{ base: "30px", md: "40px" }}
 				textTransform="uppercase"
-				my="20"
 				textAlign="center"
 			>
 				Skills

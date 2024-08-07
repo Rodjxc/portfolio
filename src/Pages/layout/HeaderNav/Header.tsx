@@ -10,25 +10,21 @@ export const Header: React.FC = () => {
 	return (
 		<Box className="bg-lightBlack-custom text-white fixed w-full p-8 z-50">
 			<Flex justify="space-between" alignItems="center">
-				<Flex justify="flex-start">
-					<Logo />
-				</Flex>
-				<Flex justify="flex-end">
-					<IconButton
-						display={{ base: "block", md: "none" }}
-						onClick={isOpen ? onClose : onOpen}
-						icon={
-							<FontAwesomeIcon
-								icon={isOpen ? faTimes : faBars}
-								className="text-white"
-							/>
-						}
-						variant="outline"
-						aria-label="Toggle Navigation"
-					/>
-					<LinksNav isOpen={isOpen} onClose={onClose} />
-				</Flex>
+				<Logo />
+				<IconButton
+					display={{ base: "block", md: "none" }}
+					onClick={isOpen ? onClose : onOpen}
+					icon={
+						<FontAwesomeIcon
+							icon={isOpen ? faTimes : faBars}
+							className="text-white"
+						/>
+					}
+					variant="outline"
+					aria-label="Toggle Navigation"
+				/>
 			</Flex>
+			<LinksNav isOpen={isOpen} onClose={onClose} />
 		</Box>
 	);
 };
