@@ -1,4 +1,11 @@
-import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
+import {
+	Box,
+	Flex,
+	Heading,
+	Text,
+	Link,
+	useMediaQuery,
+} from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { COLORS } from "../../common/colors";
 
@@ -7,27 +14,38 @@ const MotionBox = motion(Box);
 export const Hero = () => {
 	const { scrollY } = useScroll();
 
+	// Define media queries
+	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
+
+	// Side to side scroll effect for the background text
 	const backgroundTextX = useTransform(scrollY, [0, 500], [-300, 800]);
-	const titleTextX = useTransform(scrollY, [0, 500], [0, -150]);
+
+	// Translate left effect for the "Hey, I'm Rod!" title (only on larger screens)
+	const titleTextX = useTransform(
+		scrollY,
+		[0, 500],
+		isLargerThanMd ? [0, -150] : [0, 0],
+	);
 
 	return (
 		<Box
 			position="relative"
 			overflow="hidden"
 			className="bg-lightBlack-custom py-2 px-8"
+			pt={{ base: "2%", md: "4%" }}
 		>
 			<MotionBox
 				style={{ x: backgroundTextX }}
-				fontSize={{ base: "80px", md: "180px" }}
+				fontSize={{ base: "50px", md: "180px" }}
 				fontWeight="bold"
 				color="rgba(255, 255, 255, 0.1)"
 				position="absolute"
-				top="70%"
-				left="20%"
+				top={{ base: "50%", md: "70%" }}
+				left={{ base: "50%", md: "20%" }}
 				transform="translate(-50%, -50%)"
 				whiteSpace="nowrap"
 				zIndex={0}
-				pointerEvents="none" // This ensures the text doesn't interfere with other elements
+				pointerEvents="none"
 			>
 				Front-End Dev
 			</MotionBox>
@@ -51,7 +69,7 @@ export const Hero = () => {
 				>
 					<Heading
 						mb="12"
-						fontSize={{ base: "60px", md: "100px" }}
+						fontSize={{ base: "40px", md: "100px" }}
 						fontWeight="bold"
 						color={COLORS.PINK}
 						fontFamily="'Montserrat', sans-serif"
