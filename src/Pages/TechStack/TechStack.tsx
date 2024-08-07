@@ -1,24 +1,11 @@
-import { Box, Grid, GridItem, Heading, Text, Divider } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Grid, GridItem, Heading, Text, Divider } from "@chakra-ui/react";
 import { Coding } from "./Coding";
 import { Languages } from "./Languages";
 import { WorkingTools } from "./WorkingTools";
 
-const MotionBox = motion(Box);
-
 export const TechStack = () => {
 	return (
-		<MotionBox
-			bg="white"
-			color="black"
-			py={{ base: "6", md: "20" }}
-			px={{ base: "4", md: "10" }}
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			transition={{ duration: 2 }}
-			width="100%"
-			p="0"
-		>
+		<div>
 			<Heading
 				fontWeight="400"
 				fontSize={{ base: "30px", md: "40px" }}
@@ -32,7 +19,7 @@ export const TechStack = () => {
 				fontWeight="semibold"
 				textAlign="center"
 				px={{ base: "4", md: "20" }}
-				mb="12"
+				mb="2"
 			>
 				Here is a summary of my most important skills and abilities as a
 				Creative Front-end Developer. You can have a detailed view of where I've
@@ -52,6 +39,6 @@ export const TechStack = () => {
 					<WorkingTools />
 				</GridItem>
 			</Grid>
-		</MotionBox>
+		</div>
 	);
 };
