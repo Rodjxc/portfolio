@@ -1,5 +1,5 @@
-import { Heading, List, ListItem, Box, Image, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Heading, List, ListItem, Box, Image } from "@chakra-ui/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const codingLanguages = [
 	{ name: "HTML/5" },
@@ -20,51 +20,67 @@ const codingLanguages = [
 ];
 
 const MotionListItem = motion(ListItem);
+const MotionBox = motion(Box);
 
 export const Coding = () => {
+	const { scrollY } = useScroll();
+
+	const textX = useTransform(scrollY, [0, 500], [0, 200]);
+
 	return (
 		<Box
-			bg="white"
+			position="relative"
 			borderRadius="md"
 			boxShadow="md"
+			overflow="hidden"
 			_hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
 			transition="all 0.3s ease"
 		>
-			<Flex direction={{ base: "column", md: "row" }}>
-				<Box flex={{ base: "1", md: "2" }}>
-					<Image
-						src="/img/coding.jpg"
-						alt="Coding"
-						height="100%"
-						objectFit="cover"
-						borderRadius={{ base: "md md 0 0", md: "md 0 0 md" }}
-					/>
-				</Box>
-				<Box flex="2" p="6">
-					<Heading
-						fontWeight="400"
-						fontSize="30px"
-						textTransform="uppercase"
-						mb="4"
-						color="black"
-						textAlign="left"
-					>
-						Coding
-					</Heading>
-					<List spacing={2} color="black">
-						{codingLanguages.map((language, index) => (
-							<MotionListItem
-								key={language.name}
-								initial={{ opacity: 0, x: -20 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{ delay: index * 0.1 }}
-							>
-								{language.name}
-							</MotionListItem>
-						))}
-					</List>
-				</Box>
-			</Flex>
+			<Image
+				src="/img/coding.jpg"
+				alt="Coding"
+				height="100%"
+				width="100%"
+				objectFit="cover"
+				position="absolute"
+				top="0"
+				left="0"
+				zIndex="1"
+			/>
+			<MotionBox
+				bg="white"
+				borderRadius="md"
+				p="6"
+				position="relative"
+				zIndex="2"
+				style={{ x: textX }}
+				mt={{ base: "0", md: "auto" }}
+				width={{ base: "100%", md: "70%" }}
+				ml={{ base: "0", md: "auto" }}
+			>
+				<Heading
+					fontWeight="400"
+					fontSize="30px"
+					textTransform="uppercase"
+					mb="4"
+					color="black"
+					textAlign="left"
+				>
+					Coding
+				</Heading>
+				<List spacing={2} color="black">
+					{codingLanguages.map((language, index) => (
+						<MotionListItem
+							key={language.name}
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: index * 0.1 }}
+						>
+							{language.name}
+						</MotionListItem>
+					))}
+				</List>
+			</MotionBox>
 		</Box>
 	);
 };
