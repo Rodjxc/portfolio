@@ -19,7 +19,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 	const links = [
 		{ to: "/home", label: "Hey!" },
 		{ to: "/portfolio", label: "Portfolio" },
-		{ to: "/cv", label: "CV" },
+		{ to: "/cv", label: "Experience" },
 		{ to: "/about-me", label: "About Me" },
 	];
 
