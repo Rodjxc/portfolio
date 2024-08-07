@@ -16,6 +16,22 @@ interface LinksNavProps {
 }
 
 export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
+	const links = [
+		{ to: "/home", label: "Hey!" },
+		{ to: "/portfolio", label: "Portfolio" },
+		{ to: "/cv", label: "CV" },
+		{ to: "/about-me", label: "About Me" },
+	];
+
+	const externalLinks = [
+		{ href: "https://github.com/Rodjxc", label: "Github", icon: faGithub },
+		{
+			href: "https://www.linkedin.com/in/rod-jimeno/",
+			label: "LinkedIn",
+			icon: faLinkedinIn,
+		},
+	];
+
 	return (
 		<Box
 			display={{ base: isOpen ? "block" : "none", md: "flex" }}
@@ -28,321 +44,129 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 				divider={<StackDivider borderColor="gray.700" />}
 				width="100%"
 			>
-				<ChakraLink
-					as={NavLink}
-					to="/home"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					Hey!
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/portfolio"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					Portfolio
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/cv"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					CV
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/about-me"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					About Me
-				</ChakraLink>
-				<ChakraLink
-					href="https://github.com/Rodjxc"
-					target="_blank"
-					className="text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					<div className="flex items-center">
-						<Text className="mr-2">Github</Text>
-						<FontAwesomeIcon icon={faGithub} className="size-6" />
-					</div>
-				</ChakraLink>
-
-				<ChakraLink
-					href="https://www.linkedin.com/in/rod-jimeno/"
-					target="_blank"
-					className="text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					<div className="flex items-center">
-						<Text className="mr-2">LinkedIn</Text>
-						<FontAwesomeIcon icon={faLinkedinIn} className="size-6" />
-					</div>
-				</ChakraLink>
+				{links.map((link) => (
+					<ChakraLink
+						key={link.to}
+						as={NavLink}
+						to={link.to}
+						className="no-underline text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						{link.label}
+					</ChakraLink>
+				))}
+				{externalLinks.map((link) => (
+					<ChakraLink
+						key={link.href}
+						href={link.href}
+						target="_blank"
+						className="text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						<div className="flex items-center">
+							<Text className="mr-2">{link.label}</Text>
+							<FontAwesomeIcon icon={link.icon} className="size-6" />
+						</div>
+					</ChakraLink>
+				))}
 			</VStack>
 
 			<Box
 				className="flex items-center space-x-20 bg-lightBlack-custom w-full"
 				display={{ base: "none", md: "flex" }}
 			>
-				<ChakraLink
-					as={NavLink}
-					to="/home"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					onClick={onClose}
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					Hey!
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/cv"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					Experience
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/portfolio"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					Projects
-				</ChakraLink>
-				<ChakraLink
-					as={NavLink}
-					to="/about-me"
-					className="no-underline font-bold text-lg pb-2 text-white"
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					About Me
-				</ChakraLink>
-				<ChakraLink
-					href="https://github.com/Rodjxc"
-					target="_blank"
-					className="text-lg mx-3 pb-2 text-white"
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					<div className="flex items-center">
-						<Text className="mr-2">Github</Text>
-						<FontAwesomeIcon icon={faGithub} className="size-6" />
-					</div>
-				</ChakraLink>
-
-				<ChakraLink
-					href="https://www.linkedin.com/in/rod-jimeno/"
-					target="_blank"
-					className="text-lg mx-3 pb-2 text-white"
-					position="relative"
-					_before={{
-						content: '""',
-						position: "absolute",
-						bottom: 0,
-						left: 0,
-						width: 0,
-						height: "1px",
-						backgroundColor: COLORS.PINK,
-						transition: "width 0.5s ease",
-					}}
-					_hover={{
-						color: COLORS.PINK,
-						_before: {
-							width: "100%",
-						},
-					}}
-				>
-					<div className="flex items-center">
-						<Text className="mr-2">LinkedIn</Text>
-						<FontAwesomeIcon icon={faLinkedinIn} className="size-6" />
-					</div>
-				</ChakraLink>
+				{links.map((link) => (
+					<ChakraLink
+						key={link.to}
+						as={NavLink}
+						to={link.to}
+						className="no-underline text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						{link.label}
+					</ChakraLink>
+				))}
+				{externalLinks.map((link) => (
+					<ChakraLink
+						key={link.href}
+						href={link.href}
+						target="_blank"
+						className="text-lg mx-3 pb-2 text-white"
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						<div className="flex items-center">
+							<Text className="mr-2">{link.label}</Text>
+							<FontAwesomeIcon icon={link.icon} className="size-6" />
+						</div>
+					</ChakraLink>
+				))}
 			</Box>
 		</Box>
 	);
