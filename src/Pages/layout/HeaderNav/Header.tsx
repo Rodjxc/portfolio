@@ -23,8 +23,13 @@ export const Header: React.FC = () => {
 					variant="outline"
 					aria-label="Toggle Navigation"
 				/>
+				<Box display={{ base: "none", md: "block" }}>
+					<LinksNav isOpen={isOpen} onClose={onClose} />
+				</Box>
 			</Flex>
-			<LinksNav isOpen={isOpen} onClose={onClose} />
+			<Box display={{ base: isOpen ? "block" : "none", md: "none" }} mt={4}>
+				<LinksNav isOpen={isOpen} onClose={onClose} />
+			</Box>
 		</Box>
 	);
 };
