@@ -1,5 +1,13 @@
-import { Heading, List, ListItem, Box, Image } from "@chakra-ui/react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+	Box,
+	Heading,
+	List,
+	ListItem,
+	Image,
+	SimpleGrid,
+} from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const codingLanguages = [
 	{ name: "HTML/5" },
@@ -23,62 +31,69 @@ const MotionListItem = motion(ListItem);
 const MotionBox = motion(Box);
 
 export const Coding = () => {
-	const { scrollY } = useScroll();
-
-	const textX = useTransform(scrollY, [0, 500], [0, 200]);
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 
 	return (
 		<Box
 			position="relative"
-			borderRadius="md"
-			boxShadow="md"
 			overflow="hidden"
-			_hover={{ boxShadow: "lg", transform: "translateY(-4px)" }}
-			transition="all 0.3s ease"
+			maxW={{ base: "90%", md: "70%" }}
+			mx="auto"
+			my="8"
+			height="400px"
 		>
 			<Image
 				src="/img/coding.jpg"
 				alt="Coding"
-				height="100%"
 				width="100%"
 				objectFit="cover"
 				position="absolute"
 				top="0"
 				left="0"
 				zIndex="1"
+				height="100%"
+				opacity="0.5"
 			/>
 			<MotionBox
-				bg="white"
+				ref={ref}
+				bg="rgba(255, 255, 255, 0.9)"
 				borderRadius="md"
 				p="6"
 				position="relative"
 				zIndex="2"
-				style={{ x: textX }}
-				mt={{ base: "0", md: "auto" }}
-				width={{ base: "100%", md: "70%" }}
-				ml={{ base: "0", md: "auto" }}
+				mx="auto"
+				my="5%"
+				boxShadow="md"
+				textAlign="center"
+				maxWidth={{ base: "90%", md: "60%" }}
+				initial={{ opacity: 0, x: -50 }}
+				animate={isInView ? { opacity: 1, x: 0 } : {}}
+				transition={{ duration: 0.6 }}
 			>
 				<Heading
 					fontWeight="400"
-					fontSize="30px"
+					fontSize={{ base: "18px", md: "24px" }}
 					textTransform="uppercase"
-					mb="4"
+					mb="8"
 					color="black"
-					textAlign="left"
+					fontFamily="'Montserrat', sans-serif"
 				>
 					Coding
 				</Heading>
-				<List spacing={2} color="black">
-					{codingLanguages.map((language, index) => (
-						<MotionListItem
-							key={language.name}
-							initial={{ opacity: 0, x: -20 }}
-							animate={{ opacity: 1, x: 0 }}
-							transition={{ delay: index * 0.1 }}
-						>
-							{language.name}
-						</MotionListItem>
-					))}
+				<List color="black" fontSize="sm">
+					<SimpleGrid columns={2} spacing={2}>
+						{codingLanguages.map((language, index) => (
+							<MotionListItem
+								key={language.name}
+								initial={{ opacity: 0, y: 20 }}
+								animate={isInView ? { opacity: 1, y: 0 } : {}}
+								transition={{ delay: index * 0.1 }}
+							>
+								{language.name}
+							</MotionListItem>
+						))}
+					</SimpleGrid>
 				</List>
 			</MotionBox>
 		</Box>

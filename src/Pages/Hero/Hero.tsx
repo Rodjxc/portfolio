@@ -61,7 +61,6 @@ export const Hero = () => {
 			>
 				<MotionBox
 					style={{ x: titleTextX }}
-					fontFamily="'Montserrat', sans-serif"
 					fontSize={{ base: "16px", md: "20px" }}
 					lineHeight="30px"
 					paddingX={{ base: "0", md: "20%" }}

@@ -49,7 +49,7 @@ export const Portfolio = () => {
 								className="p-4 justify-center"
 								direction="column"
 								textAlign="center"
-								fontFamily="'Uncut-Sans', sans-serif"
+								fontFamily="'Montserrat', sans-serif"
 								width={{ base: "100%", md: "50%" }}
 							>
 								<Heading
