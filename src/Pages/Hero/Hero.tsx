@@ -31,8 +31,9 @@ export const Hero = () => {
 		<Box
 			position="relative"
 			overflow="hidden"
-			className="bg-lightBlack-custom py-2 px-8"
-			pt={{ base: "2%", md: "4%" }}
+			className="bg-lightBlack-custom px-8 mb-2"
+			pt={{ base: "20%", md: "10%" }} // Increased top padding for mobile
+			mb={{ base: "10%", md: "5%" }} // Increased bottom margin
 		>
 			<MotionBox
 				style={{ x: backgroundTextX }}
@@ -54,7 +55,7 @@ export const Hero = () => {
 				alignItems={{ base: "center", md: "flex-start" }}
 				justifyContent="left"
 				paddingX={{ base: "2%", md: "5%" }}
-				paddingY={{ base: "4%", md: "0" }}
+				paddingY={{ base: "4%", md: "2%" }}
 				position="relative"
 				zIndex={1}
 			>
@@ -64,7 +65,7 @@ export const Hero = () => {
 					fontSize={{ base: "16px", md: "20px" }}
 					lineHeight="30px"
 					paddingX={{ base: "0", md: "20%" }}
-					my="28"
+					mb="20"
 					textAlign="left"
 				>
 					<Heading
@@ -73,7 +74,7 @@ export const Hero = () => {
 						fontWeight="bold"
 						color={COLORS.PINK}
 						fontFamily="'Montserrat', sans-serif"
-						letterSpacing="wide"
+						letterSpacing="normal"
 					>
 						Hey, I'm Rod!
 					</Heading>

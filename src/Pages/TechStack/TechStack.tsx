@@ -1,16 +1,18 @@
-import { Grid, GridItem, Heading, Text, Divider } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Text, Divider, Box } from "@chakra-ui/react";
 import { Coding } from "./Coding";
 import { Languages } from "./Languages";
 import { WorkingTools } from "./WorkingTools";
 
 export const TechStack = () => {
 	return (
-		<div>
+		<Box pt={{ base: "10%", md: "5%" }}>
+			{" "}
+			{/* Add padding-top here */}
 			<Heading
 				fontWeight="400"
 				fontSize={{ base: "30px", md: "40px" }}
 				textTransform="uppercase"
-				mb="8"
+				my="20"
 				textAlign="center"
 			>
 				Skills
@@ -39,6 +41,6 @@ export const TechStack = () => {
 					<WorkingTools />
 				</GridItem>
 			</Grid>
-		</div>
+		</Box>
 	);
 };

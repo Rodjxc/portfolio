@@ -7,9 +7,9 @@ export const Home = () => {
 	return (
 		<Box className="bg-lightBlack-custom text-white">
 			<Hero />
-
-			<TechStack />
-
+			<Box mt={{ base: "10%", md: "5%" }}>
+				<TechStack />
+			</Box>
 			<Staff />
 		</Box>
 	);

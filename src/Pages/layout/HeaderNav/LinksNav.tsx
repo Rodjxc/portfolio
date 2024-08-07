@@ -20,7 +20,7 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 		<Box
 			display={{ base: isOpen ? "block" : "none", md: "flex" }}
 			mt={{ base: 4, md: 0 }}
-			className="bg-lightBlack-custom px-8 py-8 w-full"
+			className="bg-lightBlack-custom px-8 w-full"
 		>
 			<VStack
 				spacing={4}
