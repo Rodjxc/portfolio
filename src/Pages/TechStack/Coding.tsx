@@ -20,6 +20,8 @@ const codingLanguages = [
 	{ name: "JSON / XML" },
 	{ name: "Git" },
 	{ name: "Component Libraries" },
+	{ name: "Framer Motion" },
+
 	{ name: "Bootstrap" },
 	{ name: "React Query" },
 	{ name: "React Router" },
@@ -72,10 +74,9 @@ export const Coding = () => {
 				transition={{ duration: 0.6 }}
 			>
 				<Heading
-					fontWeight="400"
+					fontWeight="700"
 					fontSize={{ base: "18px", md: "24px" }}
-					textTransform="uppercase"
-					mb="8"
+					mb="4"
 					color="black"
 					fontFamily="'Montserrat', sans-serif"
 				>

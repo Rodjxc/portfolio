@@ -1,11 +1,4 @@
-import {
-	Box,
-	Heading,
-	List,
-	ListItem,
-	Image,
-	SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Heading, List, ListItem, Image } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -31,7 +24,7 @@ export const Languages = () => {
 			maxW={{ base: "90%", md: "70%" }}
 			mx="auto"
 			my="8"
-			height="400px"
+			height="300px"
 		>
 			<Image
 				src="/img/languages.webp"
@@ -62,17 +55,16 @@ export const Languages = () => {
 				transition={{ duration: 0.6 }}
 			>
 				<Heading
-					fontWeight="400"
+					fontWeight="700"
 					fontSize={{ base: "18px", md: "24px" }}
-					textTransform="uppercase"
 					mb="4"
 					color="black"
-					fontFamily="'Neue Montreal', sans-serif"
+					fontFamily="'Montserrat', sans-serif"
 				>
 					Languages
 				</Heading>
 				<List color="black" fontSize="sm">
-					<SimpleGrid columns={2} spacing={2} justifyItems="center">
+					<Box justifyItems="center">
 						{languages.map((language, index) => (
 							<MotionListItem
 								key={language.id}
@@ -84,7 +76,7 @@ export const Languages = () => {
 								{language.name} - {language.proficiency}
 							</MotionListItem>
 						))}
-					</SimpleGrid>
+					</Box>
 				</List>
 			</MotionBox>
 		</Box>

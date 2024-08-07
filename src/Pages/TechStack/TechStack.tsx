@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { Coding } from "./Coding";
 import { Languages } from "./Languages";
 import { WorkingTools } from "./WorkingTools";
@@ -49,10 +49,19 @@ export const TechStack = () => {
 				put them to use in the Experience section :)
 			</MotionBox>
 
-			<Coding />
-
-			<Languages />
-			<WorkingTools />
+			<Box px={{ base: "2%", md: "5%" }}>
+				<Box mb={10}>
+					<Coding />
+				</Box>
+				<SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 5, md: 5 }}>
+					<Box>
+						<Languages />
+					</Box>
+					<Box mt={{ base: "4", md: "0" }}>
+						<WorkingTools />
+					</Box>
+				</SimpleGrid>
+			</Box>
 		</Box>
 	);
 };
