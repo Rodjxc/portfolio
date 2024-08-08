@@ -38,6 +38,7 @@ export const workExperienceData = [
 			"JavaScript",
 			"Typescript",
 			"Chakra UI",
+			"Webflow",
 			"HTML & CSS",
 			"React Router",
 			"TailwindCSS",

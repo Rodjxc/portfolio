@@ -68,7 +68,7 @@ export const WorkExperience = () => {
 									<Button
 										variant="outline"
 										borderColor={COLORS.PINK}
-										color="white"
+										color={COLORS.WHITE}
 										_hover={{ borderColor: COLORS.PINK, color: COLORS.PINK }}
 										size="sm"
 										fontSize="sm"
