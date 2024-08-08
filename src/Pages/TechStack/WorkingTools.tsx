@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 const workingTools = [
 	"Github",
+	"VS Code",
 	"Adobe Photoshop",
 	"Figma",
 	"Webflow",

@@ -16,12 +16,11 @@ const codingLanguages = [
 	{ name: "React" },
 	{ name: "JavaScript" },
 	{ name: "Typescript" },
-	{ name: "i18n Internationalization library" },
+	{ name: "i18n" },
 	{ name: "JSON / XML" },
 	{ name: "Git" },
 	{ name: "Component Libraries" },
 	{ name: "Framer Motion" },
-
 	{ name: "Bootstrap" },
 	{ name: "React Query" },
 	{ name: "React Router" },
