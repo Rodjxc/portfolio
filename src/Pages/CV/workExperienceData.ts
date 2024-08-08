@@ -58,7 +58,9 @@ export const workExperienceData = [
 		title: "Content Creator for Youtube & Twitch (July 2019 - Present)",
 		description:
 			"I started my Content Creation journey in 2019 by starting a YouTube channel where I made game guides for various video games, which laid part of the groundwork for my transition into the development world. Beyond technical skills, this experience taught me valuable skills like discipline, commitment, keeping up to date with technology. Also other valuable skills like web SEO and picture/video editing to enhance the channel's quality, with allowed me to have a good eye for good UX / UI design and accessibility which have proven of great use in my developer career. All of this have resulted in a growing channel that recently passed the 40k mark.",
-	},
+			stack: [
+				"Wordpress", "Adobe Photoshop", "Elementor", "SEO", "CSS", "OBS", "Filmora"
+			],},
 	{
 		id: "Various",
 		title:

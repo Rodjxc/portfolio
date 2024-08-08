@@ -21,7 +21,7 @@ export const MyRoutes = () => {
 						<Route path="/" element={<Navigate to="/home" />} />
 						<Route path="/home" element={<Home />} />
 						<Route path="/portfolio" element={<Portfolio />} />
-						<Route path="/CV" element={<Experience />} />
+						<Route path="/experience" element={<Experience />} />
 						<Route path="/project/:id" element={<Project />} />
 						<Route path="/about-me" element={<AboutMe />} />
 
