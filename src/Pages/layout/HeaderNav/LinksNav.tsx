@@ -103,12 +103,129 @@ export const LinksNav: React.FC<LinksNavProps> = ({ isOpen, onClose }) => {
 						</div>
 					</ChakraLink>
 				))}
+				{links.map((link) => (
+					<ChakraLink
+						key={link.to}
+						as={NavLink}
+						to={link.to}
+						className="no-underline text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						{link.label}
+					</ChakraLink>
+				))}
+				{externalLinks.map((link) => (
+					<ChakraLink
+						key={link.href}
+						href={link.href}
+						target="_blank"
+						className="text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						<div className="flex items-center">
+							<Text className="mr-2">{link.label}</Text>
+							<FontAwesomeIcon icon={link.icon} className="size-6" />
+						</div>
+					</ChakraLink>
+				))}
 			</VStack>
 
 			<Box
 				className="flex items-center space-x-20 bg-lightBlack-custom w-full"
 				display={{ base: "none", md: "flex" }}
 			>
+				{links.map((link) => (
+					<ChakraLink
+						key={link.to}
+						as={NavLink}
+						to={link.to}
+						className="no-underline text-lg pb-2 text-white"
+						onClick={onClose}
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						{link.label}
+					</ChakraLink>
+				))}
+				{externalLinks.map((link) => (
+					<ChakraLink
+						key={link.href}
+						href={link.href}
+						target="_blank"
+						className="text-lg mx-3 pb-2 text-white"
+						position="relative"
+						_before={{
+							content: '""',
+							position: "absolute",
+							bottom: 0,
+							left: 0,
+							width: 0,
+							height: "1px",
+							backgroundColor: COLORS.PINK,
+							transition: "width 0.5s ease",
+						}}
+						_hover={{
+							color: COLORS.PINK,
+							_before: {
+								width: "100%",
+							},
+						}}
+					>
+						<div className="flex items-center">
+							<Text className="mr-2">{link.label}</Text>
+							<FontAwesomeIcon icon={link.icon} className="size-6" />
+						</div>
+					</ChakraLink>
+				))}
 				{links.map((link) => (
 					<ChakraLink
 						key={link.to}
