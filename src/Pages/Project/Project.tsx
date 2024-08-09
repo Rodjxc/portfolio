@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Works } from "../Portfolio/Works";
 import { Box, Heading, Image, Text, Link, VStack } from "@chakra-ui/react";
-import { ProjectType } from "./projectTypes";
+import type { ProjectType } from "./projectTypes";
 
 export const Project = () => {
 	const params = useParams();

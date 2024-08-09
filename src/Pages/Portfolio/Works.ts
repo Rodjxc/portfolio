@@ -3,7 +3,7 @@ export const Works = [
     id: "Jokeapp",
     name: "Joke App",
     url: "https://joke-app-indol.vercel.app/",
-    technologies: "React, Typescript",
+    technologies: "React & Typescript",
     categories: "Web App",
     description:
       "A small app able to fetch a list of jokes from an API and allows you to edit them. Built using AntD components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
@@ -18,8 +18,16 @@ export const Works = [
       "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements. It includes a blog application (news) with different posts that map the data from a database",
     figma:
       "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1",
-  },
- 
+  },  {
+    id: "PortF",
+    name: "Portfolio",
+    url: "https://rodj.dev",
+    technologies: "React, Typescript, React Router, TailwindCSS & ChakraUI",
+    categories: "Website, Web Design",
+    description:
+      "This same website, where I got to play a bit more with component and other functionalities and, at the same time, building my own portfolio. Built using React Router, Framer-Motion and Chakra UI components",
+    github: "https://github.com/Rodjxc/portfolio",
+  }, 
   {
     id: "MusicF",
     name: "Oslo Music Festival",
@@ -42,16 +50,7 @@ export const Works = [
     figma:
       "https://www.figma.com/file/gpUYxGbCorvTaXlqGYHxmE/Practice%3A-Chat-App-Homepage-Design-(Copy)?type=design&node-id=107%3A17&mode=design&t=zf1RNJpPckd9Z4oB-1",
   },
-  {
-    id: "PortF",
-    name: "Portfolio",
-    url: "https://rodj.dev",
-    technologies: "HTML, CSS, React & TypeScript",
-    categories: "Website, Web Design",
-    description:
-      "This same website, where I got to play a bit more with React and other functionalities and, at the same time, building my own portfolio. Built using React Router, Framer-Motion and Chakra UI components",
-    github: "https://github.com/Rodjxc/portfolio",
-  },
+
   {
     id: "MovieF",
     name: "MovieTrack",
@@ -66,7 +65,7 @@ export const Works = [
     id: "RaidF",
     name: "La Fogata de Raid",
     url: "https://lafogataderaid.com/",
-    technologies: "Wordpress + Elementor",
+    technologies: "Wordpress & Elementor",
     categories: "Website with Wordpress CMS",
     description:
       "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame. Built using Wordpress, Elementor and several plugins to improve caching and SEO",
