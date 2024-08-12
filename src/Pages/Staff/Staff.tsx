@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import { StaffData } from "./StaffData";
+import { COLORS } from "../../common/colors";
 
 export const Staff = () => (
 	<Box
@@ -7,11 +8,16 @@ export const Staff = () => (
 		style={{ width: "100%", padding: "4rem" }}
 	>
 		<Flex direction="column" alignItems="center" mb="20px">
-			<Heading fontFamily="Uncut-Sans, sans-serif" fontSize="xx-large" my="8">
+			<Heading
+				fontSize={{ base: "35px", md: "80px" }}
+				fontWeight="bold"
+				color={COLORS.PINK}
+				mb="6"
+			>
 				The Oslo Team
 			</Heading>
 			<Text fontFamily="Uncut-Sans, sans-serif" fontSize="20" mb="6">
-				I wear a lot of hats and raincoats around here.
+				I wear a lot of hats around here.
 			</Text>
 		</Flex>
 
