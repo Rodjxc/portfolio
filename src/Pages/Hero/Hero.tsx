@@ -18,7 +18,7 @@ export const Hero = () => {
 	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
 
 	// Side to side scroll effect for the background text
-	const backgroundTextX = useTransform(scrollY, [0, 500], [-300, 800]);
+	const backgroundTextX = useTransform(scrollY, [0, 900], [-800, 800]);
 
 	// Translate left effect for the "Hey, I'm Rod!" title (only on larger screens)
 	const titleTextX = useTransform(
@@ -32,8 +32,8 @@ export const Hero = () => {
 			position="relative"
 			overflow="hidden"
 			className="bg-lightBlack-custom px-8 mb-2"
-			pt={{ base: "20%", md: "10%" }} // Increased top padding for mobile
-			mb={{ base: "10%", md: "5%" }} // Increased bottom margin
+			py={{ base: "10%", md: "7%" }} // Increased top padding for mobile
+			// mb={{ base: "10%", md: "5%" }} // Increased bottom margin
 		>
 			<MotionBox
 				style={{ x: backgroundTextX }}
@@ -41,7 +41,7 @@ export const Hero = () => {
 				fontWeight="bold"
 				color="rgba(255, 255, 255, 0.1)"
 				position="absolute"
-				top={{ base: "50%", md: "70%" }}
+				top={{ base: "50%", md: "74%" }}
 				left={{ base: "50%", md: "20%" }}
 				transform="translate(-50%, -50%)"
 				whiteSpace="nowrap"
@@ -75,7 +75,7 @@ export const Hero = () => {
 						fontFamily="'Montserrat', sans-serif"
 						letterSpacing="normal"
 					>
-						Hey, I'm Rod!
+						Hey, I'm Rod! 👋
 					</Heading>
 					<Text>
 						I've been a front-end developer since 2021 (previously I worked as a{" "}
@@ -114,11 +114,11 @@ export const Hero = () => {
 						, a{" "}
 						<Link
 							color={COLORS.PINK}
-							href="https://www.estatelab.no/"
+							href="https://www.meinbafoeg.de/"
 							target="_blank"
 							_hover={{ textDecoration: "none" }}
 						>
-							start-up
+							german students company
 						</Link>
 						, and also some{" "}
 						<Link

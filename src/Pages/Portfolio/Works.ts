@@ -32,7 +32,7 @@ export const Works = [
     id: "MusicF",
     name: "Oslo Music Festival",
     url: "https://music-festival-ten.vercel.app/",
-    technologies: "HTML, React, Typescript & Tailwind CSS",
+    technologies: "React, Typescript & Tailwind CSS",
     categories: "Web Design",
     description:
       "A website for a fake music festival, built using React and Tailwind CSS and implementing React libraries .",
