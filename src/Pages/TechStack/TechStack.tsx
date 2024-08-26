@@ -10,19 +10,18 @@ const MotionBox = motion(Box);
 
 export const TechStack = () => {
 	const { scrollY } = useScroll();
-
 	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
 
-	// Adjust the transform values to ensure smooth motion without jumping
+	// Adjust the transform values for larger screens only
 	const headingX = useTransform(
 		scrollY,
 		[0, 1000],
-		isLargerThanMd ? [0, -400] : [0, -100], // Moves left instead of right
+		isLargerThanMd ? [0, -180] : [0, 0], // Disable animation on smaller screens
 	);
 	const textX = useTransform(
 		scrollY,
-		[500, 1200],
-		isLargerThanMd ? [0, -100] : [0, -30], // Moves left instead of right
+		[0, 1000],
+		isLargerThanMd ? [0, 100] : [0, 0], // Disable animation on smaller screens
 	);
 
 	return (
@@ -30,24 +29,23 @@ export const TechStack = () => {
 			<MotionBox
 				style={{ x: headingX }}
 				fontWeight="bold"
-				fontSize={{ base: "40px", md: "100px" }}
+				fontSize={{ base: "40px", md: "70px" }} // Adjust font size for smaller screens
+				fontFamily="'Montserrat', sans-serif"
 				textAlign="center"
 				color={COLORS.PINK}
 				my={{ base: 10, md: 20 }}
 				maxWidth="100vw"
-				initial={{ x: 0 }} // Ensure the initial position matches
 			>
-				Skills
+				⚙️ Skills
 			</MotionBox>
 			<MotionBox
 				style={{ x: textX }}
 				fontWeight="normal"
-				fontSize={{ base: "16px", md: "20px" }}
+				fontSize={{ base: "16px", md: "20px" }} // Adjust font size for smaller screens
 				textAlign="left"
-				px={{ base: "4", md: "20" }}
+				px={{ base: "4", md: "40" }}
 				my={10}
 				maxWidth="100vw"
-				initial={{ x: 0 }} // Ensure the initial position matches
 			>
 				Here is a summary of my most important skills and abilities as a
 				Front-end Developer. You can have a detailed view of where I've put them
