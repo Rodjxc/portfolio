@@ -27,13 +27,14 @@ export const Hero = () => {
 		isLargerThanMd ? [0, -150] : [0, 0],
 	);
 
+	const topPadding = isLargerThanMd ? "7%" : "20%";
+
 	return (
 		<Box
 			position="relative"
 			overflow="hidden"
 			className="bg-lightBlack-custom px-8 mb-2"
-			py={{ base: "10%", md: "7%" }} // Increased top padding for mobile
-			// mb={{ base: "10%", md: "5%" }} // Increased bottom margin
+			py={topPadding} // Adjust top padding dynamically
 		>
 			<MotionBox
 				style={{ x: backgroundTextX }}
@@ -55,7 +56,7 @@ export const Hero = () => {
 				alignItems={{ base: "center", md: "flex-start" }}
 				justifyContent="left"
 				paddingX={{ base: "2%", md: "5%" }}
-				paddingY={{ base: "4%", md: "2%" }}
+				paddingY={{ base: "%", md: "2%" }}
 				position="relative"
 				zIndex={1}
 			>
@@ -64,7 +65,6 @@ export const Hero = () => {
 					fontSize={{ base: "16px", md: "20px" }}
 					lineHeight="30px"
 					paddingX={{ base: "0", md: "20%" }}
-					mb="20"
 					textAlign="left"
 				>
 					<Heading

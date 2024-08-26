@@ -21,7 +21,7 @@ export const workExperienceData = [
 	{
 		id: "meinbafög",
 		title:
-			"FrontEnd Developer - Web Designer | meinBafög.de (Dec. 2023 - Feb. 2024) | 📍 Germany - Remote",
+			"FrontEnd Developer - Web Designer | meinBafög.de (Nov. 2023 - Dec. 2023) | 📍 Germany - Remote",
 		description:
 			"Helped with the design and organization of the meinbafoeg.de website, which helps German students to apply for scholarships to study abroad. Worked mainly with WordPress and design tools like Figma and different plugins.",
 		stack: ["React", "JavaScript", "Wordpress CMS", "HTML & SCSS"],
@@ -29,9 +29,9 @@ export const workExperienceData = [
 	{
 		id: "Freelance",
 		title:
-			"FrontEnd Developer - Web Designer | Freelance (Nov. 2022 - Present) | 📍 Oslo",
+			"FrontEnd Developer - Web Designer | Freelance (July. 2023 - November. 2023) | 📍 Oslo",
 		description:
-			"During the time of my studies I've been able to partake in all the projects and works shown in my portfolio and it's been an assurance that development has been the right career path for me. Beyond coding, I brought concepts to life and coded websites with React, Vite and NodeJS or Webflow from Figma designs. It's not just about writing code; it's a creative journey, much like brewing beer—from an idea to a tangible product and a user experience. And not only is it a fulfilling job but also I have fun alongside it.",
+			"During the time of my studies I've been able to partake in soem of the projects and works shown in my portfolio. Beyond coding, I brought concepts to life and coded websites with React, Vite and NodeJS or Webflow from Figma designs. It's not just about writing code; it's a creative journey, much like brewing beer—from an idea to a tangible product and a user experience. And not only is it a fulfilling job but also I have fun alongside it.",
 
 		stack: [
 			"React",

@@ -30,7 +30,7 @@ export const TechStack = () => {
 			<MotionBox
 				style={{ x: headingX }}
 				fontWeight="bold"
-				fontSize={{ base: "40px", md: "90px" }}
+				fontSize={{ base: "40px", md: "100px" }}
 				textAlign="center"
 				color={COLORS.PINK}
 				my={{ base: 10, md: 20 }}
@@ -50,8 +50,8 @@ export const TechStack = () => {
 				initial={{ x: 0 }} // Ensure the initial position matches
 			>
 				Here is a summary of my most important skills and abilities as a
-				Creative Front-end Developer. You can have a detailed view of where I've
-				put them to use in the Experience section :)
+				Front-end Developer. You can have a detailed view of where I've put them
+				to use in the Experience section :)
 			</MotionBox>
 
 			<Box px={{ base: "2%", md: "5%" }}>
