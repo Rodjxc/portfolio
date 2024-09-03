@@ -25,7 +25,7 @@ export const Works = [
     technologies: "React, Typescript, React Router, TailwindCSS & ChakraUI",
     categories: "Website, Web Design",
     description:
-      "This same website, where I got to play a bit more with component and other functionalities and, at the same time, building my own portfolio. Built using React Router, Framer-Motion and Chakra UI components",
+      "This same website, where I got to play a bit more with component and other functionalities and, at the same time, building my own portfolio. Built using React Router, TailwindCSS, Framer-Motion and Chakra UI components",
     github: "https://github.com/Rodjxc/portfolio",
   }, 
   {

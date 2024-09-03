@@ -4,14 +4,13 @@ import { useRef } from "react";
 
 const workingTools = [
 	"Github",
-	"VS Code",
-	"Adobe Photoshop",
+		"Adobe Photoshop",
 	"Figma",
 	"Webflow",
 	"Linear",
 	"Spotify",
 	"Adobe Illustrator",
-	"and Google!",
+	
 ];
 
 const MotionListItem = motion(ListItem);
