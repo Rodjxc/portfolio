@@ -4,17 +4,13 @@ import { useRef } from "react";
 
 const workingTools = [
 	"Github",
-		"Adobe Photoshop",
+	"Adobe Photoshop",
 	"Figma",
 	"Webflow",
 	"Linear",
 	"Spotify",
 	"Adobe Illustrator",
-	
 ];
-
-const MotionListItem = motion(ListItem);
-const MotionBox = motion(Box);
 
 export const WorkingTools = () => {
 	const ref = useRef(null);
@@ -41,7 +37,8 @@ export const WorkingTools = () => {
 				height="100%"
 				opacity="0.5"
 			/>
-			<MotionBox
+			<Box
+				as={motion.div}
 				ref={ref}
 				bg="rgba(255, 255, 255, 0.9)"
 				borderRadius="md"
@@ -55,7 +52,6 @@ export const WorkingTools = () => {
 				maxWidth={{ base: "90%", md: "60%" }}
 				initial={{ opacity: 0, x: -50 }}
 				animate={isInView ? { opacity: 1, x: 0 } : {}}
-				transition={{ duration: 0.6 }}
 			>
 				<Heading
 					fontWeight="700"
@@ -69,19 +65,19 @@ export const WorkingTools = () => {
 				<List color="black" fontSize="sm">
 					<Box justifyItems="center">
 						{workingTools.map((tool, index) => (
-							<MotionListItem
+							<ListItem
+								as={motion.li}
 								key={index}
 								initial={{ opacity: 0, y: 20 }}
 								animate={isInView ? { opacity: 1, y: 0 } : {}}
-								transition={{ delay: index * 0.1 }}
 								textAlign="center"
 							>
 								{tool}
-							</MotionListItem>
+							</ListItem>
 						))}
 					</Box>
 				</List>
-			</MotionBox>
+			</Box>
 		</Box>
 	);
 };

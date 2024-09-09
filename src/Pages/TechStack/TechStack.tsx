@@ -6,8 +6,6 @@ import { COLORS } from "../../common/colors";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMediaQuery } from "@chakra-ui/react";
 
-const MotionBox = motion(Box);
-
 export const TechStack = () => {
 	const { scrollY } = useScroll();
 	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
@@ -26,7 +24,8 @@ export const TechStack = () => {
 
 	return (
 		<Box pt={{ base: "10%", md: "5%" }} overflowX="hidden">
-			<MotionBox
+			<Box
+				as={motion.div}
 				style={{ x: headingX }}
 				fontWeight="bold"
 				fontSize={{ base: "40px", md: "70px" }} // Adjust font size for smaller screens
@@ -37,8 +36,9 @@ export const TechStack = () => {
 				maxWidth="100vw"
 			>
 				⚙️ Skills
-			</MotionBox>
-			<MotionBox
+			</Box>
+			<Box
+				as={motion.div}
 				style={{ x: textX }}
 				fontWeight="normal"
 				fontSize={{ base: "16px", md: "20px" }} // Adjust font size for smaller screens
@@ -50,7 +50,7 @@ export const TechStack = () => {
 				Here is a summary of my most important skills and abilities as a
 				Front-end Developer. You can have a detailed view of where I've put them
 				to use in the Experience section :)
-			</MotionBox>
+			</Box>
 
 			<Box px={{ base: "2%", md: "5%" }}>
 				<Box mb={10}>

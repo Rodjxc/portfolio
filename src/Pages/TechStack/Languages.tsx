@@ -10,9 +10,6 @@ const languages = [
 	{ id: "Norwegian", name: "Norwegian", proficiency: "(Survivable)" },
 ];
 
-const MotionListItem = motion(ListItem);
-const MotionBox = motion(Box);
-
 export const Languages = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
@@ -38,7 +35,8 @@ export const Languages = () => {
 				height="100%"
 				opacity="0.5"
 			/>
-			<MotionBox
+			<Box
+				as={motion.div} // Use `as={motion.div}` for motion support
 				ref={ref}
 				bg="rgba(255, 255, 255, 0.9)"
 				borderRadius="md"
@@ -52,7 +50,6 @@ export const Languages = () => {
 				maxWidth={{ base: "90%", md: "60%" }}
 				initial={{ opacity: 0, x: -50 }}
 				animate={isInView ? { opacity: 1, x: 0 } : {}}
-				transition={{ duration: 0.6 }}
 			>
 				<Heading
 					fontWeight="700"
@@ -65,20 +62,20 @@ export const Languages = () => {
 				</Heading>
 				<List color="black" fontSize="sm">
 					<Box justifyItems="center">
-						{languages.map((language, index) => (
-							<MotionListItem
+						{languages.map((language) => (
+							<ListItem
+								as={motion.li} // Use `as={motion.li}` for motion support
 								key={language.id}
 								initial={{ opacity: 0, y: 20 }}
 								animate={isInView ? { opacity: 1, y: 0 } : {}}
-								transition={{ delay: index * 0.1 }}
 								textAlign="center"
 							>
 								{language.name} - {language.proficiency}
-							</MotionListItem>
+							</ListItem>
 						))}
 					</Box>
 				</List>
-			</MotionBox>
+			</Box>
 		</Box>
 	);
 };

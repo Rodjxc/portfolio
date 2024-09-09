@@ -3,15 +3,14 @@ import { COLORS } from "../../common/colors";
 import { educationItems } from "./educationData";
 import { motion } from "framer-motion";
 
-const MotionBox = motion(Box);
-
 export const Education = () => {
 	return (
 		<Box
 			className="flex flex-col items-center py-6"
 			px={{ base: "4", md: "20" }}
 		>
-			<MotionBox
+			<Box
+				as={motion.div}
 				fontWeight="bold"
 				fontSize={{ base: "40px", md: "90px" }}
 				textAlign="center"
@@ -20,9 +19,10 @@ export const Education = () => {
 				fontFamily="'Montserrat', sans-serif"
 			>
 				Education
-			</MotionBox>
+			</Box>
 
-			<MotionBox
+			<Box
+				as={motion.div}
 				fontSize={{ base: "80px", md: "200px" }}
 				fontWeight="bold"
 				color="rgba(255, 255, 255, 0.1)"
@@ -36,7 +36,7 @@ export const Education = () => {
 				fontFamily="'Montserrat', sans-serif"
 			>
 				Education
-			</MotionBox>
+			</Box>
 
 			<List>
 				{educationItems.map((item, index) => (
