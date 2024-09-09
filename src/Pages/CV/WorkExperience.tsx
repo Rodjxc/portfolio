@@ -4,8 +4,6 @@ import { workExperienceData } from "./workExperienceData";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMediaQuery } from "@chakra-ui/react";
 
-const MotionBox = motion(Box);
-
 export const WorkExperience = () => {
 	const { scrollY } = useScroll();
 	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
@@ -21,7 +19,8 @@ export const WorkExperience = () => {
 			className="flex flex-col items-center py-6"
 			px={{ base: "4", md: "20" }}
 		>
-			<MotionBox
+			<Box
+				as={motion.div}
 				style={{ x: headingX }}
 				fontWeight="bold"
 				fontSize={{ base: "40px", md: "90px" }}
@@ -30,8 +29,8 @@ export const WorkExperience = () => {
 				fontFamily="'Montserrat', sans-serif"
 			>
 				Work Experience
-			</MotionBox>
-			<MotionBox
+			</Box>
+			<Box
 				fontWeight="normal"
 				fontSize={{ base: "16px", md: "20px" }}
 				textAlign="left"
@@ -41,7 +40,7 @@ export const WorkExperience = () => {
 			>
 				Here is a summary of my work experience as a Creative Front-end
 				Developer.
-			</MotionBox>
+			</Box>
 
 			{workExperienceData.map((experience) => (
 				<Box

@@ -16,8 +16,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MotionBox = motion(Box);
-
 export const AboutMe = () => {
 	const { scrollY } = useScroll();
 
@@ -42,7 +40,8 @@ export const AboutMe = () => {
 			pt={{ base: "20%", md: "10%" }} // Increased top padding for mobile
 			mb={{ base: "10%", md: "5%" }} // Increased bottom margin
 		>
-			<MotionBox
+			<Box
+				as={motion.div}
 				style={{ x: backgroundTextX }}
 				fontSize={{ base: "50px", md: "180px" }}
 				fontWeight="bold"
@@ -56,7 +55,7 @@ export const AboutMe = () => {
 				pointerEvents="none"
 			>
 				About Me
-			</MotionBox>
+			</Box>
 			<Flex
 				direction="column"
 				alignItems={{ base: "center", md: "flex-start" }}
@@ -66,7 +65,8 @@ export const AboutMe = () => {
 				position="relative"
 				zIndex={1}
 			>
-				<MotionBox
+				<Box
+					as={motion.div}
 					style={{ x: titleTextX }}
 					fontSize={{ base: "16px", md: "20px" }}
 					lineHeight="30px"
@@ -149,7 +149,7 @@ export const AboutMe = () => {
 							<FontAwesomeIcon icon={faYoutube} className="size-6 text-white" />
 						</Link>
 					</div>
-				</MotionBox>
+				</Box>
 			</Flex>
 		</Box>
 	);

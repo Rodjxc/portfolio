@@ -28,9 +28,6 @@ const codingLanguages = [
 	{ name: "Wordpress" },
 ];
 
-const MotionListItem = motion(ListItem);
-const MotionBox = motion(Box);
-
 export const Coding = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
@@ -56,7 +53,8 @@ export const Coding = () => {
 				height="100%"
 				opacity="0.5"
 			/>
-			<MotionBox
+			<Box
+				as={motion.div}
 				ref={ref}
 				bg="rgba(255, 255, 255, 0.9)"
 				borderRadius="md"
@@ -70,7 +68,6 @@ export const Coding = () => {
 				maxWidth={{ base: "90%", md: "60%" }}
 				initial={{ opacity: 0, x: -50 }}
 				animate={isInView ? { opacity: 1, x: 0 } : {}}
-				transition={{ duration: 0.6 }}
 			>
 				<Heading
 					fontWeight="700"
@@ -83,19 +80,19 @@ export const Coding = () => {
 				</Heading>
 				<List color="black" fontSize="sm">
 					<SimpleGrid columns={2} spacing={2}>
-						{codingLanguages.map((language, index) => (
-							<MotionListItem
+						{codingLanguages.map((language) => (
+							<ListItem
+								as={motion.li} // Use `as={motion.li}` for Framer Motion animations
 								key={language.name}
 								initial={{ opacity: 0, y: 20 }}
 								animate={isInView ? { opacity: 1, y: 0 } : {}}
-								transition={{ delay: index * 0.1 }}
 							>
 								{language.name}
-							</MotionListItem>
+							</ListItem>
 						))}
 					</SimpleGrid>
 				</List>
-			</MotionBox>
+			</Box>
 		</Box>
 	);
 };

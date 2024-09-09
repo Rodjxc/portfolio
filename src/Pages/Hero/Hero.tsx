@@ -9,8 +9,6 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion";
 import { COLORS } from "../../common/colors";
 
-const MotionBox = motion(Box);
-
 export const Hero = () => {
 	const { scrollY } = useScroll();
 
@@ -36,7 +34,8 @@ export const Hero = () => {
 			className="bg-lightBlack-custom px-8 mb-2"
 			py={topPadding} // Adjust top padding dynamically
 		>
-			<MotionBox
+			<Box
+				as={motion.div}
 				style={{ x: backgroundTextX }}
 				fontSize={{ base: "50px", md: "180px" }}
 				fontWeight="bold"
@@ -50,7 +49,7 @@ export const Hero = () => {
 				pointerEvents="none"
 			>
 				Front-End Dev
-			</MotionBox>
+			</Box>
 			<Flex
 				direction="column"
 				alignItems={{ base: "center", md: "flex-start" }}
@@ -60,7 +59,8 @@ export const Hero = () => {
 				position="relative"
 				zIndex={1}
 			>
-				<MotionBox
+				<Box
+					as={motion.div}
 					style={{ x: titleTextX }}
 					fontSize={{ base: "16px", md: "20px" }}
 					lineHeight="30px"
@@ -131,7 +131,7 @@ export const Hero = () => {
 						</Link>
 						.
 					</Text>
-				</MotionBox>
+				</Box>
 			</Flex>
 		</Box>
 	);

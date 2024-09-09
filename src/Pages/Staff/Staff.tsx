@@ -4,14 +4,11 @@ import {
 	Grid,
 	Heading,
 	Image,
-	Text,
 	useMediaQuery,
 } from "@chakra-ui/react";
 import { StaffData } from "./StaffData";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { COLORS } from "../../common/colors";
-
-const MotionBox = motion(Box);
 
 export const Staff = () => {
 	const { scrollY } = useScroll();
@@ -36,25 +33,25 @@ export const Staff = () => {
 			overflowX="hidden"
 		>
 			<Flex direction="column" alignItems="center" mb="20px">
-				<MotionBox
+				<Box
+					as={motion.div}
 					style={{ x: headingX }}
 					fontWeight="bold"
 					fontSize={{ base: "40px", md: "70px" }} // Adjust font size for smaller screens
 					fontFamily="'Montserrat', sans-serif"
 					color={COLORS.PINK}
 					mb="6"
-					as={Heading}
 				>
 					The Oslo Team 💭
-				</MotionBox>
-				<MotionBox
+				</Box>
+				<Box
+					as={motion.div}
 					style={{ x: textX }}
 					fontSize={{ base: "16px", md: "20px" }}
 					mb="6"
-					as={Text}
 				>
 					I wear a lot of hats around here.
-				</MotionBox>
+				</Box>
 			</Flex>
 
 			<Grid
