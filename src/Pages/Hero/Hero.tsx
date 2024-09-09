@@ -93,7 +93,7 @@ export const Hero = () => {
 						Back in 2021, one of the tasks for my job back then was building a
 						simple website and tumbled head first into the rabbit hole of coding
 						and web development. Fast-forward to today, and I've had the
-						privilege of building software for a{" "}
+						pleasure of developing for a{" "}
 						<Link
 							color={COLORS.PINK}
 							href="https://www.estatelab.no/"
