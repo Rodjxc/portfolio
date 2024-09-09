@@ -1,5 +1,15 @@
 export const Works = [
   {
+    id: "Foodies",
+    name: "Food Site",
+    url: "food-c0k6kj2f6-rodjxcs-projects.vercel.app",
+    technologies: "NextJS and React",
+    categories: "Web App",
+    description:
+      "A NextJS full stack app featuring both parts of NextJS's: frontend and backend. The users can read other's recipes, create their own, and save them in the backend.",
+    github: "https://github.com/Rodjxc/foodies-app",
+  },
+  {
     id: "Jokeapp",
     name: "Joke App",
     url: "https://joke-app-indol.vercel.app/",
