@@ -2,7 +2,7 @@ export const Works = [
   {
     id: "Foodies",
     name: "Food Site",
-    url: "food-app-theta-steel.vercel.app",
+    url: "https://food-app-theta-steel.vercel.app",
     technologies: "NextJS and React",
     categories: "Web App",
     description:
