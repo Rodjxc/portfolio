@@ -3,10 +3,10 @@ import { MyRoutes } from "./Router/MyRoutes";
 import { Cursor } from "./Components/Cursor/Cursor";
 
 export const App = () => {
-  return (
-    <ChakraProvider>
-      <MyRoutes />
-      <Cursor />
-    </ChakraProvider>
-  );
+	return (
+		<ChakraProvider>
+			<MyRoutes />
+			<Cursor />
+		</ChakraProvider>
+	);
 };
