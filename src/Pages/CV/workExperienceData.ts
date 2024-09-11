@@ -3,7 +3,7 @@ export const workExperienceData = [
 		id: "Estatelab",
 		title: "FrontEnd Developer | EstateLab (Feb. 2024 - Present) | 📍 Oslo",
 		description:
-			"I joined EstateLab in it's start-up phase and I was tasked with building almost from scratch a multitenant application to manage real estate property. It was a very heavy CRUD interaction with APIs of reading and rendering data on as table as well as managing and authenticating forms. Worked closely with cross-functional teams, including developers, sales and designers to implement the most accessible and friendly interfaces for the users.",
+			"I joined EstateLab in it's start-up phase and I was tasked with building almost from scratch a multitenant application to manage real estate property. It was a very heavy CRUD interaction with APIs, where we had to read and render data on a table as well as managing and authenticating forms. I worked closely with cross-functional teams, including developers, sales and designers to implement the most accessible and friendly interfaces for the users.",
 		stack: [
 			"React",
 			"JavaScript",

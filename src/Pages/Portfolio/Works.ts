@@ -6,7 +6,7 @@ export const Works = [
     technologies: "NextJS and React",
     categories: "Web App",
     description:
-      "A NextJS full stack app featuring both parts of NextJS's: frontend and backend. The users can read other's recipes, create their own, and save them in the backend.",
+      "A NextJS full stack app making use of Supabase as a BaaS backend on the cloud to store images. The users can read other's recipes, create their own, and save them in the backend.",
     github: "https://github.com/Rodjxc/foodies-app",
   },
   {
