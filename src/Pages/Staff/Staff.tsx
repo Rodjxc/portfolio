@@ -1,30 +1,11 @@
-import {
-	Box,
-	Flex,
-	Grid,
-	Heading,
-	Image,
-	useMediaQuery,
-} from "@chakra-ui/react";
+import { useState } from "react";
+import { Box, Grid, Heading, Flex } from "@chakra-ui/react";
 import { StaffData } from "./StaffData";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { COLORS } from "../../common/colors";
+import { cn } from "../../lib/utils";
 
 export const Staff = () => {
-	const { scrollY } = useScroll();
-	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
-
-	// Adjust the transform values for larger screens only
-	const headingX = useTransform(
-		scrollY,
-		[0, 5000],
-		isLargerThanMd ? [0, -400] : [0, 0], // Disable animation on smaller screens
-	);
-	const textX = useTransform(
-		scrollY,
-		[0, 5000],
-		isLargerThanMd ? [0, 100] : [0, 0], // Disable animation on smaller screens
-	);
+	const [hovered, setHovered] = useState<number | null>(null);
 
 	return (
 		<Box
@@ -33,23 +14,16 @@ export const Staff = () => {
 			overflowX="hidden"
 		>
 			<Flex direction="column" alignItems="center" mb="20px">
-				<Box
-					as={motion.div}
-					style={{ x: headingX }}
+				<Heading
 					fontWeight="bold"
-					fontSize={{ base: "40px", md: "70px" }} // Adjust font size for smaller screens
+					fontSize={{ base: "40px", md: "70px" }}
 					fontFamily="'Montserrat', sans-serif"
 					color={COLORS.PINK}
 					mb="6"
 				>
 					The Oslo Team 💭
-				</Box>
-				<Box
-					as={motion.div}
-					style={{ x: textX }}
-					fontSize={{ base: "16px", md: "20px" }}
-					mb="6"
-				>
+				</Heading>
+				<Box fontSize={{ base: "16px", md: "20px" }} mb="6">
 					I wear a lot of hats around here.
 				</Box>
 			</Flex>
@@ -63,36 +37,38 @@ export const Staff = () => {
 				gap="20px"
 				px="4%"
 			>
-				{StaffData.map((staff) => (
+				{StaffData.map((staff, index) => (
 					<Box
 						key={staff.id}
-						maxW="320px"
-						borderBottom="1px solid white"
-						className="card"
+						onMouseEnter={() => setHovered(index)}
+						onMouseLeave={() => setHovered(null)}
+						className={cn(
+							"rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+							hovered !== null && hovered !== index && "blur-sm scale-[0.98]",
+						)}
 					>
-						<Flex direction="column" as="article">
-							<Image
-								src={`/img/${staff.id}.jpg`}
-								alt={`Image of ${staff.name}`}
-								className="card-image"
-								width="100%"
-								height="auto"
-							/>
-							<Box className="card-text" pt="10px" mb="25px">
-								<Flex
-									direction="column"
-									alignItems="flex-end"
-									className="position-name"
-								>
-									<Heading as="h3" fontSize="20px" m="0">
-										{staff.position}
-									</Heading>
-									<Heading as="h4" fontSize="16px" m="0">
-										{staff.name}
-									</Heading>
-								</Flex>
-							</Box>
-						</Flex>
+						{/* Updated image styling */}
+						<img
+							src={`/img/${staff.id}.jpg`}
+							alt={` ${staff.name}`}
+							className="object-cover absolute inset-0 w-full h-full"
+						/>
+						{/* Text overlay */}
+						<Box
+							className={cn(
+								"absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
+								hovered === index ? "opacity-100" : "opacity-0",
+							)}
+						>
+							<Flex direction="column">
+								<Heading as="h3" fontSize="20px" color="white" mb="2">
+									{staff.position}
+								</Heading>
+								<Heading as="h4" fontSize="16px" color="white">
+									{staff.name}
+								</Heading>
+							</Flex>
+						</Box>
 					</Box>
 				))}
 			</Grid>

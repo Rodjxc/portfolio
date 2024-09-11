@@ -67,6 +67,7 @@ export const WorkingTools = () => {
 						{workingTools.map((tool, index) => (
 							<ListItem
 								as={motion.li}
+								// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 								key={index}
 								initial={{ opacity: 0, y: 20 }}
 								animate={isInView ? { opacity: 1, y: 0 } : {}}
