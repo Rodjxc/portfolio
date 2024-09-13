@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Box, Grid, Heading, Flex } from "@chakra-ui/react";
+import { Box, Grid, Heading, Flex, useMediaQuery } from "@chakra-ui/react";
 import { StaffData } from "./StaffData";
 import { COLORS } from "../../common/colors";
 import { cn } from "../../lib/utils";
 
 export const Staff = () => {
 	const [hovered, setHovered] = useState<number | null>(null);
+	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)"); // Check if the screen is larger than the 'md' breakpoint
 
 	return (
 		<Box
@@ -44,20 +45,28 @@ export const Staff = () => {
 						onMouseLeave={() => setHovered(null)}
 						className={cn(
 							"rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-							hovered !== null && hovered !== index && "blur-sm scale-[0.98]",
+							isLargerThanMd &&
+								hovered !== null &&
+								hovered !== index &&
+								"blur-sm scale-[0.98]",
 						)}
 					>
-						{/* Updated image styling */}
+						{/* Image */}
 						<img
 							src={`/img/${staff.id}.jpg`}
-							alt={` ${staff.name}`}
+							alt={`${staff.name}`}
 							className="object-cover absolute inset-0 w-full h-full"
 						/>
-						{/* Text overlay */}
+
+						{/* Text overlay for larger screens or always visible on mobile */}
 						<Box
 							className={cn(
 								"absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
-								hovered === index ? "opacity-100" : "opacity-0",
+								isLargerThanMd
+									? hovered === index
+										? "opacity-100"
+										: "opacity-0"
+									: "opacity-100", // Always visible on mobile
 							)}
 						>
 							<Flex direction="column">
