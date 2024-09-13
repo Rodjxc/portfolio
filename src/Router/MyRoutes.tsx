@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Home } from "../Pages/layout/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
-import { Experience } from "../Pages/CV/Experience";
+import { Experience } from "../Pages/Experience/Experience";
 import { Footer } from "../Pages/layout/Footer/Footer";
 import { Project } from "../Pages/Project/Project";
 import { Header } from "../Pages/layout/HeaderNav/Header";

@@ -20,18 +20,11 @@ export const WorkExperience = () => {
 			const rect = ref.current.getBoundingClientRect();
 			setHeight(rect.height);
 		}
-	}, []); // Removed ref dependency to fix the warning
+	}, []);
 
 	// Control timeline animations based on scroll position
 	const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
 	const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
-	// Title animation
-	const headingX = useTransform(
-		scrollYProgress,
-		[0, 1],
-		isLargerThanMd ? [0, -200] : [0, -50],
-	);
 
 	return (
 		<Box
@@ -42,7 +35,6 @@ export const WorkExperience = () => {
 			{/* Animated Title */}
 			<Box
 				as={motion.div}
-				style={{ x: headingX }}
 				fontWeight="bold"
 				fontSize={{ base: "40px", md: "90px" }}
 				textAlign="center"
@@ -71,80 +63,59 @@ export const WorkExperience = () => {
 				py={10}
 				position="relative"
 			>
-				{/* Timeline Line */}
-				<Box
-					style={{
-						height: `${height}px`,
-					}}
-					className="absolute left-[4%] md:left-[1%] w-[2px] bg-gradient-to-b from-purple-500 via-blue-500 to-transparent"
-				>
-					{/* Pink scrolling line */}
-					<motion.div
+				{/* Timeline Line - only visible on larger screens */}
+				{isLargerThanMd && (
+					<Box
 						style={{
-							height: heightTransform,
-							opacity: opacityTransform,
+							height: `${height}px`,
 						}}
-						className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent"
-					/>
-				</Box>
+						className="absolute left-[4%] md:left-[1%] w-[2px] bg-gradient-to-b from-pink-300 to-transparent"
+					>
+						<motion.div
+							style={{
+								height: heightTransform,
+								opacity: opacityTransform,
+							}}
+							className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-pink-300 to-transparent"
+						/>
+					</Box>
+				)}
 
 				{/* Work experience entries */}
 				{workExperienceData.map((experience) => (
 					<Box
 						key={experience.title}
-						className="flex justify-start pt-10 md:pt-40 gap-6"
+						className="flex flex-col md:flex-row justify-start pt-10 md:pt-40 gap-6"
 					>
-						{/* Sticky Timeline Dots and Titles */}
-						<Box className="sticky flex flex-col items-center top-40 self-start max-w-xs md:max-w-sm md:w-full">
-							{/* Marker: Grey circle with a black center, centered on the line */}
-							<Box
-								className="h-10 w-10 rounded-full bg-black dark:bg-black flex items-center justify-center"
-								style={{
-									position: "absolute",
-									left: "2%", // Aligned with the line
-									transform: "translateX(-50%)", // Center the marker on the line
-								}}
-							>
-								{/* Inner Grey Dot */}
-								<Box className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
-							</Box>
-
-							{/* Title at the top */}
+						{/* Title, Date, and Location */}
+						<Box
+							className="sticky flex flex-col items-start top-40 self-start max-w-xs md:max-w-sm md:w-full"
+							textAlign="left"
+							mb={isLargerThanMd ? 0 : 4}
+							pl={{ base: 0, md: 8 }} // Padding for mobile and desktop views
+						>
 							<Text
-								className="text-xl font-bold text-neutral-500 dark:text-neutral-400"
-								ml={isLargerThanMd ? "10" : "8"} // Margin-left for spacing from the line
+								fontSize={{ base: "20px", md: "30px" }}
+								fontWeight="bold"
+								color={COLORS.PINK}
 							>
 								{experience.title}
 							</Text>
-
-							{/* Date below the title */}
-							<Text
-								className="text-sm font-semibold text-neutral-500 dark:text-neutral-400"
-								ml={isLargerThanMd ? "10" : "8"} // Margin-left for spacing from the line
-							>
+							<Text fontSize="sm" color="neutral-500" mb="2">
 								{experience.date}
 							</Text>
-
-							{/* Location below the date */}
-							<Text
-								className="text-sm font-normal text-neutral-500 dark:text-neutral-400"
-								ml={isLargerThanMd ? "10" : "8"} // Margin-left for spacing from the line
-							>
+							<Text fontSize="sm" color="neutral-500">
 								{experience.location}
 							</Text>
 						</Box>
 
 						{/* Description */}
-						<Box className="relative pl-20 pr-4 md:pl-10 w-full">
-							{/* Title for mobile */}
-							<Text className="md:hidden text-2xl mb-4 text-left font-bold">
-								{experience.title}
-							</Text>
-
+						<Box className="relative w-full">
 							<Text
 								borderLeft={`4px solid ${COLORS.PINK}`}
 								pl="5%"
 								lineHeight="2rem"
+								fontSize={{ base: "14px", md: "16px" }}
 							>
 								{experience.description}
 							</Text>
