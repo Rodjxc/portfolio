@@ -1,34 +1,29 @@
-import { Box, Flex, useMediaQuery } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react";
 import { HeroTitle } from "./HeroTitle";
 import { HeroDescription } from "./HeroDescription";
-import { HeroBackgroundText } from "./HeroBackgroundText"; // Import the new component
+import { HeroBackgroundText } from "./HeroBackgroundText";
 
 export const Hero = () => {
 	const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
 
-	const topPadding = isLargerThanMd ? "9%" : "20%";
-
 	return (
-		<Box
-			position="relative"
-			overflow="hidden"
-			className="bg-lightBlack-custom px-8 mb-2"
-			py={topPadding}
+		<div
+			className={`relative overflow-hidden bg-lightBlack-custom px-8 mb-2 ${
+				isLargerThanMd ? "py-[9%]" : "py-[20%]"
+			}`}
 		>
 			<HeroBackgroundText />
 
-			<Flex
-				direction="column"
-				alignItems={{ base: "center", md: "flex-start" }}
-				justifyContent="left"
-				paddingX={{ base: "2%", md: "5%" }}
-				paddingY={{ base: "0%", md: "2%" }}
-				position="relative"
-				zIndex={1}
+			<div
+				className={`flex flex-col relative z-10 ${
+					isLargerThanMd
+						? "items-start px-[5%] py-[2%]"
+						: "items-center px-[2%] py-0"
+				}`}
 			>
 				<HeroTitle />
 				<HeroDescription />
-			</Flex>
-		</Box>
+			</div>
+		</div>
 	);
 };
