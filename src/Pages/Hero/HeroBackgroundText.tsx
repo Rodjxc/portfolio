@@ -1,28 +1,17 @@
-import { Box } from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export const HeroBackgroundText = () => {
 	const { scrollY } = useScroll();
 
-	// Side to side scroll effect for the background text
-	const backgroundTextX = useTransform(scrollY, [0, 900], [-800, 800]);
+	// Side-to-side scroll effect for the background text
+	const backgroundTextX = useTransform(scrollY, [0, 900], [-400, 400]);
 
 	return (
-		<Box
-			as={motion.div}
+		<motion.div
 			style={{ x: backgroundTextX }}
-			fontSize={{ base: "50px", md: "180px" }}
-			fontWeight="bold"
-			color="rgba(255, 255, 255, 0.1)"
-			position="absolute"
-			top={{ base: "50%", md: "74%" }}
-			left={{ base: "50%", md: "20%" }}
-			transform="translate(-50%, -50%)"
-			whiteSpace="nowrap"
-			zIndex={0}
-			pointerEvents="none"
+			className="absolute text-[50px] md:text-[180px] font-bold text-white opacity-10 top-[92%] md:top-[74%] left-1/2 md:left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap"
 		>
 			Front-End Dev
-		</Box>
+		</motion.div>
 	);
 };
