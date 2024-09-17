@@ -1,57 +1,41 @@
-import { Box, Link, List, ListItem } from "@chakra-ui/react";
+import { Link, List, ListItem } from "@chakra-ui/react";
 import { COLORS } from "../../common/colors";
 import { educationItems } from "./educationData";
 import { motion } from "framer-motion";
 
 export const Education = () => {
 	return (
-		<Box
-			className="flex flex-col items-center py-6"
-			px={{ base: "4", md: "20" }}
-		>
-			<Box
-				as={motion.div}
-				fontWeight="bold"
-				fontSize={{ base: "40px", md: "90px" }}
-				textAlign="center"
-				color={COLORS.PINK}
-				my={{ base: 10, md: 20 }}
-				fontFamily="'Montserrat', sans-serif"
+		<div className="flex flex-col items-center py-6 px-4 md:px-20">
+			<motion.div
+				className="font-bold text-center text-[40px] md:text-[90px] text-pink my-10 md:my-20"
+				style={{ fontFamily: "'Montserrat', sans-serif", color: COLORS.PINK }}
 			>
 				Education
-			</Box>
+			</motion.div>
 
-			<Box
-				as={motion.div}
-				fontSize={{ base: "80px", md: "200px" }}
-				fontWeight="bold"
-				color="rgba(255, 255, 255, 0.1)"
-				position="absolute"
-				top="50%"
-				left="50%"
-				transform="translate(-50%, -50%)"
-				whiteSpace="nowrap"
-				pointerEvents="none"
-				zIndex={-1}
-				fontFamily="'Montserrat', sans-serif"
+			<motion.div
+				className="font-bold text-[80px] md:text-[200px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap pointer-events-none z-[-1]"
+				style={{
+					color: "rgba(255, 255, 255, 0.1)",
+					fontFamily: "'Montserrat', sans-serif",
+				}}
 			>
 				Education
-			</Box>
+			</motion.div>
 
 			<List>
 				{educationItems.map((item, index) => (
-					<ListItem key={index} mb="15px">
+					<ListItem key={index} className="mb-4">
 						<Link
 							href={item.href}
-							color={COLORS.WHITE}
-							_hover={{ color: COLORS.PINK }}
-							textDecoration="none"
+							className="text-white hover:text-pink no-underline"
+							style={{ color: COLORS.WHITE }}
 						>
 							{item.text}
 						</Link>
 					</ListItem>
 				))}
 			</List>
-		</Box>
+		</div>
 	);
 };
