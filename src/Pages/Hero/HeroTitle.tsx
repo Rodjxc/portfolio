@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { COLORS } from "../../common/colors";
 import { useMediaQuery } from "@chakra-ui/react";
@@ -15,13 +15,9 @@ export const HeroTitle = () => {
 	);
 
 	return (
-		<Box
-			as={motion.div}
+		<motion.div
 			style={{ x: titleTextX }}
-			fontSize={{ base: "16px", md: "20px" }}
-			lineHeight="30px"
-			paddingX={{ base: "0", md: "20%" }}
-			textAlign="left"
+			className="text-left px-0 md:px-[20%] text-[16px] md:text-[20px] leading-[30px]"
 		>
 			<Heading
 				mb="12"
@@ -33,6 +29,6 @@ export const HeroTitle = () => {
 			>
 				Hey, I'm Rod! 👋
 			</Heading>
-		</Box>
+		</motion.div>
 	);
 };
