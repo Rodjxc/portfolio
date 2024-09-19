@@ -1,9 +1,9 @@
-import { Box, Text, Link } from "@chakra-ui/react";
+import { Text, Link } from "@chakra-ui/react";
 import { COLORS } from "../../common/colors";
 
 export const HeroDescription = () => {
 	return (
-		<Box textAlign="left" paddingX={{ base: "0", md: "20%" }}>
+		<div className="text-left px-0 md:px-[20%]">
 			<Text fontSize="lg">
 				I've been a front-end developer since 2021 (previously I worked as a{" "}
 				<Link
@@ -58,6 +58,6 @@ export const HeroDescription = () => {
 				</Link>
 				.
 			</Text>
-		</Box>
+		</div>
 	);
 };
