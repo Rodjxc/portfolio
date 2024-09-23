@@ -1,5 +1,5 @@
+import { COLORS } from "@/common/colors";
 import { Flex, Text, Link } from "@chakra-ui/react";
-import { COLORS } from "src/common/colors";
 
 export const Footer = () => {
 	return (
