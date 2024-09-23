@@ -1,20 +1,20 @@
 @font-face {
-    font-family: 'Neue Montreal';
-    src: url('./NeueMontreal/NeueMontreal-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Neue Montreal';
-    src: url('./NeueMontreal/NeueMontreal-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Quicksand';
-    src: url('./Quicksand/Quicksand-Regular.ttf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: 'Neue Montreal';
+  src: url('/fonts/NeueMontreal/NeueMontreal-Regular.otf') format('opentype'); /* Use absolute path */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/NeueMontreal/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand/Quicksand-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
