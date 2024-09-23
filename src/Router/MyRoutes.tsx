@@ -1,11 +1,11 @@
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { Home } from "../Pages/layout/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
 import { Experience } from "../Pages/Experience/Experience";
-import { Footer } from "../Pages/layout/Footer/Footer";
 import { Project } from "../Pages/Project/Project";
-import { Header } from "../Pages/layout/HeaderNav/Header";
 import { AboutMe } from "../Pages/AboutMe/AboutMe";
+import { Header } from "../Layout/HeaderNav/Header";
+import { Footer } from "../Layout/Footer/Footer";
+import { Home } from "../Layout/Home/Home";
 
 export const MyRoutes = () => {
 	return (
