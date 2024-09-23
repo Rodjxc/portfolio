@@ -18,7 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@chakra-ui/react": ["node_modules/@chakra-ui/react"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"],

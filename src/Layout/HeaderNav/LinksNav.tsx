@@ -8,7 +8,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { COLORS } from "src/common/colors";
+import { COLORS } from "@/common/colors";
 
 interface LinksNavProps {
 	isOpen: boolean;
