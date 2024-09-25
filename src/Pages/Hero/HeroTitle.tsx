@@ -20,12 +20,10 @@ export const HeroTitle = () => {
 			className="text-left px-0 md:px-[20%] text-[16px] md:text-[20px] leading-[30px]"
 		>
 			<Heading
-				mb="12"
-				fontSize={{ base: "40px", md: "100px" }}
-				fontWeight="bold"
 				color={COLORS.PINK}
 				fontFamily="'Montserrat', sans-serif"
-				letterSpacing="normal"
+				fontSize={{ base: "40px", md: "100px" }}
+				className="mb-12 font-bold tracking-normal antialiased"
 			>
 				Hey, I'm Rod! 👋
 			</Heading>

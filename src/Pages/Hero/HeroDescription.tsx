@@ -4,7 +4,7 @@ import { COLORS } from "../../common/colors";
 export const HeroDescription = () => {
 	return (
 		<div className="text-left px-0 md:px-[20%]">
-			<Text fontSize="lg">
+			<Text fontSize="lg" className="antialiased">
 				I've been a front-end developer since 2021 (previously I worked as a{" "}
 				<Link
 					color={COLORS.PINK}
