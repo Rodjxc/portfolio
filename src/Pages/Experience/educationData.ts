@@ -21,10 +21,10 @@ export const educationItems = [
 	},
 	{
 		text: "IBD Certified Beer Sommelier",
-		href: "",
+		href: "https://www.beerandcideracademy.org/meet-the-sommeliers/2018/10/10/rodrigo-jimeno",
 	},
 	{
-		text: "UIB - University of Balearic Island (Spain) - Bacherlor degree in Tourism and Leisure Studies",
+		text: "UIB - University of Balearic Island (Spain) - Bachelor degree in Tourism and Leisure Studies",
 		href: "",
 	},
 ];
