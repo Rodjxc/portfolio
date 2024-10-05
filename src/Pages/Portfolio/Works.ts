@@ -1,5 +1,14 @@
 export const Works = [
   {
+    id: "keenious",
+    name: "Keenie Chatbot",
+    url: "keenious-chatbot.vercel.app",
+    technologies: "React, Typescript, Open AI and Open Alex API",
+    categories: "Web App",
+    description:
+      "A fully functional feature of a chatbot that uses Chat GPT to create a query for the Open Alex API. This would look for the detailed academic paper, return it back to Chat GPT and the results will be displaye on screen with a summary. Built using Google's Material UI component library",
+    github: "https://github.com/Rodjxc/keenious-chatbot",
+  },{
     id: "Foodies",
     name: "Food Site",
     url: "https://food-app-theta-steel.vercel.app",
