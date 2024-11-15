@@ -1,5 +1,15 @@
 export const Works = [
   {
+    id: "weather",
+    name: "Weather App",
+    url: "https://weather-app-rodjxcs-projects.vercel.app/",
+    technologies: "React, Typescript, React Query",
+    categories: "Web App",
+    description:
+      "A weather app that uses the OpenWeather API to fetch the weather data and displays it in a beautiful way. It shows the weather for the current location and has a feature for recent searches. Built using React, Typescript and React Query",
+    github: "https://github.com/Rodjxc/weather-app-marketer",
+  },
+  {
     id: "keenious",
     name: "Keenie Chatbot",
     url: "keenious-chatbot.vercel.app",
@@ -8,7 +18,8 @@ export const Works = [
     description:
       "A fully functional feature of a chatbot that uses Chat GPT to create a query for the Open Alex API. This would look for the detailed academic paper, return it back to Chat GPT and the results will be displayed on screen with a summary. Built using Google's Material UI components library.",
     github: "https://github.com/Rodjxc/keenious-chatbot",
-  },{
+  },
+  {
     id: "Foodies",
     name: "Food Site",
     url: "https://food-app-theta-steel.vercel.app",
@@ -27,7 +38,8 @@ export const Works = [
     description:
       "A small app able to fetch a list of jokes from an API and allows you to edit them. Built using AntD components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
     github: "https://github.com/Rodjxc/joke-app",
-  },{
+  },
+  {
     id: "HystarF",
     name: "Hystar",
     url: "https://hystar.webflow.io/",
@@ -37,7 +49,8 @@ export const Works = [
       "Another version of Hystar's website, a Norwegian hydrogen company that builds electrolysers to produce green energy. My wife happens to work there and I wanted to give another look to their website just for fun and play with different elements. It includes a blog application (news) with different posts that map the data from a database",
     figma:
       "https://www.figma.com/file/cGNBmCqdqdLmtNw74KuZ25/Wireframe-Kit-(Copy)?type=design&node-id=6286%3A504&mode=design&t=Ncx7Xhg7GePyOwoG-1",
-  },  {
+  },
+  {
     id: "PortF",
     name: "Portfolio",
     url: "https://rodj.dev",
@@ -46,7 +59,7 @@ export const Works = [
     description:
       "This same website, where I got to play a bit more with component and other functionalities and, at the same time, building my own portfolio. Built using React Router, TailwindCSS, Framer-Motion and Chakra UI components",
     github: "https://github.com/Rodjxc/portfolio",
-  }, 
+  },
   {
     id: "MusicF",
     name: "Oslo Music Festival",
