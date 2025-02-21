@@ -1,6 +1,7 @@
 export const workExperienceData = [
   {
     id: "Marketer",
+    image: "/img/marketer.png",
     title: "FrontEnd Developer | Marketer",
     date: "Dec. 2024 - Present",
     location: "📍 Oslo",
@@ -16,11 +17,12 @@ export const workExperienceData = [
       "Playwright",
       "Custom component libraries",
       "Jira",
-      "GraphQL"
+      "GraphQL",
     ],
   },
   {
     id: "Estatelab",
+    image: "/img/estatelab.png",
     title: "FrontEnd Developer | EstateLab",
     date: "Feb. 2024 - Aug.2024",
     location: "📍 Oslo",
@@ -42,6 +44,7 @@ export const workExperienceData = [
   },
   {
     id: "meinbafög",
+    image: "/img/meinbafog.png",
     title: "FrontEnd Developer - Web Designer | meinBafög.de",
     date: "Nov. 2023 - Dec. 2023",
     location: "📍 Germany - Remote",
