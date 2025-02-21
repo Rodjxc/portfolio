@@ -5,7 +5,7 @@ export const workExperienceData = [
     date: "Dec. 2024 - Present",
     location: "📍 Oslo",
     description:
-      "Development and improvement of different projects within the company, based on different real estate solution for existing and newly built homes. I worked with an amazing team of 8 other developers working fully remote and taking part of full development plans and demos as well as code maintenance in different projects across the company.",
+      "Development and improvement of different projects within the company, based on different real estate solution for marketing of existing and newly built homes. I worked with an amazing team of 8 other developers working fully remote and taking part of full development plans and demos as well as code maintenance in different projects across the company.",
     stack: [
       "React",
       "Typescript",
@@ -16,6 +16,7 @@ export const workExperienceData = [
       "Playwright",
       "Custom component libraries",
       "Jira",
+      "GraphQL"
     ],
   },
   {

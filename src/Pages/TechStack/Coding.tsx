@@ -17,15 +17,15 @@ const codingLanguages = [
   { name: "Next JS" },
   { name: "E2E Testing w/Cypress" },
   { name: "Typescript" },
-  { name: "i18n" },
-  { name: "JSON / XML" },
-  { name: "Git" },
+  { name: "i18n libraries" },
+  { name: "GraphQL" },
   { name: "Component Libraries" },
-  { name: "Bootstrap" },
+  { name: "Rest APIs" },
   { name: "React Query" },
   { name: "React Router" },
   { name: "React Hook Form" },
-  { name: "Wordpress" },
+  { name: "CI/CD" },
+  { name: "Vercel" },
 ];
 
 export const Coding = () => {
