@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./lib/styles/globals.css";
 import Navbar from "./lib/components/navbar/Navbar";
+import { Cursor } from "./lib/components/common/Cursor";
 import { Footer } from "./lib/components/common/Footer";
 
 export const metadata: Metadata = {
@@ -20,8 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="bg-background text-primary antialiased">
+        <Cursor />
         <Navbar />
         <main className="pt-24 min-h-screen">{children}</main>
         <Footer />

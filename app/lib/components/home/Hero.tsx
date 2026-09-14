@@ -26,6 +26,7 @@ export const Hero = () => {
           <a
             className="text-link"
             href="https://www.beerandcideracademy.org/meet-the-sommeliers/2018/10/10/rodrigo-jimeno"
+            data-cursor-text="Wanna know more?"
             target="_blank"
             rel="noopener noreferrer"
           >

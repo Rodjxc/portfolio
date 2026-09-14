@@ -15,6 +15,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           target={liveUrl ? "_blank" : undefined}
           rel={liveUrl ? "noopener noreferrer" : undefined}
           className="block h-full"
+          data-cursor-text="See project live"
         >
           <Image
             src={`/img/${project.id}.jpg`}

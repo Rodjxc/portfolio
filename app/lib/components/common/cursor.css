@@ -1,0 +1,22 @@
+.mf-cursor {
+  color: #f6c5b7;
+}
+
+.mf-cursor .mf-cursor-text {
+  color: black;
+}
+
+@media (min-width: 891px) {
+  html,
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .mf-cursor {
+    display: none;
+  }
+}
