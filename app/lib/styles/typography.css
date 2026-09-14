@@ -1,0 +1,136 @@
+@utility heading-display {
+  font-size: clamp(40px, 8vw, 100px);
+  line-height: 110%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-pink);
+}
+
+@utility heading-h1 {
+  font-size: var(--text-h1);
+  line-height: 120%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-h2 {
+  font-size: var(--text-h2);
+  line-height: 120%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-h3 {
+  font-size: var(--text-h3);
+  line-height: 120%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-h4 {
+  font-size: var(--text-h4);
+  line-height: 120%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-h5 {
+  font-size: var(--text-h5);
+  line-height: 150%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-h6 {
+  font-size: var(--text-h6);
+  line-height: 150%;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility body-lg {
+  font-size: var(--text-body-lg);
+  line-height: 160%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+@utility body-md {
+  font-size: var(--text-body-md);
+  line-height: 160%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+@utility body-sm {
+  font-size: var(--text-body-sm);
+  line-height: 160%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+@utility body-xs {
+  font-size: var(--text-body-xs);
+  line-height: 130%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+@utility caption {
+  font-size: var(--text-caption);
+  line-height: 140%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+@utility nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.25rem;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-pink);
+    transition: width 0.5s ease;
+  }
+
+  &:hover,
+  &[data-active="true"] {
+    color: var(--color-pink);
+  }
+
+  &:hover::after,
+  &[data-active="true"]::after {
+    width: 100%;
+  }
+}
+
+@utility text-link {
+  color: var(--color-pink);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

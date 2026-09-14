@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./typography.css";
+
+html {
+  scroll-behavior: smooth;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+}
+
+body {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+.page-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
