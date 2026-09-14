@@ -38,7 +38,7 @@ export default async function ProjectPage({
     <article className="page-container mx-auto max-w-xl py-10">
       <div className="mb-6 h-[300px] overflow-hidden shadow-[0_0_20px_#ddd]">
         <Image
-          src={`/img/${project.id}.jpg`}
+          src={project.image}
           alt={project.name}
           width={800}
           height={300}

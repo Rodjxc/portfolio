@@ -1,6 +1,7 @@
 export type Project = {
   id: string;
   name: string;
+  image: string;
   url?: string;
   technologies: string;
   categories: string;
@@ -10,49 +11,51 @@ export type Project = {
 };
 
 export const works: Project[] = [
+
+  {
+    id: "eiendom.no",
+    name: "Eiendom.no",
+    image: "/img/eiendom.png",
+    url: "https://eiendom.no/",
+    technologies: "NextJS 14, React 19, Tailwind CSS & TypeScript. React Query for data fetching and Mapbox for the map.",
+    categories: "Website - App",
+    description:
+       "Eiendom.no is designed to become Norway's leading data-driven tool for evaluating property purchases, powered by our in-house value-estimation model and direct integrations with real-estate brokers. I built the app from scratch and had further developed it with the team.",
+  },
+  {
+    id: "plot",
+    name: "Plot.ai",
+    image: "/img/plot.png",
+    url: "https://plot.ai/",
+    technologies: "NextJS 14, React 19, Shadcn UI, Tailwind CSS, TypeScript",
+    categories: "Website with backend integration",
+    description: "Plot.ai is an advanced Norwegian proptech platform and market analysis tool designed to help real estate developers, investors, and consumers make data-driven property decisions. This website and their integrations are the entrance to the paid platform for broker of Plot.ai",
+  },
+  {
+    id: "Sendaplays",
+    name: "Sendaplays.com",
+    image: "/img/sendaplays.png",
+    url: "https://sendaplays.com/",
+    technologies: "NextJS 14, React 19, Shadcn UI, Tailwind CSS, TypeScript, Supabase",
+    categories: "Website with Backend in the cloud. Receives thousands of users monthly",
+    description:
+      "Personal project, I created (and currently maintain) about guides for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame. Built with the NextJS 14 and hosting a Backend (BaaS) with Supabase.",
+  },
   {
     id: "weather",
     name: "Weather App",
+    image: "/img/weather.jpg",
     url: "https://weather-app-rodjxcs-projects.vercel.app/",
     technologies: "React, Typescript, React Query",
-    categories: "Web App",
+    categories: "Simple Web App",
     description:
       "A weather app that uses the OpenWeather API to fetch the weather data and displays it in a beautiful way. It shows the weather for the current location and has a feature for recent searches. Built using React, Typescript and React Query",
     github: "https://github.com/Rodjxc/weather-app-marketer",
   },
   {
-    id: "keenious",
-    name: "Keenie Chatbot",
-    url: "https://keenious-chatbot.vercel.app",
-    technologies: "React, Typescript, Open AI and Open Alex API",
-    categories: "Web App",
-    description:
-      "A fully functional feature of a chatbot that uses Chat GPT to create a query for the Open Alex API. This would look for the detailed academic paper, return it back to Chat GPT and the results will be displayed on screen with a summary. Built using Google's Material UI components library.",
-    github: "https://github.com/Rodjxc/keenious-chatbot",
-  },
-  {
-    id: "Foodies",
-    name: "Food Site",
-    url: "https://food-app-theta-steel.vercel.app",
-    technologies: "NextJS and React",
-    categories: "Web App",
-    description:
-      "A NextJS full stack app making use of Supabase as a BaaS backend on the cloud to store images. The users can read other's recipes, create their own, and save them in the backend.",
-    github: "https://github.com/Rodjxc/foodies-app",
-  },
-  {
-    id: "Jokeapp",
-    name: "Joke App",
-    url: "https://joke-app-indol.vercel.app/",
-    technologies: "React & Typescript",
-    categories: "Web App",
-    description:
-      "A small app able to fetch a list of jokes from an API and allows you to edit them. Built using AntD components, React and Typescript. It also uses the i18n library to translate and has a dark mode toggle",
-    github: "https://github.com/Rodjxc/joke-app",
-  },
-  {
     id: "HystarF",
     name: "Hystar",
+    image: "/img/HystarF.jpg",
     url: "https://hystar.webflow.io/",
     technologies: "Webflow",
     categories: "Web Design, built using Webflow",
@@ -64,6 +67,7 @@ export const works: Project[] = [
   {
     id: "PortF",
     name: "Portfolio",
+    image: "/img/PortF.jpg",
     url: "https://rodj.dev",
     technologies: "Next.js, React, TypeScript & Tailwind CSS",
     categories: "Website, Web Design",
@@ -72,18 +76,9 @@ export const works: Project[] = [
     github: "https://github.com/Rodjxc/portfolio",
   },
   {
-    id: "MusicF",
-    name: "Oslo Music Festival",
-    url: "https://music-festival-ten.vercel.app/",
-    technologies: "React, Typescript & Tailwind CSS",
-    categories: "Web Design",
-    description:
-      "A website for a fake music festival, built using React and Tailwind CSS and implementing React libraries .",
-    github: "https://github.com/Rodjxc/Music-Festival",
-  },
-  {
     id: "CommuF",
     name: "CommuniLink",
+    image: "/img/CommuF.jpg",
     url: "https://communilinkrodjdev.webflow.io/",
     technologies: "Webflow",
     categories: "Web Design, built using Webflow",
@@ -91,26 +86,7 @@ export const works: Project[] = [
       "A simple landing page for a website of a fake chat and video calls app, fully responsive. Designed in Figma and built using WebFlow",
     figma:
       "https://www.figma.com/file/gpUYxGbCorvTaXlqGYHxmE/Practice%3A-Chat-App-Homepage-Design-(Copy)?type=design&node-id=107%3A17&mode=design&t=zf1RNJpPckd9Z4oB-1",
-  },
-  {
-    id: "MovieF",
-    name: "MovieTrack",
-    url: "https://movies-site-h4l5b12fe-rodjxc.vercel.app",
-    technologies: "HTML, CSS, React & JS",
-    categories: "Website functionality",
-    description:
-      "A website to write down, rate, and track movies you've watched or want to watch and add a description about them. Built using React and saving the items in the Local Storage",
-    github: "https://github.com/Rodjxc/movies-site",
-  },
-  {
-    id: "RaidF",
-    name: "La Fogata de Raid",
-    url: "https://lafogataderaid.com/",
-    technologies: "Wordpress & Elementor",
-    categories: "Website with Wordpress CMS",
-    description:
-      "My personal project, the first functional website I created for the videogame Raid Shadow Legends. It's the reference in Spanish language for the game Raid Shadow Legends videogame. Built using Wordpress, Elementor and several plugins to improve caching and SEO",
-  },
+  }
 ];
 
 export function getProjectById(id: string) {

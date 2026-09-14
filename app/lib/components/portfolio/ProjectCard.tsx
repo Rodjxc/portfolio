@@ -18,7 +18,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           data-cursor-text="See project live"
         >
           <Image
-            src={`/img/${project.id}.jpg`}
+            src={project.image}
             alt={project.name}
             width={900}
             height={560}
