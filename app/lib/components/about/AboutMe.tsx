@@ -1,88 +1,122 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, Instagram, Linkedin, Youtube } from "lucide-react";
+import Image from "next/image";
+import { useRef } from "react";
+import { socials } from "../../data/contact";
+import { languages } from "../../data/skills";
+import { Reveal } from "../common/Reveal";
 
-const socials = [
-  { href: "https://github.com/Rodjxc", label: "GitHub", icon: Github },
-  {
-    href: "https://www.linkedin.com/in/rod-jimeno/",
-    label: "LinkedIn",
-    icon: Linkedin,
-  },
-  {
-    href: "https://www.instagram.com/sendaplays/",
-    label: "Instagram",
-    icon: Instagram,
-  },
-  {
-    href: "https://www.youtube.com/@SendaPlays",
-    label: "YouTube",
-    icon: Youtube,
-  },
+const facts = [
+  { emoji: "📍", title: "Oslo, Norway", text: "After years in London, Norway became home." },
+  { emoji: "🥋", title: "Brazilian Jiu-Jitsu", text: "Most evenings you'll find me on the mats at the gym." },
+  { emoji: "🎬", title: "YouTube", text: "Gaming as @sendaplays and travel stories as @elrodtrip. 50k+ subscribers." },
+  { emoji: "🐶", title: "Family", text: "Most free time goes to my wife, our dog, and travelling." },
 ];
 
 export const AboutMe = () => {
-  const { scrollY } = useScroll();
-  const backgroundTextX = useTransform(scrollY, [0, 500], [-120, 240]);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "end start"],
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24">
-      <motion.p
-        style={{ x: backgroundTextX }}
-        className="pointer-events-none absolute top-[55%] left-[10%] z-0 whitespace-nowrap text-[50px] font-bold text-white/10 md:text-[180px]"
-      >
-        About Me
-      </motion.p>
-
-      <div className="relative z-10 mx-auto max-w-4xl">
-        <h1 className="heading-display mb-12">About Me</h1>
-        <div className="flex flex-col gap-6">
-          <p className="body-lg">
-            Since I was 5 I&apos;ve been surrounded by computers and videogames,
-            which probably laid the foundations of an interest in technology.
-            This interest took me to a pivotal decision, shifting from a 10+
-            years working in the craft beer industry and being a beer sommelier,
-            to changing my career to become a developer.
-          </p>
-          <p className="body-lg">
-            I believe that my brain naturally works exactly the way a developer
-            thinks, with the logic side of programming and believing that
-            there&apos;s always more than one solution to a problem. Before I
-            used my creativity to make original and tasty beers and now I use it
-            to create web applications. I really enjoy minimalist designs
-            inspired by the likes of Next JS and Vercel. When I see a project
-            built with frameworks I&apos;m not familiar with, I instantly get an
-            “I want to learn this” feeling.
-          </p>
-          <p className="body-lg">
-            When I&apos;m not at the computer I&apos;m usually in the gym
-            practicing Brazilian Jiu Jitsu, travelling, or spending time with my
-            wife and dog.
-          </p>
-          <p className="body-lg">
-            Oh, and I also have a YouTube channel where I make guides for
-            videogames!
-          </p>
-        </div>
-        <div className="mt-16 flex gap-6">
-          {socials.map((social) => {
-            const Icon = social.icon;
-            return (
+    <>
+      <section className="grid items-start gap-12 pt-16 pb-10 md:pt-24 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
+        <div>
+          <Reveal>
+            <p className="eyebrow mb-4">
+              <span className="mr-3 text-pink">04</span>About
+            </p>
+            <h2 className="heading-section">
+              The person <span className="text-pink">behind the code.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1} className="mt-10 flex flex-col gap-6">
+            <p className="body-lg">
+              I grew up surrounded by computers and video games, but spent my
+              first career in craft beer: bartending and managing in London,
+              brewing in Oslo, and becoming a certified beer sommelier.
+            </p>
+            <p className="body-lg !text-secondary">
+              In 2021 a job task had me build a simple website, and I fell
+              head first into web development. Today I build web products in
+              Oslo, with a soft spot for minimal interfaces, thoughtful motion
+              and well-typed code.
+            </p>
+            <p className="body-lg !text-secondary">
+              The hospitality years stuck with me: I still think about the
+              person on the other side first, whether that&apos;s a guest at
+              the bar or someone using what I build.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2} className="mt-10 flex flex-wrap gap-3">
+            {socials.map(({ href, label, icon: Icon }) => (
               <a
-                key={social.href}
-                href={social.href}
+                key={href}
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={social.label}
-                className="text-primary transition-colors hover:text-pink"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 transition-colors hover:border-pink hover:text-pink"
               >
-                <Icon className="size-6" />
+                <Icon className="size-4" />
+                {label}
               </a>
-            );
-          })}
+            ))}
+          </Reveal>
         </div>
-      </div>
-    </section>
+
+        <motion.div
+          ref={imageRef}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="relative aspect-[3/4] overflow-hidden rounded-[2rem] border border-border lg:sticky lg:top-28"
+        >
+          <motion.div style={{ y: imageY }} className="absolute -inset-[10%]">
+            <Image
+              src="/img/rod.jpg"
+              alt="Rod holding a mechanical keyboard"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <section className="py-10">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {facts.map((fact, index) => (
+            <Reveal key={fact.title} delay={index * 0.06}>
+              <motion.article
+                whileHover={{ y: -6, rotate: index % 2 ? 1 : -1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="h-full rounded-3xl border border-border bg-card p-7"
+              >
+                <span className="text-4xl">{fact.emoji}</span>
+                <h3 className="heading-h4 mt-6">{fact.title}</h3>
+                <p className="body-md mt-2 !text-secondary">{fact.text}</p>
+              </motion.article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-4 rounded-3xl border border-border p-7 md:p-10">
+          <p className="eyebrow mb-6">Human languages I speak</p>
+          <ul className="flex flex-wrap gap-x-10 gap-y-6">
+            {languages.map((language) => (
+              <li key={language.name}>
+                <p className="heading-h3">{language.name}</p>
+                <p className="body-sm !text-secondary">{language.proficiency}</p>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+    </>
   );
 };

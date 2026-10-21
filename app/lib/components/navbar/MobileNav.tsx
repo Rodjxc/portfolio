@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { navLinks, socialLinks } from "./links";
+import { useActiveSection } from "./useActiveSection";
 
 interface MobileNavProps {
   isMenuOpen: boolean;
@@ -13,7 +13,7 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ isMenuOpen, setIsMenuOpen }: MobileNavProps) {
-  const pathname = usePathname();
+  const active = useActiveSection();
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
@@ -27,7 +27,7 @@ export function MobileNav({ isMenuOpen, setIsMenuOpen }: MobileNavProps) {
   return (
     <>
       <button
-        className={`md:hidden fixed top-4 right-4 z-[100] rounded-full border border-border bg-card p-2 text-primary shadow-lg transition-opacity ${
+        className={`md:hidden fixed top-3.5 right-4 z-[100] rounded-full border border-border bg-card p-2 text-primary shadow-lg transition-opacity ${
           isMenuOpen ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
         aria-label="Open menu"
@@ -65,16 +65,22 @@ export function MobileNav({ isMenuOpen, setIsMenuOpen }: MobileNavProps) {
                 </button>
               </div>
               <nav className="flex flex-col gap-6">
-                {navLinks.map((link) => (
-                  <Link
+                {navLinks.map((link, index) => (
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    data-active={pathname === link.href}
-                    className="nav-link heading-h4"
-                    onClick={close}
+                    initial={{ opacity: 0, x: 24 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
                   >
-                    {link.label}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      data-active={active === link.id}
+                      className="nav-link heading-h2"
+                      onClick={close}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
                 <div className="mt-4 flex flex-col gap-4 border-t border-border pt-6">
                   {socialLinks.map((link) => (

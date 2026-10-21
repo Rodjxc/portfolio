@@ -8,6 +8,7 @@ import { MobileNav } from "./MobileNav";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Navbar() {
         setShowNavbar(true);
       }
 
+      setIsScrolled(currentScrollY > 20);
       lastScrollY.current = currentScrollY;
     };
 
@@ -31,12 +33,12 @@ export default function Navbar() {
     <>
       <header
         className={
-          `fixed top-0 left-0 z-30 w-full bg-background/70 backdrop-blur-sm ` +
-          `transform transition-transform duration-300 ` +
+          `fixed top-0 left-0 z-30 w-full transform transition-all duration-300 ` +
+          (isScrolled ? "bg-background/70 backdrop-blur-md " : "") +
           (showNavbar ? "translate-y-0" : "-translate-y-full")
         }
       >
-        <div className="page-container relative my-4 flex w-full items-center justify-between">
+        <div className="page-container relative flex h-20 w-full items-center justify-between">
           <Logo />
           <DesktopNav />
         </div>

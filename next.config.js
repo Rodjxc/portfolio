@@ -17,6 +17,9 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      { source: "/portfolio", destination: "/#work", permanent: true },
+      { source: "/experience", destination: "/#experience", permanent: true },
+      { source: "/about-me", destination: "/#about", permanent: true },
     ];
   },
 };

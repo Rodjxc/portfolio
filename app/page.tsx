@@ -1,15 +1,29 @@
-import { BackgroundBeams } from "./lib/components/home/BackgroundBeams";
+import { AboutMe } from "./lib/components/about/AboutMe";
+import { Staff } from "./lib/components/about/Staff";
+import { ContactCTA } from "./lib/components/common/ContactCTA";
+import { Education } from "./lib/components/experience/Education";
+import { WorkExperience } from "./lib/components/experience/WorkExperience";
+import { Capabilities } from "./lib/components/home/Capabilities";
 import { Hero } from "./lib/components/home/Hero";
-import { Staff } from "./lib/components/home/Staff";
-import { TechStack } from "./lib/components/home/TechStack";
+import { Marquee } from "./lib/components/home/Marquee";
+import { SelectedWork } from "./lib/components/home/SelectedWork";
 
 export default function HomePage() {
   return (
-    <div className="relative bg-background">
+    <>
       <Hero />
-      <TechStack />
-      <BackgroundBeams className="pointer-events-none opacity-70" />
-      <Staff />
-    </div>
+      <Marquee />
+      <SelectedWork />
+      <Capabilities />
+      <div id="experience" className="page-container scroll-mt-20">
+        <WorkExperience />
+        <Education />
+      </div>
+      <div id="about" className="page-container scroll-mt-20">
+        <AboutMe />
+        <Staff />
+      </div>
+      <ContactCTA />
+    </>
   );
 }

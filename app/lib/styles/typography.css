@@ -6,6 +6,45 @@
   color: var(--color-pink);
 }
 
+@utility heading-hero {
+  font-size: clamp(44px, 5.4vw, 88px);
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility heading-section {
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility eyebrow {
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  color: var(--color-secondary);
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--text-body-xs);
+  line-height: 160%;
+  color: var(--color-secondary);
+  background-color: rgb(255 255 255 / 0.02);
+}
+
 @utility heading-h1 {
   font-size: var(--text-h1);
   line-height: 120%;

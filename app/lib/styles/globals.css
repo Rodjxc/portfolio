@@ -18,6 +18,11 @@ body {
   border-color: var(--color-border);
 }
 
+::selection {
+  background-color: var(--color-pink);
+  color: #141414;
+}
+
 html,
 body {
   min-height: 100%;
