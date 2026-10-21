@@ -50,9 +50,9 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
         </a>
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-card from-25% via-card/85 via-45% to-transparent to-75% md:block"
+          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-card from-30% via-card/80 via-50% to-transparent to-80% md:block lg:from-15% lg:via-32% lg:to-55%"
         />
-        <div className="relative flex flex-col justify-between gap-8 p-6 md:pointer-events-none md:h-full md:max-w-[45%] md:p-10">
+        <div className="relative flex flex-col justify-between gap-8 p-6 md:pointer-events-none md:h-full md:max-w-[52%] md:p-8 lg:max-w-[36%] lg:p-10">
           <div>
             <p className="eyebrow mb-6">
               <span className="text-pink">0{index + 1}</span> / {project.category}

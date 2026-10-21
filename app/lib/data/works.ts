@@ -19,7 +19,7 @@ export const works: Project[] = [
     tagline: "Data-driven property valuations for Norway",
     image: "/img/eiendom.png",
     url: "https://eiendom.no/",
-    stack: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "React Query", "Mapbox"],
+    stack: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "React Query", "Mapbox", "Figma MCP"],
     category: "Web app",
     featured: true,
     description:
@@ -31,7 +31,7 @@ export const works: Project[] = [
     tagline: "Proptech platform and market analysis",
     image: "/img/plot.png",
     url: "https://plot.ai/",
-    stack: ["Next.js", "React 19", "TypeScript", "shadcn/ui", "Tailwind CSS"],
+    stack: ["Next.js", "React 19", "TypeScript", "shadcn/ui", "Tailwind CSS", "Sanity", "Storybook"],
     category: "Website + integrations",
     featured: true,
     description:
@@ -40,7 +40,7 @@ export const works: Project[] = [
   {
     id: "Sendaplays",
     name: "SendaPlays",
-    tagline: "The Spanish reference for Raid: Shadow Legends",
+    tagline: "The Spanish reference for guides, tips and tricks for the video game Raid: Shadow Legends",
     image: "/img/sendaplays.png",
     url: "https://sendaplays.com/",
     stack: ["Next.js", "React 19", "TypeScript", "Supabase", "shadcn/ui"],

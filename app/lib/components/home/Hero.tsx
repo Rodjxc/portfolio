@@ -28,28 +28,6 @@ const stats = [
   { value: "50k+", label: "subscribers across my YouTube channels" },
 ];
 
-const RotatingBadge = () => (
-  <motion.svg
-    viewBox="0 0 100 100"
-    className="absolute -top-6 -right-3 z-20 size-24 sm:-top-8 sm:-right-8 md:size-32"
-    animate={{ rotate: 360 }}
-    transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-    aria-hidden
-  >
-    <circle cx="50" cy="50" r="50" fill="var(--color-pink)" />
-    <defs>
-      <path id="badge-circle" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" />
-    </defs>
-    <text fontSize="10.5" fontWeight="700" letterSpacing="2.2" fill="#141414">
-      <textPath href="#badge-circle">OSLO · NORWAY · FRONT-END · </textPath>
-    </text>
-    <circle cx="50" cy="50" r="19" fill="#141414" />
-    <text x="50" y="57" textAnchor="middle" fontSize="20">
-      👋
-    </text>
-  </motion.svg>
-);
-
 const Portrait = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -78,7 +56,6 @@ const Portrait = () => {
         style={{ rotateX, rotateY }}
         className="relative"
       >
-        <RotatingBadge />
         <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border bg-muted">
           <Image
             src="/img/rod-headshot.jpg"
@@ -133,7 +110,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, ease }}
             className="eyebrow mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2"
           >
-            Hey, I&apos;m Rod 👋 · Oslo, Norway
+            Hey, I&apos;m Rod 👋 · Based in Oslo
           </motion.p>
 
           <h1 className="heading-hero">

@@ -51,7 +51,6 @@ export const workExperience: WorkExperience[] = [
     highlights: [
       "Involved in every phase of the development lifecycle, from planning and design to daily standups and bi-weekly demos",
       "Worked across several codebases sharing custom component libraries",
-      "Wrote end-to-end tests in Cypress and Playwright",
     ],
     stack: [
       "React",
@@ -60,8 +59,6 @@ export const workExperience: WorkExperience[] = [
       "TanStack Router",
       "GraphQL",
       "Tailwind CSS",
-      "Cypress",
-      "Playwright",
     ],
   },
   {

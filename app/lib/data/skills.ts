@@ -32,8 +32,8 @@ export const capabilities: Capability[] = [
     id: "quality",
     title: "Quality & delivery",
     description:
-      "End-to-end tests, CI/CD and careful reviews, so shipping on a Friday isn't scary.",
-    tools: ["Playwright", "Cypress", "CI/CD", "Vercel"],
+      "Unit and end-to-end tests, CI/CD and careful reviews, so shipping on a Friday isn't scary.",
+    tools: ["Jest", "Playwright", "CI/CD", "Vercel"],
   },
   {
     id: "ai",
