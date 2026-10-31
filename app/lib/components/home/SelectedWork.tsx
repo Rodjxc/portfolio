@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { withHttps } from "@/lib/utils";
 import { works, type Project } from "../../data/works";
+import { ProjectVideo } from "../common/ProjectVideo";
 import { SectionHeading } from "../common/SectionHeading";
 import { ProjectCard } from "../portfolio/ProjectCard";
 
@@ -37,16 +38,25 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
           href={liveUrl ?? `/project/${project.id}`}
           target={liveUrl ? "_blank" : undefined}
           rel={liveUrl ? "noopener noreferrer" : undefined}
-          data-cursor-text="Visit site"
+          data-cursor-text={liveUrl ? "Visit site" : "Details"}
           className="relative order-first block aspect-[16/10] overflow-hidden md:absolute md:inset-0 md:aspect-auto"
         >
-          <Image
-            src={project.image}
-            alt={`Screenshot of ${project.name}`}
-            fill
-            sizes="(min-width: 768px) 90vw, 100vw"
-            className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-          />
+          {project.video ? (
+            <ProjectVideo
+              src={project.video}
+              poster={project.image}
+              label={`Walkthrough of ${project.name}`}
+              className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          ) : (
+            <Image
+              src={project.image}
+              alt={`Screenshot of ${project.name}`}
+              fill
+              sizes="(min-width: 768px) 90vw, 100vw"
+              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          )}
         </a>
         <div
           aria-hidden
@@ -68,17 +78,15 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
                 </li>
               ))}
             </ul>
-            {liveUrl && (
-              <a
-                href={liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-5 py-3 backdrop-blur transition-colors hover:border-pink hover:text-pink"
-              >
-                Visit {project.name}
-                <ArrowUpRight className="size-4" />
-              </a>
-            )}
+            <a
+              href={liveUrl ?? `/project/${project.id}`}
+              target={liveUrl ? "_blank" : undefined}
+              rel={liveUrl ? "noopener noreferrer" : undefined}
+              className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-5 py-3 backdrop-blur transition-colors hover:border-pink hover:text-pink"
+            >
+              {liveUrl ? `Visit ${project.name}` : "Watch the walkthrough"}
+              <ArrowUpRight className="size-4" />
+            </a>
           </div>
         </div>
       </motion.article>

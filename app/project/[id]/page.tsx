@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProjectById, works } from "../../lib/data/works";
+import { ProjectVideo } from "../../lib/components/common/ProjectVideo";
 import { Reveal } from "../../lib/components/common/Reveal";
 import { withHttps } from "@/lib/utils";
 
@@ -58,14 +59,24 @@ export default async function ProjectPage({
       </Reveal>
 
       <Reveal delay={0.1} className="relative mt-12 aspect-[16/9] overflow-hidden rounded-3xl border border-border bg-card">
-        <Image
-          src={project.image}
-          alt={`Screenshot of ${project.name}`}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-top"
-        />
+        {project.video ? (
+          <ProjectVideo
+            src={project.video}
+            poster={project.image}
+            label={`Walkthrough of ${project.name}`}
+            controls
+            className="absolute inset-0 object-contain"
+          />
+        ) : (
+          <Image
+            src={project.image}
+            alt={`Screenshot of ${project.name}`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
+          />
+        )}
       </Reveal>
 
       <div className="mt-12 grid gap-10 md:grid-cols-[1fr_2fr]">

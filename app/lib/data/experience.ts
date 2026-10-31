@@ -8,6 +8,7 @@ export type WorkExperience = {
   end: string;
   location: string;
   summary: string;
+  products?: { name: string; href: string; description: string }[];
   highlights?: string[];
   stack?: string[];
 };
@@ -22,9 +23,22 @@ export const workExperience: WorkExperience[] = [
     end: "Present",
     location: "Oslo · Hybrid",
     summary:
-      "Built Eiendom.no from the ground up: a platform designed to become Norway's leading data-driven tool for evaluating property purchases, powered by an in-house value-estimation model and direct integrations with real estate brokers.",
+      "Front-end work on two products in the Vergence ecosystem's Homekey branch: one for home buyers, one for the people who build homes.",
+    products: [
+      {
+        name: "Eiendom.no",
+        href: "/project/eiendom.no",
+        description:
+          "Built from the ground up: a platform designed to become Norway's leading data-driven tool for evaluating property purchases, powered by an in-house value-estimation model and direct integrations with real estate brokers.",
+      },
+      {
+        name: "Plot platform",
+        href: "/project/plot-platform",
+        description:
+          "A paid B2B analysis tool that real estate developers and construction companies use to decide what to build and where: plot valuations, migration and demographic trends, and which unit types are in demand in each area.",
+      },
+    ],
     highlights: [
-      "Maintain and develop features across other platforms in the Vergence ecosystem's Homekey branch, including B2B property-insights products",
       "Work spans architecture, performance optimization, UI implementation and API integration",
       "Keep the user experience consistent and high quality across products",
     ],

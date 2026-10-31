@@ -3,6 +3,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { previousLife, workExperience } from "../../data/experience";
 import { Reveal } from "../common/Reveal";
@@ -76,6 +77,24 @@ export const WorkExperience = () => {
                       )}
                     </div>
                     <p className="body-lg">{job.summary}</p>
+                    {job.products && (
+                      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                        {job.products.map((product) => (
+                          <Link
+                            key={product.name}
+                            href={product.href}
+                            data-cursor-text="Details"
+                            className="group rounded-2xl border border-border bg-muted/40 p-5 transition-colors hover:border-pink/40"
+                          >
+                            <p className="heading-h5 flex items-center justify-between gap-2">
+                              {product.name}
+                              <ArrowUpRight className="size-4 text-secondary transition-all group-hover:rotate-45 group-hover:text-pink" />
+                            </p>
+                            <p className="body-sm mt-2 !text-secondary">{product.description}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                     {job.highlights && (
                       <ul className="mt-6 flex flex-col gap-3">
                         {job.highlights.map((highlight) => (

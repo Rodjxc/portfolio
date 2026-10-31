@@ -3,6 +3,7 @@ export type Project = {
   name: string;
   tagline: string;
   image: string;
+  video?: string;
   url?: string;
   stack: string[];
   category: string;
@@ -17,7 +18,8 @@ export const works: Project[] = [
     id: "eiendom.no",
     name: "Eiendom.no",
     tagline: "Data-driven property valuations for Norway",
-    image: "/img/eiendom.png",
+    image: "/img/eiendom.jpg",
+    video: "/video/eiendom.mp4",
     url: "https://eiendom.no/",
     stack: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "React Query", "Mapbox", "Figma MCP"],
     category: "Web app",
@@ -26,10 +28,23 @@ export const works: Project[] = [
       "Eiendom.no is designed to become Norway's leading data-driven tool for evaluating property purchases, powered by an in-house value-estimation model and direct integrations with real estate brokers. I built the app from scratch and kept developing it with the team.",
   },
   {
+    id: "plot-platform",
+    name: "Plot platform",
+    tagline: "Deciding what to build, and where, for developers and construction companies",
+    image: "/img/plot-platform.jpg",
+    video: "/video/plot-platform.mp4",
+    stack: ["React", "TypeScript", "React Query", "Mapbox"],
+    category: "Paid B2B platform · Behind login",
+    featured: true,
+    description:
+      "Plot's main product is a paid analysis tool for real estate developers and construction companies. It helps them decide what to build and where: plot valuations, migration and demographic trends, and which unit types are in demand in each area, from one- to three-bedroom apartments to homes for families or older buyers. It lives behind a login, so the video above is a short walkthrough of features I've worked on.",
+  },
+  {
     id: "plot",
     name: "Plot.ai",
     tagline: "Proptech platform and market analysis",
-    image: "/img/plot.png",
+    image: "/img/plot.jpg",
+    video: "/video/plot.mp4",
     url: "https://plot.ai/",
     stack: ["Next.js", "React 19", "TypeScript", "shadcn/ui", "Tailwind CSS", "Sanity", "Storybook"],
     category: "Website + integrations",
@@ -41,7 +56,8 @@ export const works: Project[] = [
     id: "Sendaplays",
     name: "SendaPlays",
     tagline: "The Spanish reference for guides, tips and tricks for the video game Raid: Shadow Legends",
-    image: "/img/sendaplays.png",
+    image: "/img/sendaplays.jpg",
+    video: "/video/sendaplays.mp4",
     url: "https://sendaplays.com/",
     stack: ["Next.js", "React 19", "TypeScript", "Supabase", "shadcn/ui"],
     category: "Personal product · 5k+ monthly visits",
