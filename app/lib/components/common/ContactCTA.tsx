@@ -26,7 +26,7 @@ export const ContactCTA = () => {
         />
         <p className="eyebrow relative mb-6 !text-black/60">Say hello</p>
         <h2 className="heading-hero relative mx-auto max-w-4xl !text-[#141414]">
-          Always happy to chat about the web.
+          Always happy to chat about the web. Or craft beer.
         </h2>
         <a
           href={`mailto:${EMAIL}`}

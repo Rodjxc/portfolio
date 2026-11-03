@@ -15,8 +15,13 @@ export const socials = [
     icon: Instagram,
   },
   {
-    href: "https://www.youtube.com/@SendaPlays",
-    label: "YouTube",
+    href: "https://youtube.com/@sendaplays",
+    label: "YouTube · Gaming",
+    icon: Youtube,
+  },
+  {
+    href: "https://youtube.com/@elrodtrip",
+    label: "YouTube · Travel",
     icon: Youtube,
   },
 ];

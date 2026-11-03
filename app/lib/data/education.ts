@@ -38,4 +38,8 @@ export const educationItems: EducationItem[] = [
     issuer: "Udemy",
     href: "https://www.udemy.com/certificate/UC-bd7b711f-a31c-4886-82a3-a9ee376804e2/",
   },
+  {
+    title: "Filming & video editing: OBS, Filmora, DaVinci Resolve",
+    issuer: "Self-taught",
+  },
 ];

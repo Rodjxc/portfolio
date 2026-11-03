@@ -83,8 +83,9 @@ export const Capabilities = () => {
           <div className="relative flex h-full flex-col justify-end p-8">
             <p className="eyebrow mb-3 !text-pink">How I work</p>
             <p className="heading-h3 max-w-md">
-              I care about the details users feel but rarely notice: loading
-              states, keyboard flows, and motion that explains what just happened.
+              AI agents speed up the build; I own the details users feel but
+              rarely notice: loading states, keyboard flows, and motion that
+              explains what just happened.
             </p>
           </div>
         </SpotlightCard>
@@ -107,9 +108,13 @@ export const Capabilities = () => {
                 </div>
                 <h3 className="heading-h4">{capability.title}</h3>
                 <p className="body-md mt-2 !text-secondary">{capability.description}</p>
-                <p className="body-sm mt-5 font-mono !text-primary/70">
-                  {capability.tools.join(" · ")}
-                </p>
+                {capability.tools && (
+                  <p className="body-sm mt-5 font-mono !text-primary/70">
+                    {capability.toolsIntro
+                      ? `${capability.toolsIntro} ${capability.tools.slice(0, -1).join(", ")} and ${capability.tools.at(-1)}.`
+                      : capability.tools.join(" · ")}
+                  </p>
+                )}
               </div>
             </SpotlightCard>
           );

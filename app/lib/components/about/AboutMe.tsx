@@ -11,7 +11,7 @@ const facts = [
   { emoji: "📍", title: "Oslo, Norway", text: "After years in London, Norway became home." },
   { emoji: "🥋", title: "Brazilian Jiu-Jitsu", text: "Most evenings you'll find me on the mats at the gym." },
   { emoji: "🎬", title: "YouTube", text: "Gaming as @sendaplays and travel stories as @elrodtrip. 50k+ subscribers." },
-  { emoji: "🐶", title: "Family", text: "Most free time goes to my wife, our dog, and travelling." },
+  { emoji: "🐶", title: "Family", text: "Most free time goes to my wife, my daughter, our dog, gaming and travelling." },
 ];
 
 export const AboutMe = () => {
@@ -37,7 +37,7 @@ export const AboutMe = () => {
           <Reveal delay={0.1} className="mt-10 flex flex-col gap-6">
             <p className="body-lg">
               I grew up surrounded by computers and video games, but spent my
-              first career in craft beer: bartending and managing in London,
+              first career in craft beer: bartending and managing pubs in London,
               brewing in Oslo, and becoming a certified beer sommelier.
             </p>
             <p className="body-lg !text-secondary">

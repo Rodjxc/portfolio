@@ -23,7 +23,7 @@ export const workExperience: WorkExperience[] = [
     end: "Present",
     location: "Oslo · Hybrid",
     summary:
-      "Front-end work on two products in the Vergence ecosystem's Homekey branch: one for home buyers, one for the people who build homes.",
+      "Front-end work on two products in Vergence's proptech ecosystem: one for home buyers, one for the people who build homes.",
     products: [
       {
         name: "Eiendom.no",
@@ -85,7 +85,7 @@ export const workExperience: WorkExperience[] = [
     end: "Sep 2024",
     location: "Oslo · Hybrid",
     summary:
-      "Joined during the start-up phase and built a multi-tenant real estate management application almost from scratch.",
+      "Joined during the start-up phase and built a multi-tenant real estate management application from scratch, based on Figma designs.",
     highlights: [
       "Heavy REST API-based CRUD: tables, complex forms and authentication",
       "Worked closely with sales, design and engineering to make the interface accessible and friendly",

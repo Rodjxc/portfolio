@@ -13,17 +13,17 @@ import Link from "next/link";
 import { ease } from "../common/Reveal";
 import { BackgroundBeams } from "./BackgroundBeams";
 
-const headline = ["From", "beer", "sommelier", "to", "software."];
-const highlighted = new Set(["to", "software."]);
+const headline = ["From", "beer", "sommelier", "to", "AI-led", "software."];
+const highlighted = new Set(["to", "AI-led", "software."]);
 
 const stickers = [
   { label: "✦ 5+ years in product teams", className: "-left-6 top-10 -rotate-6", delay: 0.9 },
   { label: "▶ 50k+ on YouTube", className: "-right-4 top-1/2 rotate-3", delay: 1.05 },
-  { label: "⚛ React · Next.js · TS", className: "-bottom-5 left-8 -rotate-2", delay: 1.2 },
+  { label: "⚛ React · Next.js · Claude Code", className: "-bottom-5 left-8 -rotate-2", delay: 1.2 },
 ];
 
 const stats = [
-  { value: "5+", label: "years shipping web products" },
+  { value: "5+", label: "years building user-facing products" },
   { value: "5k+", label: "monthly visits on a site I built and run" },
   { value: "50k+", label: "subscribers across my YouTube channels" },
 ];
@@ -134,9 +134,11 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease, delay: 0.7 }}
             className="body-lg mt-8 max-w-xl !text-secondary"
           >
-            I&apos;m a senior front-end developer in Oslo, building fast,
-            accessible products with React, Next.js and TypeScript, mostly in
-            proptech, where maps, tables and big datasets need to feel simple.
+            I&apos;m a senior front-end engineer in Oslo who leads AI-assisted
+            development, using modern AI tools like Claude Code or Cursor and
+            implementing designs with the Figma MCP. I ship fast, accessible React
+            and Next.js products, and most of my experience is in proptech, where
+            maps, tables and big datasets need to feel simple.
             Before code, I spent a decade in craft beer as a{" "}
             <a
               className="text-link"
@@ -157,7 +159,7 @@ export const Hero = () => {
             >
               YouTube videos
             </a>{" "}
-            about gaming and travel.
+            about gaming and travelling to unique places.
           </motion.p>
 
           <motion.div

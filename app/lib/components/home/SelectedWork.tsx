@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 import { withHttps } from "@/lib/utils";
 import { works, type Project } from "../../data/works";
 import { ProjectVideo } from "../common/ProjectVideo";
@@ -27,8 +27,8 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
 
   return (
     <div
-      className="flex items-start md:sticky md:h-[90vh] md:items-center"
-      style={{ top: `calc(5rem + ${index * 28}px)` }}
+      className="sticky top-[calc(5rem+var(--stack-index)*16px)] flex items-start md:top-[calc(5rem+var(--stack-index)*28px)] md:h-[90vh] md:items-center"
+      style={{ "--stack-index": index } as CSSProperties}
     >
       <motion.article
         style={{ scale }}
@@ -39,7 +39,7 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
           target={liveUrl ? "_blank" : undefined}
           rel={liveUrl ? "noopener noreferrer" : undefined}
           data-cursor-text={liveUrl ? "Visit site" : "Details"}
-          className="relative order-first block aspect-[16/10] overflow-hidden md:absolute md:inset-0 md:aspect-auto"
+          className="relative order-first block aspect-video overflow-hidden md:absolute md:inset-0 md:aspect-auto"
         >
           {project.video ? (
             <ProjectVideo
@@ -62,18 +62,18 @@ const StackCard = ({ project, index, total, progress }: StackCardProps) => {
           aria-hidden
           className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-card from-30% via-card/80 via-50% to-transparent to-80% md:block lg:from-15% lg:via-32% lg:to-55%"
         />
-        <div className="relative flex flex-col justify-between gap-8 p-6 md:pointer-events-none md:h-full md:max-w-[52%] md:p-8 lg:max-w-[36%] lg:p-10">
+        <div className="relative flex flex-col justify-between gap-5 p-5 md:pointer-events-none md:h-full md:max-w-[52%] md:gap-8 md:p-8 lg:max-w-[36%] lg:p-10">
           <div>
-            <p className="eyebrow mb-6">
+            <p className="eyebrow mb-3 md:mb-6">
               <span className="text-pink">0{index + 1}</span> / {project.category}
             </p>
             <h3 className="heading-section">{project.name}</h3>
             <p className="body-lg mt-4 !text-secondary">{project.tagline}</p>
           </div>
           <div>
-            <ul className="mb-8 flex flex-wrap gap-2">
+            <ul className="-mx-5 mb-5 flex gap-2 overflow-x-auto px-5 [scrollbar-width:none] md:mx-0 md:mb-8 md:flex-wrap md:overflow-visible md:px-0">
               {project.stack.map((tech) => (
-                <li key={tech} className="chip">
+                <li key={tech} className="chip shrink-0 whitespace-nowrap">
                   {tech}
                 </li>
               ))}
